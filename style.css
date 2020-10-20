@@ -27,6 +27,11 @@
   background-color: #efeeee;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 button {
   outline: none;
 }
@@ -63,6 +68,10 @@ button {
 
 .primary_button:hover {
   background-color: #ffe029;
+}
+
+.form_button {
+  width: 100%;
 }
 
 .btn_svg {
@@ -898,6 +907,41 @@ header .header-desk__nav ul li a {
   margin: 0 auto;
   background: black;
   height: 1px;
+}
+
+.top {
+  padding-top: 120px;
+}
+
+.contact_container {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  position: relative;
+  overflow: hidden;
+  background: #231f20;
+}
+
+.contact_container .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.form-control {
+  font-size: 18x;
+  width: 100%;
+  color: #fff;
+  display: block;
+  margin: 0 0 20px;
+  border: 0;
+  width: 100%;
+  line-height: 1.83333;
+  background: inherit;
+  border-bottom: 1px solid #efeeee;
+}
+
+.form-control:focus {
+  outline: none;
 }
 
 footer {

@@ -23,6 +23,14 @@
     background-color: #efeeee;
 }
 
+
+// LINKS
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 // BUTTONS
 
 button {
@@ -54,6 +62,10 @@ button {
 }
 .primary_button:hover {
     background-color: #ffe029;
+}
+
+.form_button {
+    width: 100%;
 }
 
 .btn_svg {
@@ -595,6 +607,7 @@ header {
 
 
 // CATEGORY PAGE
+
 .category {
     padding-top: 120px;
     .category_container {
@@ -687,6 +700,46 @@ header {
     height: 1px;
 }
 
+
+
+// CONTACTS PAGE
+.top {
+    padding-top: 120px;
+}
+.contact_container {
+    padding-top: $pt;
+    padding-bottom: $pb;
+    position: relative;
+    overflow: hidden;
+    background: #231f20;
+
+    .wrapper {
+        display: flex;
+    }
+}
+
+
+// FORM
+
+.lumex_form {
+
+}
+
+.form-control {
+    font-size: 18x;
+    width: 100%;
+    color: #fff;
+    display: block;
+    margin: 0 0 20px;
+    border: 0;
+    width: 100%;
+    line-height: 1.83333;
+    background: inherit;
+    border-bottom: 1px solid #efeeee;
+}
+.form-control:focus {
+    outline: none;
+}
 
 // FOOTER
 footer {
