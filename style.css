@@ -927,6 +927,16 @@ header .header-desk__nav ul li a {
   display: flex;
 }
 
+.contact_map {
+  position: relative;
+}
+
+.lumex_info {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
 .form-control {
   font-size: 18x;
   width: 100%;

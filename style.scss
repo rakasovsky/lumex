@@ -714,8 +714,17 @@ header {
     background: #231f20;
 
     .wrapper {
-        display: flex;
+        display: flex
     }
+}
+
+.contact_map {
+    position: relative;
+}
+.lumex_info {
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 
 
