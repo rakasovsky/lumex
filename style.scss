@@ -1,0 +1,737 @@
+@font-face {
+    font-family: "Aeonik";
+    src: url("assets/fonts/Aeonik-Regular.otf");
+}
+@font-face {
+    font-family: "RobotoMono";
+    src: url("assets/fonts/RobotoMono-Regular.ttf")
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+
+#app {
+    display: grid;
+    position: relative;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    font-family: "Aeonik", sans-serif;
+    background-color: #efeeee;
+}
+
+// BUTTONS
+
+button {
+    outline: none;
+}
+
+.primary_button {
+    display: flex;
+    align-items: center;
+    position: relative;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    justify-content: center;
+    cursor: pointer;
+    border: 0 solid transparent;
+    border-radius: 0;
+    font-family: Roboto Mono,monospace;
+    font-size: 15px;
+    color: #323539;
+    letter-spacing: 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    white-space: nowrap;
+    background: #ffda00;
+    padding: 0;
+    width: 70px;
+    height: 70px;
+}
+.primary_button:hover {
+    background-color: #ffe029;
+}
+
+.btn_svg {
+    line-height: 80px;
+    width: 20px;
+    height: 13px;
+    transition: transform .2s ease-in-out,-webkit-transform .2s ease-in-out;
+}
+
+.lumex_button {
+    min-width: 96px;
+    padding: 0 20px;
+    height: 36px;
+    margin: 0 15px 0 0;
+    background-color: transparent;
+    border: 1px solid #a8a8a8;
+    border-radius: 18px;
+    color: white;
+}
+.lumex_button-active {
+    min-width: 96px;
+    padding: 0 20px;
+    height: 36px;
+    margin: 0 15px 0 0;
+    background-color: #ffda00;
+    color: #333;
+    border-radius: 18px;
+    border-color: #ffda00;
+}
+
+.lumex_button-active:focus {
+    outline: none;
+}
+
+
+
+.transform90 {
+    transform: rotate(90deg);
+}
+
+// Padding Top 200px
+$pt: 200px;
+
+$pb: 200px;
+// colors
+
+$primary-color: #ffda00;
+$secondary-color: #282124;
+$third-color: #a8a8a8;;
+
+.yellow {
+    background: $primary-color;
+}
+.dark-grey {
+    background: $secondary-color;
+}
+.grey {
+    background: $third-color;
+}
+
+.fc_grey {
+    color: $third-color;
+}
+
+.fc_black {
+    color: #000;
+}
+
+
+// Text
+.label {
+    font-family: "RobotoMono", monospace;
+    margin-bottom: 15px;
+}
+
+.h_title {
+    margin-bottom: 42px;
+    max-width: 17em;
+    line-height: 1.1;
+}
+
+.c_title {
+    line-height: 1.4;
+    padding-bottom: 24px;
+}
+
+.lumex {
+    color: #ff0000;
+}
+
+// Text Size
+
+.fs15 {
+    font-size:15px;
+}
+
+.fs24 {
+    font-size: 24px;
+}
+.fs28 {
+    font-size: 28px;
+}
+.fs42 {
+    font-size: 42px;
+}
+.fs80 {
+    font-size: 80px;
+    line-height: 1.125em;
+    margin-bottom: .75em;
+    // max-width: 7.5em;
+}
+
+header {
+    // display: flex;
+    // justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: flex-start;
+    z-index: 11;
+    padding: 20px 0;
+    color: #323539;
+    position: absolute;
+    width: 100%;
+
+    .header-logo {
+        flex: none;
+        align-self: stretch;
+        width: 20.83333%;
+        margin-left: 8.33333%;
+        margin-right: 4.16667%;
+    }
+    .header-desk__nav {
+        align-self: stretch;
+        width: 58.33333%;
+        margin-right: 8.33333%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-end;
+
+        ul {    
+            list-style: none;
+            display: flex;
+            
+
+            li {
+                height: 100px;
+                padding-left: 50px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+
+                a{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+.who-we-are {
+    padding-bottom: 120px;
+
+    .who-we-are__container {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        height: 100%;
+
+        .who-we-are__row {
+            display: flex;
+            align-items: stretch;
+            justify-content: flex-start;
+            flex-direction: row;
+
+            .lumex__video {
+                background: url("https://cloudcalls.com.ua/wp-content/uploads/2018/02/stock-photo-211548267.jpg");
+                flex: none;
+                align-self: stretch;
+                width: 50%;
+                right: -12.5%;
+                z-index: 2;
+                margin-top: 120px;
+                margin-left: -12.5%;
+                img {
+                
+                    height: 675px;
+                }
+            }
+            .lumex__content {
+                padding-top: 175px;
+                padding-bottom: 120px;
+                flex: none;
+                align-self: stretch;
+                width: 62.5%;
+                margin-left: 0;
+                z-index: 0;
+                margin-top: 0;
+                margin-bottom: -120px;
+                background: $primary-color;
+
+                .content {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    height: 100%;
+                    margin-left: 35%;
+
+                    .bot {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-right: 14%;
+                    }
+                    }
+                }
+        }
+    }
+}
+
+.lumex__main {
+    padding-top: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-direction: row;
+
+    .cloud__block1{
+        flex: none;
+        align-self: stretch;
+        width: 37.5%;
+        margin-left: 8.33333%;
+
+        p:last-child{
+            display: block;
+            max-width: 30em;
+        }
+    }
+    .cloud__block2 {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        justify-content: flex-start;
+        flex: none;
+        align-content: stretch;
+        position: relative;
+        align-self: stretch;
+        width: 50%;
+        padding-top: 25%;
+        
+        .title {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+            justify-content: flex-start;
+            overflow: hidden;
+            .title__front {
+                display: flex;
+                flex-direction: column;
+                padding: 8.33333%;
+
+                color: #fff;
+                margin-left: auto;
+                width: 50%;
+            }
+            .title__front:before {
+                content: "";
+                display: block;
+                position: absolute;
+                background-color: $secondary-color;
+                right: 50%;
+                top: 0;
+                width: 0;
+                height: 100%;
+                -webkit-transition: width .4s cubic-bezier(.215,.61,.355,1) .4s;
+                transition: width .4s cubic-bezier(.215,.61,.355,1) .4s;
+            }
+        }
+    }
+    .cloud__block3 {
+        width: 25%;
+        padding-top: 25%;
+        align-self: stretch;
+        opacity: 1;
+        position: relative;
+
+        .title {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+            justify-content: flex-start;
+            flex-direction: row;
+            overflow: hidden;
+
+            .title__front {
+                display: flex;
+                flex-direction: column;
+                padding: 16.66667%;
+            }
+            .title__back {
+              background-image: url('//images.ctfassets.net/0vdg6equhogq/2WTAjslTS6KAs4o9KEdy17/cbd63d4766675e9271ce1b317f8d1045/10_-home-web.jpg');
+              position: absolute;
+              padding: 16.66667%;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              left: 0;
+              display: block;
+              opacity: 0;
+              background-repeat: no-repeat;
+              background-size: cover;
+              background-position: 70% 50%;
+              -webkit-transition: opacity .1s;
+              transition: opacity .1s;
+            }
+        }
+        
+    }
+    .cloud__block4 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex: none;
+        flex-direction: column;
+        position: relative;
+        width: 50%;
+        background-color: $secondary-color;
+        color: white;
+
+        p:last-child{
+            max-width: 420px;
+            margin-left: 8%;
+        }
+    }
+}
+
+.wrapper {
+    width: 75%;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+}
+
+.cloud__calls-main {
+    padding-top: $pt;
+    background: $secondary-color;
+    color: white;
+    
+    .slogan {
+        p:last-child{
+            max-width: 772px;
+        }
+    }
+    .how_it_works {
+        padding-top: $pt;
+        display: flex;
+
+        img {
+            width: 50%;
+        }
+        .text_wrapper {
+            width: 33.33333%;
+            margin-left: 16.66667%;
+            .tabs {
+                min-height: 220px;
+
+                .tab {
+                    height: 300px;
+                }
+            }
+        }
+    }
+    .our_products {
+        padding-top: $pt;
+
+    }
+   .our_products:before {
+    content: "";
+    display: block;
+    border-top: 1px solid #6b6b6b;
+    width: 83.33333%;
+    margin: 0 auto;
+ }
+
+}
+
+// CARDS SETTINGS
+
+.card_wrapper {
+    width: 83.33333%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: $pt;
+    padding-bottom: $pb;
+    margin: 0 auto;
+    .left {
+        width: 30%;
+        .text{
+            max-width: 350px;
+        }
+    }
+    .right {
+        width: 65%;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.product_card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    width: 46%;
+    color: #fff;
+    background-color: #333;
+
+    .card-img {
+        position: relative;
+        overflow: hidden;
+        div {
+            width: 100%;
+            padding-bottom: 52.38095238095238%;
+        }
+        img {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+            transition: transform 1s ease-in-out,-webkit-transform 1s ease-in-out!important;
+            transform: scale(1) translateZ(0);
+            filter: grayscale(1);
+        }
+    }
+
+    .card-content {
+        padding: 60px 16.66667%;
+    }
+
+    .card-button_container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        justify-content: flex-end;
+        flex-direction: row;
+        flex-grow: 1;
+    }
+
+}
+
+.prod_grey {
+    background: #efeeee;
+    color: #000;
+}
+
+.prod_white {
+    background: #ffff;
+    color: #000;
+}
+
+
+
+.lumex_partners-wrapper {
+    padding-top: 200px;
+    .partners_text {
+        flex: none;
+        align-self: stretch;
+        width: 33.33333%;
+        margin-left: 12.5%;
+        display: flex;
+    }
+    .partners_slideshow {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        max-width: 80%;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        margin: 0px auto;
+       
+    }
+}
+
+.lumex_team {
+    display: flex;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    .team_left {
+        margin-left: 12.5%;
+        margin-right: auto;
+        width: 33%;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        div {
+            max-width: 420px;
+        }
+}
+    }
+    .team_right {
+        width: 50%;
+        margin-left: 0;
+        padding-top: 13%;
+        margin-bottom: 0;
+        background-position: center;
+        background-image: url("https://cloudcalls.com.ua/wp-content/uploads/2018/02/stock-photo-211548267.jpg");
+
+}
+
+.vertical-button {
+    flex-direction: column;
+    padding: 40px 0;
+    width: 80px;
+    min-height: 320px;
+    span {
+        writing-mode: vertical-lr;
+    }
+    svg {
+        width: 20px;
+        height: 13px;
+        margin: auto auto 0;
+    }
+}
+
+
+// CATEGORY PAGE
+.category {
+    padding-top: 120px;
+    .category_container {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        // height: 100%;
+        height: 100vh;
+        .category_cover {
+            position: absolute;
+            overflow: hidden;
+            opacity: 1;
+            background-image: url(assets/img/cyberpunk2077.jpg);
+            background-position: 20% 90%;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            width: 100%;
+            height: 85vh;
+            background-size: cover;
+        }
+        .category_cover:before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -100;
+            // background-image: url(assets/img/cyberpunk2077.jpg);
+            background-repeat: no-repeat;
+            opacity: 1
+        }
+        .category_text {
+            position: absolute;
+            align-self: stretch;
+            width: 62.5%;
+            margin-top: -420px;
+            padding: 135px 16.66667% 185px;
+            /* height: 100%; */
+            overflow: hidden;
+            background: #c9c9c9;
+            color: #2a2a2a;
+            bottom: -5%;
+
+            .vertical-button {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            .transform90 {
+                position: absolute;
+                left: 8%;
+            }
+        } 
+    }
+}
+
+.category_diogram {
+        padding-top: $pt;
+        display: flex;
+        padding-bottom: $pb;
+        .diogram_left {
+            width: 20%;
+            margin-left: 8%;
+            margin-right: 12.5%;
+            padding-top: 115px;
+        }
+        .diogram_right {
+            width: 60%;
+            // background-image: url(assets/img/Screenshot_4.png);
+            img {
+                display: flex;
+                width: 100%;
+                height: 100%;
+            }
+        }
+}
+.category_sub {
+    display: flex;
+    flex-direction:column;
+}
+.divider {
+    flex: none;
+    align-self: stretch;
+    width: 83.33333%;
+    margin: 0 auto;
+    background: black;
+    height: 1px;
+}
+
+
+// FOOTER
+footer {
+    padding-top: 200px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+     .footer_top {
+        padding-bottom: 200px;
+        display: flex;
+     }
+    .footer-logo {
+        align-self: stretch;
+        width: 20.83333%;
+        margin-left: 8.33333%;
+        margin-right: 4.16667%;
+    }
+    .footer_container {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 8.33333%;
+        div{
+            width:25%;
+        }
+        .footer_contacts{
+            width: 20%;
+            margin: 0 50px;
+            padding-left: 3%;
+        }
+    }
+    .footer_bottom {
+        display: flex;
+        justify-content: flex-end;
+        padding-bottom: 30px;
+        .copyright {
+            display: flex;
+            margin-right: 8.33333%;
+            p{
+                padding: 0 15px;  
+            }
+            p:last-child{
+                border-left: 1px solid #a8a8a8;
+            }
+        }
+    
+    }
+    
+}
