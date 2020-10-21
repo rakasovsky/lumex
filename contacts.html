@@ -26,36 +26,44 @@
         <div class="contact_container">
             <div class="wrapper">
                 <div class="contact_form">
-                    <h3 class="h_title fs42">Слыш, купи!</h3>
-                    <p class="label">Облачные и аппаратные решения в области безопасности и связи. Сервис и обслуживание.</p>
+                    <h3 class="h_title fs42 fc_white">Слыш, купи!</h3>
+                    <p class="label fc_grey">Облачные и аппаратные решения в области безопасности и связи. Сервис и обслуживание.</p>
+                    <div class="alert_msg">
+
+                    </div>
                     <form action="POST" class="lumex_form">
                         <div><input type="text" class="form-control" placeholder="Имя"></div>
-                        <div><input type="text" class="form-control" placeholder="Email Address"></div>
+                        <div><input type="text" class="form-control" placeholder="Email"></div>
                         <div><input type="text" class="form-control" placeholder="Фирма"></div>
                         <div><input type="text" class="form-control" placeholder="Телефон"></div>
                         <div><input type="textarea" class="form-control" placeholder="Сообщение"></div>
-                        <div class="primary_button form_button">Отправить</div>
+                        <button class="primary_button form_button">
+                            <span> Отправить </span> 
+                            <svg class="btn_svg">
+                                <path d="m14.4 1-.7.7 5 4.8h-18.7v1h18.8l-5.2 5.5.8.7 6.3-6.7z" fill="currentColor"></path>
+                            </svg>
+                        </button>
                     </form>
-                    <p><a href="tell://+380577143074">+380 57 714-3074</a></p>
-                    <p><a href="tell://0661082211">+380 66 108-2211</a></p>
-                    <p><a href="mailto:info@lumex.in.ua">info@lumex.in.ua</a></p>
-                    <p><a href="mailto:support@lumex.in.ua">support@lumex.in.ua</a></p>
                 </div>
                 <div class="contact_map">
                     <div id="map" style="width: 50vw; height: 100%; margin-left: 15%;">
 
                     </div>
                     <div class="lumex_info">
-                        <h4 class="title">Hello</h4>
-                        <p>Kharkiv</p>
-                        <p>RRR str</p>
+                        <h4 class="title fs24"><span class="lumex">L</span>umex</h4>
+                        <p>Харьков</p>
+                        <p>Сумская 26</p>
+                        <p><a href="tell://+380577143074">+380 57 714-3074</a></p>
+                        <p><a href="tell://0661082211">+380 66 108-2211</a></p>
+                        <p><a href="mailto:info@lumex.in.ua">info@lumex.in.ua</a></p>
+                        <p><a href="mailto:support@lumex.in.ua">support@lumex.in.ua</a></p>
                     </div>
-                    <script type="text/javascript">
-                        function initMap() {
-
+        <script type="text/javascript">
+                function initMap() {
+                const myLatLng = {lat: 49.997589, lng:36.233797};
                 var map = new google.maps.Map(document.getElementById('map'), {
-                    zoom: 5,
-                    center: new google.maps.LatLng(50.011508, 36.245364),
+                    zoom: 17,
+                    center: myLatLng,
                     mapTypeId: google.maps.MapTypeId.ROADMAP,
                     mapTypeControl: false,
                     styles: [
@@ -132,7 +140,7 @@
                             elementType: 'labels.text.fill',
                             stylers: [
                                 {
-                                    color: '#9e9e9e'
+                                    color: 'black'
                                 }
                             ]
                         },
@@ -141,7 +149,7 @@
                             elementType: 'geometry',
                             stylers: [
                                 {
-                                    color: '#ffffff'
+                                    color: '#ffe029'
                                 }
                             ]
                         },
@@ -150,7 +158,7 @@
                             elementType: 'labels.text.fill',
                             stylers: [
                                 {
-                                    color: '#757575'
+                                    color: 'black'
                                 }
                             ]
                         },
@@ -159,7 +167,7 @@
                             elementType: 'geometry',
                             stylers: [
                                 {
-                                    color: '#dadada'
+                                    color: '#ffe029'
                                 }
                             ]
                         },
@@ -177,7 +185,7 @@
                             elementType: 'labels.text.fill',
                             stylers: [
                                 {
-                                    color: '#9e9e9e'
+                                    color: 'black'
                                 }
                             ]
                         },
@@ -219,7 +227,13 @@
                         }
                     ],
                 });
+                new google.maps.Marker({
+                    position: myLatLng,
+                    map,
+                    title: "Hello World!",
+                });
             }
+            
             </script>
             <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCj0CTmW0SEtwx7gz6zkgokJASsemggRfE&callback=initMap"type="text/javascript"></script>
                 </div>

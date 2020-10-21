@@ -132,6 +132,10 @@ button {
   color: #000;
 }
 
+.fc_white {
+  color: white;
+}
+
 .label {
   font-family: "RobotoMono", monospace;
   margin-bottom: 15px;
@@ -932,9 +936,34 @@ header .header-desk__nav ul li a {
 }
 
 .lumex_info {
+  margin-left: 15%;
+  padding: 50px;
   position: absolute;
-  right: 0;
-  bottom: 0;
+  left: 0;
+  top: 0;
+  background-color: #231f20;
+  color: white;
+}
+
+.alert_msg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 50px;
+  margin-bottom: 25px;
+}
+
+.lumex_form .form_button {
+  margin-top: 150px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 40px;
+}
+
+input {
+  font-size: 18px;
+  color: white;
 }
 
 .form-control {

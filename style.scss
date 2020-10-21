@@ -134,6 +134,10 @@ $third-color: #a8a8a8;;
     color: #000;
 }
 
+.fc_white {
+    color: white;
+}
+
 
 // Text
 .label {
@@ -722,16 +726,36 @@ header {
     position: relative;
 }
 .lumex_info {
+    margin-left: 15%;
+    padding: 50px;
     position: absolute;
-    right: 0;
-    bottom: 0;
+    left: 0;
+    top: 0;
+    background-color: #231f20;
+    color: white;
 }
 
 
 // FORM
 
-.lumex_form {
+.alert_msg {
+    display: flex;
+    min-height: 50px;
+    margin-bottom: 25px;
+    // background-color: #efeeee;
+}
 
+.lumex_form {
+    .form_button {
+        margin-top: 150px;
+        justify-content: space-between;
+        padding: 0 40px; 
+    }
+}
+
+input {
+    font-size: 18px;
+    color: white;
 }
 
 .form-control {
@@ -749,6 +773,8 @@ header {
 .form-control:focus {
     outline: none;
 }
+
+
 
 // FOOTER
 footer {
