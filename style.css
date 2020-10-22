@@ -25,6 +25,7 @@
   min-height: 100vh;
   font-family: "Aeonik", sans-serif;
   background-color: #efeeee;
+  overflow-x: hidden;
 }
 
 a {
@@ -258,6 +259,7 @@ header .header-desk__nav ul li a {
   display: -ms-flexbox;
   display: flex;
   width: 1440px;
+  display: none;
 }
 
 .nav_dropdown .dropdown_container {
@@ -370,7 +372,12 @@ header .header-desk__nav ul li a {
           box-shadow: 0 4px 40px rgba(0, 0, 0, 0.25);
 }
 
+.who-we-are::-webkit-scrollbar {
+  display: none;
+}
+
 .who-we-are {
+  scrollbar-width: none;
   padding-bottom: 120px;
 }
 
@@ -403,7 +410,6 @@ header .header-desk__nav ul li a {
 }
 
 .who-we-are .who-we-are__container .who-we-are__row .lumex__video {
-  background: url("https://cloudcalls.com.ua/wp-content/uploads/2018/02/stock-photo-211548267.jpg");
   -webkit-box-flex: 0;
       -ms-flex: none;
           flex: none;

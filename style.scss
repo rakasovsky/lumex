@@ -14,6 +14,7 @@
 }
 
 
+
 #app {
     display: grid;
     position: relative;
@@ -21,6 +22,7 @@
     min-height: 100vh;
     font-family: "Aeonik", sans-serif;
     background-color: #efeeee;
+    overflow-x: hidden;
 }
 
 
@@ -230,7 +232,7 @@ header {
         }
     }
 }
-
+// DROPDOWN
 .nav_dropdown {
     position: absolute;
     top: 120px;
@@ -238,6 +240,8 @@ header {
     display: flex;
     width: 1440px;
 
+    display: none;
+    
     .dropdown_container {
         display: flex;
         width: 100%;
@@ -314,7 +318,11 @@ header {
     }
 }
 
+.who-we-are::-webkit-scrollbar {
+    display: none;
+}
 .who-we-are {
+    scrollbar-width: none;
     padding-bottom: 120px;
 
     .who-we-are__container {
@@ -330,7 +338,7 @@ header {
             flex-direction: row;
 
             .lumex__video {
-                background: url("https://cloudcalls.com.ua/wp-content/uploads/2018/02/stock-photo-211548267.jpg");
+                // background: url("https://cloudcalls.com.ua/wp-content/uploads/2018/02/stock-photo-211548267.jpg");
                 flex: none;
                 align-self: stretch;
                 width: 50%;
