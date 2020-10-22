@@ -16,3 +16,13 @@ catBlck.from(".cat_block",{duration:1, opacity:0, y:200, stagger:0.5});
 
 
 
+
+const lbl = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".lbl",
+        start: "top bottom"
+    }
+})
+
+lbl.from(".lbl",{duration:1, opacity:0, x:-100}),
+lbl.from(".txt", {duration:1, opacity:0, y: 100,stagger: 0.25})
