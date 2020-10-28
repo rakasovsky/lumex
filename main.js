@@ -1,3 +1,4 @@
+// GSAP
 const tl = gsap.timeline();
 
 tl.from(".lumex__content", {duration: 2, scale: 0.1,  x: 1500});
@@ -26,3 +27,57 @@ const lbl = gsap.timeline({
 
 lbl.from(".lbl",{duration:1, opacity:0, x:-100}),
 lbl.from(".txt", {duration:1, opacity:0, y: 100,stagger: 0.25})
+
+
+
+
+gsap.from(".nav_dropdown",{duration:3, opacity:0, y: -800});
+
+// GSAP
+
+
+
+// MEGA MENU
+
+let navItem = document.querySelectorAll('.nav-item');
+let navDropdown = document.querySelector('.nav_dropdown');
+
+function showDrop(){
+    navDropdown.style.display = 'block';
+}
+
+
+
+
+// 1
+// console.log(navItem.length);
+// navItem.forEach(this.addEventListener('mouseover', showDrop))
+
+
+// 2
+
+// navItem.forEach(addEventListener('mouseover', showDrop))
+
+// navItem.forEach(item => {
+//     item.addEventListener('mouseover', event => {
+//         navDropdown.style.display = 'block';
+//     })
+// })
+
+// 3
+// document.querySelectorAll('.nav_item').forEach(item => {
+//     item.addEventListener('click', event => {
+//         document.querySelector('.nav_dropdown').style.display = 'block'
+//     })
+// })
+
+
+// 4
+
+function toggleModal() {
+    navDropdown.classList.toggle("visible")
+}
+
+navItem.forEach(function (i){
+    i.addEventListener('mouseover', toggleModal)
+})
