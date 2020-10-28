@@ -30,8 +30,11 @@ lbl.from(".txt", {duration:1, opacity:0, y: 100,stagger: 0.25})
 
 
 
+const mmTl = gsap.timeline({
+    paused: true
+});
 
-gsap.from(".nav_dropdown",{duration:3, opacity:0, y: -800});
+mmTl.from(".nav_dropdown",{duration:.5, opacity:0, y: -400});
 
 // GSAP
 
@@ -39,56 +42,26 @@ gsap.from(".nav_dropdown",{duration:3, opacity:0, y: -800});
 
 // MEGA MENU
 
-// let navItem = document.querySelectorAll('.nav-item');
-// let navDropdown = document.querySelector('.nav_dropdown');
-
-// function showDrop(){
-//     navDropdown.style.display = 'block';
-// }
-
-
-
-
-// 1
-// console.log(navItem.length);
-// navItem.forEach(this.addEventListener('mouseover', showDrop))
-
-
-// 2
-
-// navItem.forEach(addEventListener('mouseover', showDrop))
-
-// navItem.forEach(item => {
-//     item.addEventListener('mouseover', event => {
-//         navDropdown.style.display = 'block';
-//     })
-// })
-
-// 3
-// document.querySelectorAll('.nav_item').forEach(item => {
-//     item.addEventListener('click', event => {
-//         document.querySelector('.nav_dropdown').style.display = 'block'
-//     })
-// })
-
-
-// 4
-
-// function toggleModal() {
-//     navDropdown.classList.toggle("visible")
-// }
-
-// navItem.forEach(function (i){
-//     i.addEventListener('mouseover', toggleModal)
-// })
+// document.querySelectorAll('.nav-item').forEach(function(li) {
+//     li.addEventListener('mouseover', function(e) {
+//     console.log('over');
+//       e.currentTarget.querySelector('.nav_dropdown').style.display = 'block';
+//     });
+//     li.addEventListener('mouseout', function(e) {
+//     console.log('out');
+//       e.currentTarget.querySelector('.nav_dropdown').style.display = 'none';
+//     });
+//   });
 
 document.querySelectorAll('.nav-item').forEach(function(li) {
     li.addEventListener('mouseover', function(e) {
     console.log('over');
       e.currentTarget.querySelector('.nav_dropdown').style.display = 'block';
+      mmTl.restart();
     });
     li.addEventListener('mouseout', function(e) {
     console.log('out');
       e.currentTarget.querySelector('.nav_dropdown').style.display = 'none';
+      mmTl.reverse();
     });
   });
