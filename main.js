@@ -30,11 +30,11 @@ lbl.from(".txt", {duration:1, opacity:0, y: 100,stagger: 0.25})
 
 
 
-const mmTl = gsap.timeline({
-    paused: true
-});
+// const mmTl = gsap.timeline({
+//     paused: true
+// });
 
-mmTl.from(".nav_dropdown",{duration:.5, opacity:0, y: -400});
+// mmTl.from(".nav_dropdown",{duration:.5, opacity:0, y: gsap.utils.random(-100, 100, true), ease: Power3.easeOut});
 
 // GSAP
 

@@ -435,10 +435,25 @@ header .header-desk__nav ul li a {
   z-index: 2;
   margin-top: 120px;
   margin-left: -12.5%;
+  position: relative;
+  height: 72vh;
 }
 
 .who-we-are .who-we-are__container .who-we-are__row .lumex__video img {
   height: 675px;
+}
+
+.who-we-are .who-we-are__container .who-we-are__row .lumex__video video {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .who-we-are .who-we-are__container .who-we-are__row .lumex__content {
