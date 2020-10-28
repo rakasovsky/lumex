@@ -39,12 +39,12 @@ gsap.from(".nav_dropdown",{duration:3, opacity:0, y: -800});
 
 // MEGA MENU
 
-let navItem = document.querySelectorAll('.nav-item');
-let navDropdown = document.querySelector('.nav_dropdown');
+// let navItem = document.querySelectorAll('.nav-item');
+// let navDropdown = document.querySelector('.nav_dropdown');
 
-function showDrop(){
-    navDropdown.style.display = 'block';
-}
+// function showDrop(){
+//     navDropdown.style.display = 'block';
+// }
 
 
 
@@ -74,10 +74,21 @@ function showDrop(){
 
 // 4
 
-function toggleModal() {
-    navDropdown.classList.toggle("visible")
-}
+// function toggleModal() {
+//     navDropdown.classList.toggle("visible")
+// }
 
-navItem.forEach(function (i){
-    i.addEventListener('mouseover', toggleModal)
-})
+// navItem.forEach(function (i){
+//     i.addEventListener('mouseover', toggleModal)
+// })
+
+document.querySelectorAll('.nav-item').forEach(function(li) {
+    li.addEventListener('mouseover', function(e) {
+    console.log('over');
+      e.currentTarget.querySelector('.nav_dropdown').style.display = 'block';
+    });
+    li.addEventListener('mouseout', function(e) {
+    console.log('out');
+      e.currentTarget.querySelector('.nav_dropdown').style.display = 'none';
+    });
+  });
