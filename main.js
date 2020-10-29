@@ -50,7 +50,7 @@ const drp = gsap.timeline({
     
 });
 drp.to('.nav_dropdown',{duration: .5, scaleY: 1, height: '70vh'});
-drp.from('.drp-list',{duration: .5, opacity: 0, y: "550%", stagger: 0.25,}, "-=1");
+drp.from('.drp-list',{duration: .5, opacity: 0, y:0 , stagger: 0.25,}, "-=1");
 drp.from('.drp_card',{duration: .5, opacity:0, x: "550%",stagger: 0.25, ease: "power4.in"}, "-=1");    
 drp.reversed(true);
 
