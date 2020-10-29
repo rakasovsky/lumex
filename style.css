@@ -269,7 +269,10 @@ header .header-desk__nav ul li a {
   display: -ms-flexbox;
   display: flex;
   width: 1440px;
-  display: none;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: top;
+          transform-origin: top;
 }
 
 .nav_dropdown .dropdown_container {

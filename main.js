@@ -35,12 +35,45 @@ lbl.from(".txt", {duration:1, opacity:0, y: 100,stagger: 0.25})
 // });
 
 // mmTl.from(".nav_dropdown",{duration:.5, opacity:0, y: gsap.utils.random(-100, 100, true), ease: Power3.easeOut});
+// mmTl.to(".nav_dropdown",{duration:.5, opacity:0, y: 0, ease: Power3.easeOut});
 
 // GSAP
 
 
 
 // MEGA MENU
+
+
+const drp = gsap.timeline({
+    defaults: {duration: 1},
+    paused: true
+    
+});
+drp.to('.nav_dropdown',{duration: .5, scaleY: 1, height: '70vh'});
+drp.from('.drp-list',{duration: .5, opacity: 0, y: "550%", stagger: 0.25,}, "-=1");
+drp.from('.drp_card',{duration: .5, opacity:0, x: "550%",stagger: 0.25, ease: "power4.in"}, "-=1");    
+drp.reversed(true);
+
+document.querySelectorAll('.nav-trigger').forEach(function(li) {
+
+li.addEventListener('mouseover', function(e) {
+    console.log('over');
+    drp.reversed(!drp.reversed());
+    if (drp.reversed())
+        drp.reverse();
+    else {
+        drp.play()
+    }
+    });
+li.addEventListener('mouseout', function(e) {
+    console.log('out');
+    drp.reverse();
+});
+})
+
+
+
+
 
 // document.querySelectorAll('.nav-item').forEach(function(li) {
 //     li.addEventListener('mouseover', function(e) {
@@ -53,15 +86,29 @@ lbl.from(".txt", {duration:1, opacity:0, y: 100,stagger: 0.25})
 //     });
 //   });
 
-document.querySelectorAll('.nav-item').forEach(function(li) {
-    li.addEventListener('mouseover', function(e) {
-    console.log('over');
-      e.currentTarget.querySelector('.nav_dropdown').style.display = 'block';
-      mmTl.restart();
-    });
-    li.addEventListener('mouseout', function(e) {
-    console.log('out');
-      e.currentTarget.querySelector('.nav_dropdown').style.display = 'none';
-      mmTl.reverse();
-    });
-  });
+// document.querySelectorAll('.nav-item').forEach(function(li) {
+
+//     const mmTl = gsap.timeline({
+//         paused: true
+//     });
+//     mmTl.from(".nav_dropdown",{duration:1, opacity:0, y: gsap.utils.random(-100, 100, true), ease: Power3.easeOut});
+
+//     li.addEventListener('mouseover', function(e) {
+//     console.log('over');
+//       e.currentTarget.querySelector('.nav_dropdown').style.display = 'block';
+//       mmTl.play();
+//     });
+//     li.addEventListener('mouseout', function(e) {
+//     console.log('out');
+//       e.currentTarget.querySelector('.nav_dropdown').style.display = 'none';
+//       mmTl.reverse();
+//     });
+
+    
+//   });
+
+
+
+  // test 
+
+

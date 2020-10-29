@@ -246,8 +246,11 @@ header {
     right: 0;
     display: flex;
     width: 1440px;
+    transform: scaleY(0);
+    transform-origin: top;
+   
 
-    display: none;
+    // display: none;
     
     .dropdown_container {
         display: flex;
