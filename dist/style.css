@@ -454,8 +454,7 @@ header .header-desk__nav ul li a {
   transition: opacity 0.1s;
 }
 .lumex__main .cloud__block2 .title .title__back div {
-  max-width: 320px;
-  margin-left: auto;
+  padding-left: 58.33333%;
 }
 .lumex__main .cloud__block3 {
   width: 25%;

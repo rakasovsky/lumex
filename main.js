@@ -79,22 +79,46 @@ const qa = gsap.timeline({
     paused: true
 })
 
-qa.to('.title__front',{duration: .5, width: "100%"})
-   .to('.title__front div', {duration: .5, y: 20, opacity:0})
-   .to('.title__front',{duration: .5, opacity: 0})
-   .to('.title__back',{duration: .5, opacity: 1},"-=1")
-   .from('.title__back div', {duration: .5, y: 20, opacity:0},"-=1")
+// qa.to('.title__front',{duration: .5, width: "100%"})
+//    .to('.title__front div', {duration: .5, y: 20, opacity:0})
+//    .to('.title__front',{duration: .5, opacity: 0})
+//    .to('.title__back',{duration: .5, opacity: 1},"-=1")
+//    .from('.title__back div', {duration: .5, y: 20, opacity:0},"-=1")
 
 
+
+// document.querySelectorAll(".cloud__block2").forEach(function(f){
+
+//     f.addEventListener('mouseover', function(e) {
+//             qa.play();
+//     })
+//     f.addEventListener('mouseout', function(e) {
+        
+//       qa.reverse();
+//     })
+// })
 
 document.querySelectorAll(".cloud__block2").forEach(function(f){
+
     f.addEventListener('mouseover', function(e) {
-        qa.play();
+        var x = e.target.closest('.cat_block');
+        var a = x.querySelector('.title__front');
+        var b = x.querySelector('.title__front div');
+        var c = x.querySelector('.title__back');
+        var d = x.querySelector('.title__back div');
+        qa.to(a, {duration: .5, width: "100%"})
+        .to(b, {duration: .5, y: 20, opacity:0})
+        .to(a, {duration: .5, opacity: 0})
+        .to(c,{duration: .5, opacity:1},"-=1")
+        .from(d, {duration: .5, y: 20, opacity:0},"-=1")  
     })
     f.addEventListener('mouseout', function(e) {
-        qa.reverse();
+        
+      qa.reverse();
     })
 })
+
+
 
 
 
