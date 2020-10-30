@@ -98,32 +98,54 @@ li.addEventListener('mouseout', function(e) {
 //     })
 // })
 
-document.querySelectorAll(".cloud__block2").forEach(function(f){
 
+// 2
+// document.querySelectorAll(".cloud__block2").forEach(function(f){
+
+//     const qa = gsap.timeline({
+//         defaults: {duration: 1},
+//         paused: true
+//     })
+
+//     f.addEventListener('mouseover', function(e) {
+//         var x = e.target.closest('.cloud__block2');
+//         var a = x.querySelector('.title__front');
+//         var b = x.querySelector('.title__front div');
+//         var c = x.querySelector('.title__back');
+//         var d = x.querySelector('.title__back div');
+//         qa.to(a, {duration: .5, width: "100%"})
+//             .to(b, {duration: .5, y: 20, opacity:0})
+//             .to(a, {duration: .5, opacity: 0})
+//             .to(c, {duration: .5, opacity:1},"-=1")
+//             .from(d, {duration: .5, y: 20, opacity:0},"-=1")
+//         qa.play();      
+//     })
+//     f.addEventListener('mouseout', function(e) {
+//       qa.reverse();
+//     })
+// })
+
+document.querySelectorAll(".cloud__block2").forEach(function (f) {
     const qa = gsap.timeline({
-        defaults: {duration: 1},
-        paused: true
-    })
-
-    f.addEventListener('mouseover', function(e) {
-        var x = e.target.closest('.cloud__block2');
-        var a = x.querySelector('.title__front');
-        var b = x.querySelector('.title__front div');
-        var c = x.querySelector('.title__back');
-        var d = x.querySelector('.title__back div');
-        qa.to(a, {duration: .5, width: "100%"})
-            .to(b, {duration: .5, y: 20, opacity:0})
-            .to(a, {duration: .5, opacity: 0})
-            .to(c, {duration: .5, opacity:1},"-=1")
-            .from(d, {duration: .5, y: 20, opacity:0},"-=1")
-        qa.play();      
-    })
-    f.addEventListener('mouseout', function(e) {
-        
+      defaults: { duration: 1 },
+      paused: true,
+    });
+    var tf = f.querySelector(".title__front");
+    var tfd = f.querySelector(".title__front div");
+    var tb = f.querySelector(".title__back");
+    var tbd = f.querySelector(".title__back div");
+    qa.to(tf, { duration: 0.5, width: "100%" })
+      .to(tfd, { duration: 0.5, y: 20, opacity: 0 })
+      .to(tf, { duration: 0.5, opacity: 0 })
+      .to(tb, { duration: 0.5, opacity: 1 }, "-=1")
+      .from(tbd, { duration: 0.5, y: 20, opacity: 0 }, "-=1");
+    f.addEventListener("mouseover", function (e) {
+      qa.play();
+    });
+    f.addEventListener("mouseout", function (e) {
       qa.reverse();
-    })
-})
-
+    });
+});
 
 
 
