@@ -91,13 +91,11 @@ document.querySelectorAll('.nav-trigger').forEach(function (li) {
     drp.reverse();
   });
 }); // Q/A CARDS 
-
-var qa = gsap.timeline({
-  defaults: {
-    duration: 1
-  },
-  paused: true
-}); // qa.to('.title__front',{duration: .5, width: "100%"})
+// const qa = gsap.timeline({
+//     defaults: {duration: 1},
+//     paused: true
+// })
+// qa.to('.title__front',{duration: .5, width: "100%"})
 //    .to('.title__front div', {duration: .5, y: 20, opacity:0})
 //    .to('.title__front',{duration: .5, opacity: 0})
 //    .to('.title__back',{duration: .5, opacity: 1},"-=1")
@@ -112,8 +110,14 @@ var qa = gsap.timeline({
 // })
 
 document.querySelectorAll(".cloud__block2").forEach(function (f) {
+  var qa = gsap.timeline({
+    defaults: {
+      duration: 1
+    },
+    paused: true
+  });
   f.addEventListener('mouseover', function (e) {
-    var x = e.target.closest('.cat_block');
+    var x = e.target.closest('.cloud__block2');
     var a = x.querySelector('.title__front');
     var b = x.querySelector('.title__front div');
     var c = x.querySelector('.title__back');
@@ -136,6 +140,7 @@ document.querySelectorAll(".cloud__block2").forEach(function (f) {
       y: 20,
       opacity: 0
     }, "-=1");
+    qa.play();
   });
   f.addEventListener('mouseout', function (e) {
     qa.reverse();
