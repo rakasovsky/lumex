@@ -72,6 +72,29 @@ li.addEventListener('mouseout', function(e) {
 })
 
 
+// Q/A CARDS 
+
+const qa = gsap.timeline({
+    defaults: {duration: 1},
+    paused: true
+})
+
+qa.to('.title__front',{duration: .5, width: "100%"})
+   .to('.title__front div', {duration: .5, y: 20, opacity:0})
+   .to('.title__front',{duration: .5, opacity: 0})
+   .to('.title__back',{duration: .5, opacity: 1},"-=1")
+   .from('.title__back div', {duration: .5, y: 20, opacity:0},"-=1")
+
+
+
+document.querySelectorAll(".cloud__block2").forEach(function(f){
+    f.addEventListener('mouseover', function(e) {
+        qa.play();
+    })
+    f.addEventListener('mouseout', function(e) {
+        qa.reverse();
+    })
+})
 
 
 

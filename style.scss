@@ -455,10 +455,14 @@ header {
                 display: flex;
                 flex-direction: column;
                 padding: 8.33333%;
-
                 color: #fff;
                 margin-left: auto;
                 width: 50%;
+
+                div {
+                    max-width: 320px;
+                    margin-left: auto;
+                }
             }
             .title__front:before {
                 content: "";
@@ -473,32 +477,39 @@ header {
                 transition: width .4s cubic-bezier(.215,.61,.355,1) .4s;
             }
             .title__back {
+                background-image: url('');
                 position: absolute;
                 padding: 16.66667%;
                 top: 0;
                 right: 0;
                 bottom: 0;
                 left: 0;
-                display: block;
+                // display: none;
                 opacity: 0;
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-position: 70% 50%;
                 -webkit-transition: opacity .1s;
                 transition: opacity .1s;
+
+                div {
+                    max-width: 320px;
+                    margin-left: auto;
+                }
               }
         }
-        .title:hover {
-            .title__front {
-                width: 100%;
-                opacity: 0;
-            }
-            .title__back {
-                opacity: 1;
-            }
-        }
+        // .title:hover {
+        //     .title__front {
+        //         width: 100%;
+        //         opacity: 0;
+        //     }
+        //     .title__back {
+        //         opacity: 1;
+        //     }
+        // }
     }
     .cloud__block3 {
+        
         width: 25%;
         padding-top: 25%;
         align-self: stretch;
@@ -540,11 +551,11 @@ header {
               transition: opacity .1s;
             }
         }
-        .title:hover {
-            .title__back{
-                opacity: 1;
-            }
-        }
+        // .title:hover {
+        //     .title__back{
+        //         opacity: 1;
+        //     }
+        // }
         
     }
     .cloud__block4 {
