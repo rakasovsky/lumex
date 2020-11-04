@@ -170,7 +170,7 @@ p {
 }
 
 .fs42 {
-  font-size: clamp(24, 3vw, 42px);
+  font-size: clamp(24px, 3vw, 42px);
 }
 
 .fs80 {
