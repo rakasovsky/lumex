@@ -948,7 +948,11 @@ header {
     background: #231f20;
 
     .wrapper {
-        display: flex
+        display: flex;
+        
+        .contact_form {
+            max-width: 800px;
+        }
     }
 }
 
@@ -1052,6 +1056,75 @@ footer {
     
     }
     
+}
+
+@media (max-width:2560px) {
+    .lumex__main {
+        .cloud__block2{
+            .title {
+                .title__front { 
+                     div {
+                        max-width: 425px;
+                    }
+                }
+            }
+        }
+    }
+    .lumex__main .cloud__block2 .title .title__back div {
+        padding: 10%;
+        width: 655px;
+    } 
+    
+    // Category PAGE
+    .category .category_container .category_text {
+        bottom: 5%;
+    }
+}
+
+@media (max-width:1440px) { 
+    .fs24 {
+        font-size: 21px;
+    }
+    .fs28 {
+        font-size: 24px;
+    }
+
+    .who-we-are .who-we-are__container .who-we-are__row .lumex__content {
+        width: 52.5%;
+    }
+    .who-we-are .who-we-are__container .who-we-are__row .lumex__content .content {
+        margin-left: 30%;
+    }
+    .who-we-are .who-we-are__container .who-we-are__row .lumex__content .content .bot .transform90{
+        transform: rotate(90deg) translateX(-20px);
+    }
+    .lumex__main {
+        width: 1440px;
+    }
+
+    .lumex__main .cloud__block2 .title .title__front div {
+        max-width: 240px;
+    }
+    .lumex__main .cloud__block2 .title .title__back div {
+        width: 370px;
+    }
+
+    .cloud__calls-main {
+        max-width: 1440px;
+    }
+
+    .card_wrapper .left {
+        width: 25%;
+    }
+
+    .product_card {
+        width: 45%;
+    }
+
+    footer {
+        max-width: 1440px;
+    }
+   
 }
 
 

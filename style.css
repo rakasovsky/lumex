@@ -1176,6 +1176,10 @@ header .header-desk__nav ul li a {
   display: flex;
 }
 
+.contact_container .wrapper .contact_form {
+  max-width: 800px;
+}
+
 .contact_map {
   position: relative;
 }
@@ -1299,6 +1303,59 @@ footer .footer_bottom .copyright p {
 
 footer .footer_bottom .copyright p:last-child {
   border-left: 1px solid #a8a8a8;
+}
+
+@media (max-width: 2560px) {
+  .lumex__main .cloud__block2 .title .title__front div {
+    max-width: 425px;
+  }
+  .lumex__main .cloud__block2 .title .title__back div {
+    padding: 10%;
+    width: 655px;
+  }
+  .category .category_container .category_text {
+    bottom: 5%;
+  }
+}
+
+@media (max-width: 1440px) {
+  .fs24 {
+    font-size: 21px;
+  }
+  .fs28 {
+    font-size: 24px;
+  }
+  .who-we-are .who-we-are__container .who-we-are__row .lumex__content {
+    width: 52.5%;
+  }
+  .who-we-are .who-we-are__container .who-we-are__row .lumex__content .content {
+    margin-left: 30%;
+  }
+  .who-we-are .who-we-are__container .who-we-are__row .lumex__content .content .bot .transform90 {
+    -webkit-transform: rotate(90deg) translateX(-20px);
+            transform: rotate(90deg) translateX(-20px);
+  }
+  .lumex__main {
+    width: 1440px;
+  }
+  .lumex__main .cloud__block2 .title .title__front div {
+    max-width: 240px;
+  }
+  .lumex__main .cloud__block2 .title .title__back div {
+    width: 370px;
+  }
+  .cloud__calls-main {
+    max-width: 1440px;
+  }
+  .card_wrapper .left {
+    width: 25%;
+  }
+  .product_card {
+    width: 45%;
+  }
+  footer {
+    max-width: 1440px;
+  }
 }
 
 @media (max-width: 500px) {
