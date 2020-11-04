@@ -153,24 +153,28 @@ button {
   color: #ff0000;
 }
 
+p {
+  font-size: clamp(12px, 1.2vw, 16px);
+}
+
 .fs15 {
   font-size: 15px;
 }
 
 .fs24 {
-  font-size: 24px;
+  font-size: clamp(13px, 2vw, 24px);
 }
 
 .fs28 {
-  font-size: 28px;
+  font-size: clamp(15px, 2.2vw, 28px);
 }
 
 .fs42 {
-  font-size: 42px;
+  font-size: clamp(24, 3vw, 42px);
 }
 
 .fs80 {
-  font-size: 80px;
+  font-size: clamp(40px, 5vw, 80px);
   line-height: 1.125em;
   margin-bottom: 0.75em;
 }
@@ -513,6 +517,8 @@ header .header-desk__nav ul li a {
 .cloud__calls-main {
   padding-top: 200px;
   background: #282124;
+  display: flex;
+  flex-direction: column;
   color: white;
 }
 .cloud__calls-main .slogan p:last-child {
@@ -629,7 +635,7 @@ header .header-desk__nav ul li a {
 }
 .lumex_partners-wrapper .partners_slideshow {
   align-items: center;
-  display: flex;
+  display: none;
   justify-content: center;
   max-width: 80%;
   overflow: hidden;
@@ -786,7 +792,7 @@ header .header-desk__nav ul li a {
 }
 .category_diogram .diogram_left {
   width: 20%;
-  margin-left: 8%;
+  margin-left: 8.5%;
   margin-right: 12.5%;
   padding-top: 115px;
 }
@@ -818,6 +824,7 @@ header .header-desk__nav ul li a {
 }
 
 .contact_container {
+  display: flex;
   padding-top: 200px;
   padding-bottom: 200px;
   position: relative;
@@ -826,6 +833,8 @@ header .header-desk__nav ul li a {
 }
 .contact_container .wrapper {
   display: flex;
+  margin-left: 8.5%;
+  margin-right: 8.5%;
 }
 .contact_container .wrapper .contact_form {
   max-width: 800px;
@@ -939,16 +948,11 @@ footer .footer_bottom .copyright p:last-child {
   }
 }
 @media (max-width: 1440px) {
-  .fs24 {
-    font-size: 21px;
+  .nav_dropdown {
+    width: 100%;
   }
-
-  .fs28 {
-    font-size: 24px;
-  }
-
-  .who-we-are .who-we-are__container .who-we-are__row .lumex__content {
-    width: 52.5%;
+  .nav_dropdown .product_card .card-content {
+    padding: 30px 10%;
   }
 
   .who-we-are .who-we-are__container .who-we-are__row .lumex__content .content {
@@ -959,20 +963,12 @@ footer .footer_bottom .copyright p:last-child {
     transform: rotate(90deg) translateX(-20px);
   }
 
-  .lumex__main {
-    width: 1440px;
-  }
-
   .lumex__main .cloud__block2 .title .title__front div {
     max-width: 240px;
   }
 
   .lumex__main .cloud__block2 .title .title__back div {
     width: 370px;
-  }
-
-  .cloud__calls-main {
-    max-width: 1440px;
   }
 
   .card_wrapper .left {
@@ -982,12 +978,124 @@ footer .footer_bottom .copyright p:last-child {
   .product_card {
     width: 45%;
   }
-
-  footer {
-    max-width: 1440px;
+}
+@media (max-width: 1366px) {
+  .category .category_container .category_text {
+    bottom: -20%;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 1024px) {
+  .h_title {
+    margin-bottom: 18px;
+  }
+
+  .who-we-are .who-we-are__container .who-we-are__row .lumex__content {
+    width: 62.5%;
+  }
+
+  .who-we-are .who-we-are__container .who-we-are__row .lumex__content .content .bot .transform90 {
+    white-space: nowrap;
+  }
+
+  .lumex__main .cloud__block1 {
+    margin-left: 4.5%;
+    width: 55%;
+  }
+  .lumex__main .cloud__block1 .fs42 {
+    font-size: 26px;
+  }
+
+  .lumex__main .cloud__block2 {
+    width: 33.33333%;
+    padding-top: 33.33333%;
+  }
+
+  .lumex__main .cloud__block3 {
+    width: 33.33333%;
+  }
+
+  .lumex__main .cloud__block4 {
+    width: 66.666666%;
+  }
+
+  .lumex__main .cloud__block2 .title .title__front {
+    width: 100%;
+  }
+
+  .lumex__main .cloud__block4 .fs42 {
+    font-size: 26px;
+  }
+
+  .cloud__calls-main .how_it_works img {
+    width: 30%;
+    height: 280px;
+  }
+
+  .cloud__calls-main .how_it_works .text_wrapper {
+    width: 66.33333%;
+  }
+
+  .our_products .card_wrapper {
+    flex-direction: column;
+  }
+  .our_products .card_wrapper .left {
+    width: 50%;
+    margin-bottom: 42px;
+  }
+  .our_products .card_wrapper .right {
+    width: 100%;
+  }
+
+  footer .footer_container {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  footer .footer_container .footer_about {
+    width: 50%;
+    padding-left: 10%;
+  }
+
+  footer .footer_container .footer_contacts {
+    width: 50%;
+    padding-left: 19%;
+    margin: 0;
+  }
+
+  footer .footer_bottom .copyright {
+    margin-right: 7.33333%;
+  }
+
+  .category .category_container {
+    height: 70vh;
+  }
+  .category .category_container .category_cover {
+    height: 50vh;
+  }
+  .category .category_container .category_text {
+    bottom: 0%;
+    width: 80%;
+  }
+
+  .category_diogram .diogram_left {
+    padding-top: 0px;
+  }
+
+  .category_diogram .diogram_left {
+    width: 40%;
+  }
+
+  .sub_wrapper .card_wrapper {
+    flex-direction: column;
+  }
+  .sub_wrapper .card_wrapper .left {
+    width: 50%;
+    margin-bottom: 42px;
+  }
+  .sub_wrapper .card_wrapper .right {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
   header .header-desk__nav {
     display: none;
   }
@@ -1000,6 +1108,9 @@ footer .footer_bottom .copyright p:last-child {
     justify-content: space-between;
     position: sticky;
     top: 0;
+  }
+  header .mob_logo {
+    margin-right: 25px;
   }
   header #menuToggle {
     display: flex;
@@ -1069,5 +1180,64 @@ footer .footer_bottom .copyright p:last-child {
   }
   header #menuToggle input:checked ~ ul {
     transform: none;
+  }
+
+  .who-we-are .who-we-are__container .who-we-are__row .lumex__content {
+    width: 73%;
+  }
+
+  .who-we-are .who-we-are__container .who-we-are__row .lumex__video {
+    width: 40%;
+  }
+
+  .who-we-are .who-we-are__container .who-we-are__row .lumex__content .content .bot {
+    margin-right: 5%;
+  }
+
+  .who-we-are .who-we-are__container .who-we-are__row .lumex__content .content .bot .transform90 {
+    height: 30px;
+    transform: rotate(90deg) translateX(50px);
+  }
+
+  .wrapper {
+    margin-left: 8.5%;
+    margin-right: 8.5%;
+  }
+
+  .cloud__calls-main .wrapper {
+    width: 85%;
+  }
+
+  .lumex__main .cloud__block2 .title .title__back div {
+    padding: 16%;
+  }
+
+  .footer_top {
+    flex-wrap: wrap;
+  }
+  .footer_top .footer-logo {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .footer_top .footer_container .footer_about {
+    padding-left: 9%;
+  }
+
+  .category .category_container {
+    height: 74vh;
+  }
+
+  .contact_container .wrapper {
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+
+  .contact_map {
+    height: 70vh;
+  }
+  .contact_map #map {
+    width: 100% !important;
+    margin-left: 0 !important;
   }
 }
