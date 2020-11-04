@@ -4,7 +4,6 @@
 var tl = gsap.timeline();
 tl.from(".lumex__content", {
   duration: 2,
-  scale: 0.1,
   x: 1500
 });
 tl.from(".content", {

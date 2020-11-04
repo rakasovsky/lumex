@@ -1,7 +1,7 @@
 // GSAP
 const tl = gsap.timeline();
 
-tl.from(".lumex__content", {duration: 2, scale: 0.1,  x: 1500});
+tl.from(".lumex__content", {duration: 2,   x: 1500});
 tl.from(".content",{duration:2, opacity:0, y:200, stagger: 0.25});
 gsap.from(".lumex__video", {duration: 2, scale: 0.3,  x: -1500});
 
