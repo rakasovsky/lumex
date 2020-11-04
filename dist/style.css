@@ -933,7 +933,7 @@ footer .footer_bottom .copyright p:last-child {
   border-left: 1px solid #a8a8a8;
 }
 
-@media (max-width: 2560px) {
+@media screen and (min-width: 2560px) {
   .lumex__main .cloud__block2 .title .title__front div {
     max-width: 425px;
   }
@@ -1164,7 +1164,7 @@ footer .footer_bottom .copyright p:last-child {
   }
   header #menu {
     position: absolute;
-    width: 500px;
+    width: 795px;
     height: 100vh;
     margin: -50px 0 0 -50px;
     padding: 125px 50px 50px 50px;

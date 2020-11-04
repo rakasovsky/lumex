@@ -1068,7 +1068,7 @@ footer {
     
 }
 
-@media (max-width:2560px) {
+@media screen and (min-width:2560px) {
     .lumex__main {
         .cloud__block2{
             .title {
@@ -1341,7 +1341,7 @@ footer {
         
           #menu {
             position: absolute;
-            width: 500px;
+            width: 795px;
             height: 100vh;
         
             margin: -50px 0 0 -50px;
