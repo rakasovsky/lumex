@@ -45,7 +45,7 @@ const JoC = gsap.timeline({
         start: "top bottom"
     }
 })
-MoP.from(".txt3", {duration:1, opacity:0, y: 100,stagger: 0.25})
+JoC.from(".txt3", {duration:1, opacity:0, y: 100,stagger: 0.25})
 
 // const mmTl = gsap.timeline({
 //     paused: true
