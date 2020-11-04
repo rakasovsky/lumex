@@ -29,6 +29,23 @@ lbl.from(".lbl",{duration:1, opacity:0, x:-100}),
 lbl.from(".txt", {duration:1, opacity:0, y: 100,stagger: 0.25})
 
 
+const MoP = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".mop",
+        start: "top bottom"
+    }
+})
+MoP.from(".fl", {duration:.5, opacity:0, x: -400})
+MoP.from(".txt2", {duration:1, opacity:0, y: 100,stagger: 0.25})
+
+
+const JoC = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".joc",
+        start: "top bottom"
+    }
+})
+MoP.from(".txt3", {duration:1, opacity:0, y: 100,stagger: 0.25})
 
 // const mmTl = gsap.timeline({
 //     paused: true
@@ -125,7 +142,7 @@ li.addEventListener('mouseout', function(e) {
 //     })
 // })
 
-document.querySelectorAll(".cloud__block2").forEach(function (f) {
+document.querySelectorAll(".cat_block").forEach(function (f) {
     const qa = gsap.timeline({
       defaults: { duration: 1 },
       paused: true,

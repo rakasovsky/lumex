@@ -45,6 +45,35 @@ lbl.from(".lbl", {
   opacity: 0,
   y: 100,
   stagger: 0.25
+});
+var MoP = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".mop",
+    start: "top bottom"
+  }
+});
+MoP.from(".fl", {
+  duration: .5,
+  opacity: 0,
+  x: -400
+});
+MoP.from(".txt2", {
+  duration: 1,
+  opacity: 0,
+  y: 100,
+  stagger: 0.25
+});
+var JoC = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".joc",
+    start: "top bottom"
+  }
+});
+MoP.from(".txt3", {
+  duration: 1,
+  opacity: 0,
+  y: 100,
+  stagger: 0.25
 }); // const mmTl = gsap.timeline({
 //     paused: true
 // });
@@ -132,7 +161,7 @@ document.querySelectorAll('.nav-trigger').forEach(function (li) {
 //     })
 // })
 
-document.querySelectorAll(".cloud__block2").forEach(function (f) {
+document.querySelectorAll(".cat_block").forEach(function (f) {
   var qa = gsap.timeline({
     defaults: {
       duration: 1

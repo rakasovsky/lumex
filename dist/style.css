@@ -426,22 +426,11 @@ header .header-desk__nav ul li a {
   max-width: 320px;
   margin-left: auto;
 }
-.lumex__main .cloud__block2 .title .title__front:before {
-  content: "";
-  display: block;
-  position: absolute;
-  background-color: #282124;
-  right: 50%;
-  top: 0;
-  width: 0;
-  height: 100%;
-  -webkit-transition: width 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s;
-  transition: width 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s;
-}
 .lumex__main .cloud__block2 .title .title__back {
   background-image: url("");
   position: absolute;
-  padding: 16.66667%;
+  display: flex;
+  justify-content: flex-end;
   top: 0;
   right: 0;
   bottom: 0;
@@ -454,7 +443,8 @@ header .header-desk__nav ul li a {
   transition: opacity 0.1s;
 }
 .lumex__main .cloud__block2 .title .title__back div {
-  padding-left: 58.33333%;
+  padding: 10%;
+  width: 490px;
 }
 .lumex__main .cloud__block3 {
   width: 25%;
