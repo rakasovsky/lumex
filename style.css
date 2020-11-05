@@ -721,6 +721,10 @@ header .header-desk__nav ul li a {
   margin-left: 8%;
 }
 
+.lumex__main_mobile {
+  display: none;
+}
+
 .wrapper {
   width: 75%;
   margin-left: 12.5%;
@@ -1639,6 +1643,149 @@ footer .footer_bottom .copyright p:last-child {
   .contact_map #map {
     width: 100% !important;
     margin-left: 0 !important;
+  }
+}
+
+@media (max-width: 414px) {
+  .who-we-are .who-we-are__container .who-we-are__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .who-we-are .who-we-are__container .who-we-are__row .lumex__video {
+    width: 100%;
+  }
+  .who-we-are .who-we-are__container .who-we-are__row .lumex__content {
+    width: 85%;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+  }
+  .who-we-are .who-we-are__container .who-we-are__row .lumex__content .content {
+    margin-left: 14%;
+  }
+  .who-we-are .who-we-are__container .who-we-are__row .transform90 {
+    display: none;
+  }
+  .lumex__main {
+    display: none;
+  }
+  .lumex__main_mobile {
+    padding-top: 200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .lumex__main_mobile .blocks_horizont {
+    overflow: hidden;
+    display: block;
+  }
+  .lumex__main_mobile .blocks_horizont .blocks_scroll {
+    width: 100%;
+    overflow-x: scroll;
+    margin-bottom: -30px;
+    padding-bottom: 30px;
+  }
+  .lumex__main_mobile .blocks_horizont .blocks_scroll .blocks_row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    -ms-flex-item-align: stretch;
+        align-self: stretch;
+    width: 213.33333%;
+  }
+  .lumex__main_mobile .blocks_horizont .blocks_scroll .blocks_row .cloud__block {
+    width: 31.25%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    min-height: 66.66vw;
+  }
+  .lumex__main_mobile .blocks_horizont .blocks_scroll .blocks_row .cloud__block .title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    position: relative;
+    -ms-flex-line-pack: stretch;
+        align-content: stretch;
+    width: 100%;
+    overflow: hidden;
+  }
+  .lumex__main_mobile .blocks_horizont .blocks_scroll .blocks_row .cloud__block .title .title__front {
+    padding: 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+  }
+  .lumex__main_mobile .blocks_horizont .blocks_scroll .short {
+    width: 140%;
+    margin-top: 6.66667%;
+    direction: ltr;
+  }
+  .lumex__main_mobile .blocks_horizont .blocks_scroll .short .cloud__block {
+    width: 47.61905%;
   }
 }
 /*# sourceMappingURL=style.css.map */

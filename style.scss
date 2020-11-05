@@ -588,7 +588,9 @@ header {
         }
     }
 }
-
+.lumex__main_mobile {
+    display: none;
+}
 .wrapper {
     width: 75%;
     margin-left: 12.5%;
@@ -1419,7 +1421,7 @@ footer {
     }
 }
 
-@media (max-width:500px) {
+@media (max-width:414px) {
     
 
     // .mob_menu {
@@ -1508,4 +1510,93 @@ footer {
     //     }
 
     //   }
+    .who-we-are .who-we-are__container .who-we-are__row {
+        flex-direction: column;
+        .lumex__video {
+            width: 100%;
+        }
+        .lumex__content {
+            width: 85%;
+            padding-top: 75px;
+            padding-bottom: 75px;
+            position: absolute;
+            bottom: 0;
+            z-index: 2;
+            .content {
+                margin-left: 14%;
+            }
+        }
+        .transform90{
+            display: none;
+        }
+    }
+   
+    .lumex__main{
+            display: none;
+    }
+    .lumex__main_mobile {
+        padding-top: $pt;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        justify-content: space-between;
+        flex-direction: row;
+
+        .blocks_horizont {
+            overflow: hidden;
+            display: block;
+            .blocks_scroll{
+                width: 100%;
+                overflow-x: scroll;
+                margin-bottom: -30px;
+                padding-bottom: 30px;
+                .blocks_row{
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: stretch;
+                    justify-content: space-between;
+                    flex-direction: row;
+                    flex: none;
+                    align-self: stretch;
+                    width: 213.33333%;
+                    .cloud__block{
+                        width: 31.25%;
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: stretch;
+                        justify-content: space-between;
+                        flex-direction: row;
+                        min-height: 66.66vw;
+                        .title{
+                            display: flex;
+                            flex-wrap: wrap;
+                            align-items: stretch;
+                            justify-content: flex-start;
+                            flex-direction: row;
+                            position: relative;
+                            align-content: stretch;
+                            width: 100%;
+                            overflow: hidden;
+                            .title__front{
+                                padding: 10%;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-between;
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+                .short {
+                    width: 140%;
+                    margin-top: 6.66667%;
+                    direction: ltr;
+                    .cloud__block {
+                        width: 47.61905%;
+                    }
+                }
+            }
+        }
+    }
+    
 }
