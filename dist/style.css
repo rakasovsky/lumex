@@ -617,6 +617,10 @@ header .header-desk__nav ul li a {
   flex-grow: 1;
 }
 
+.product_card:hover img {
+  transform: scale(1.2);
+}
+
 .prod_grey {
   background: #efeeee;
   color: #000;

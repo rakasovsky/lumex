@@ -882,6 +882,11 @@ header .header-desk__nav ul li a {
           flex-grow: 1;
 }
 
+.product_card:hover img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
 .prod_grey {
   background: #efeeee;
   color: #000;
