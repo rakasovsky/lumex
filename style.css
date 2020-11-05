@@ -506,7 +506,7 @@ header .header-desk__nav ul li a {
 }
 
 .lumex__main {
-  padding-top: 200px;
+  padding-top: calc(100% / 9);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -732,7 +732,7 @@ header .header-desk__nav ul li a {
 }
 
 .cloud__calls-main {
-  padding-top: 200px;
+  padding-top: calc(100% / 9);
   background: #282124;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -749,7 +749,7 @@ header .header-desk__nav ul li a {
 }
 
 .cloud__calls-main .how_it_works {
-  padding-top: 200px;
+  padding-top: calc(100% / 9);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -773,7 +773,7 @@ header .header-desk__nav ul li a {
 }
 
 .cloud__calls-main .our_products {
-  padding-top: 200px;
+  padding-top: calc(100% / 9);
 }
 
 .cloud__calls-main .our_products:before {
@@ -792,8 +792,8 @@ header .header-desk__nav ul li a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: calc(100% / 9);
+  padding-bottom: calc(100% / 9);
   margin: 0 auto;
 }
 
@@ -893,7 +893,7 @@ header .header-desk__nav ul li a {
 }
 
 .lumex_partners-wrapper {
-  padding-top: 200px;
+  padding-top: calc(100% / 9);
 }
 
 .lumex_partners-wrapper .partners_text {
@@ -997,7 +997,7 @@ header .header-desk__nav ul li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 200px;
+  padding-top: calc(100% / 9);
   padding-bottom: 200px;
 }
 
@@ -1122,11 +1122,11 @@ header .header-desk__nav ul li a {
 }
 
 .category_diogram {
-  padding-top: 200px;
+  padding-top: calc(100% / 9);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-bottom: 200px;
+  padding-bottom: calc(100% / 9);
 }
 
 .category_diogram .diogram_left {
@@ -1179,8 +1179,8 @@ header .header-desk__nav ul li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: calc(100% / 9);
+  padding-bottom: calc(100% / 9);
   position: relative;
   overflow: hidden;
   background: #231f20;
@@ -1251,7 +1251,7 @@ input, textarea {
 }
 
 footer {
-  padding-top: 200px;
+  padding-top: calc(100% / 9);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1674,7 +1674,7 @@ footer .footer_bottom .copyright p:last-child {
     display: none;
   }
   .lumex__main_mobile {
-    padding-top: 200px;
+    padding-top: calc(100% / 9);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1840,6 +1840,12 @@ footer .footer_bottom .copyright p:last-child {
     width: 100%;
     margin-bottom: 42px;
   }
+  .our_products .card_wrapper .right .product_card p {
+    font-size: 15px;
+  }
+  .our_products .card_wrapper .right .product_card .c_title {
+    font-size: 20px;
+  }
   .lumex_team {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -1861,18 +1867,100 @@ footer .footer_bottom .copyright p:last-child {
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
-  .lumex_team .team_right .vertical-button span {
+  .lumex_team .team_right span {
     -webkit-writing-mode: lr;
         -ms-writing-mode: lr;
             writing-mode: lr;
   }
-  .lumex_team .team_right .vertical-button svg {
+  .lumex_team .team_right svg {
     margin: 0;
   }
   .lumex_team .team_left {
     margin-top: 42px;
     margin-left: 12.5%;
     width: 75%;
+  }
+  .category .category_container {
+    height: 85vh;
+  }
+  .category .category_container .category_text {
+    padding: 60px 12.66667% 110px;
+    bottom: 1%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .category .category_container .category_text .vertical-button {
+    top: unset;
+    bottom: 0;
+    width: 100%;
+    padding: 0 20px 0 55px;
+    min-height: 32px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .category .category_container .category_text .vertical-button span {
+    -webkit-writing-mode: lr;
+        -ms-writing-mode: lr;
+            writing-mode: lr;
+  }
+  .category .category_container .category_text .vertical-button svg {
+    margin: 0;
+  }
+  .category .category_container .category_text .transform90 {
+    display: none;
+  }
+  .category_diogram {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .category_diogram .diogram_left {
+    width: 85%;
+    margin-left: 12.5%;
+    margin-bottom: 40px;
+  }
+  .category_diogram .diogram_right {
+    width: 87.5%;
+    margin-left: 12.5%;
+  }
+  .sub_wrapper .card_wrapper {
+    width: 88%;
+  }
+  .sub_wrapper .card_wrapper .left {
+    width: 90%;
+    margin-left: 7%;
+  }
+  .sub_wrapper .card_wrapper .right {
+    width: 100%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .sub_wrapper .card_wrapper .right .product_card {
+    width: 100%;
+    margin-bottom: 42px;
+  }
+  .sub_wrapper .card_wrapper .right .product_card p {
+    font-size: 15px;
+  }
+  .sub_wrapper .card_wrapper .right .product_card .c_title {
+    font-size: 20px;
+  }
+  .lumex_info {
+    margin-left: 0%;
+    padding: 30px;
+    bottom: 0;
+    top: unset;
   }
 }
 /*# sourceMappingURL=style.css.map */

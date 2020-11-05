@@ -119,6 +119,9 @@ button {
 $pt: 200px;
 
 $pb: 200px;
+$pt: calc(100% / 9);
+
+$pb: calc(100% / 9);
 // colors
 
 $primary-color: #ffda00;
@@ -1644,6 +1647,12 @@ footer {
             .product_card {
                 width: 100%;
                 margin-bottom: 42px;
+                p{
+                    font-size: 15px;
+                }
+                .c_title {
+                    font-size: 20px;
+                }
             }
         }
     }
@@ -1659,10 +1668,10 @@ footer {
                 flex-direction: row; 
                 justify-content: space-around;
             }
-                .vertical-button span {
+                span {
                     writing-mode:lr; 
             }
-            .vertical-button svg {
+             svg {
                 margin: 0;
             }
         }
@@ -1671,5 +1680,79 @@ footer {
             margin-left: 12.5%;
             width: 75%;
         }
+    }
+
+    // Category PAGE
+    .category .category_container {
+        height: 85vh;
+    }
+    .category .category_container .category_text {
+        padding: 60px 12.66667% 110px;
+        bottom: 1%;
+        display: flex;
+        flex-direction: column;
+
+        .vertical-button{
+            top: unset;
+            bottom: 0;
+            width: 100%;
+            padding: 0 20px 0 55px;
+            min-height: 32px;
+            flex-direction: row; 
+            justify-content: space-between;
+
+            span {
+                writing-mode: lr;
+            }
+            svg {
+                margin: 0;
+            }
+        }
+        .transform90{
+            display: none;
+        }
+    }
+    .category_diogram {
+        flex-direction: column;
+        .diogram_left {
+            width: 85%;
+            margin-left: 12.5%;
+            margin-bottom: 40px;
+        }
+        .diogram_right {
+            width: 87.5%;
+            margin-left: 12.5%;
+        }
+    }
+    .sub_wrapper{
+        .card_wrapper {
+            width: 88%;
+            .left {
+                 width: 90%;
+                 margin-left: 7%;
+             }
+             .right {
+                 width: 100%;
+                 flex-wrap: wrap;
+                 .product_card {
+                     width: 100%;
+                     margin-bottom: 42px;
+                     p{
+                         font-size: 15px;
+                     }
+                     .c_title {
+                         font-size: 20px;
+                     }
+                 }
+             }
+         }
+    }
+
+    //Contact Page
+    .lumex_info {
+        margin-left: 0%;
+        padding: 30px;
+        bottom: 0;
+        top: unset;
     }
 }
