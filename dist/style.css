@@ -270,11 +270,11 @@ header .header-desk__nav ul li a {
   display: block;
   background: #2a2a2a;
 }
-.nav_dropdown .dropdown_container .right div {
+.nav_dropdown .dropdown_container .right .cards_wrapper {
   width: 100%;
   overflow-x: scroll;
 }
-.nav_dropdown .dropdown_container .right div .inner_container {
+.nav_dropdown .dropdown_container .right .cards_wrapper .inner_container {
   display: flex;
   align-items: stretch;
   justify-content: space-between;
@@ -283,13 +283,9 @@ header .header-desk__nav ul li a {
   align-self: stretch;
   width: 113.33333%;
 }
-.nav_dropdown .dropdown_container .right div .product_card {
+.nav_dropdown .dropdown_container .right .cards_wrapper .product_card {
   width: 31.25%;
   display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-  justify-content: space-between;
-  flex-direction: row;
   min-height: 26.66vw;
   margin: 45px 30px 30px;
   color: #e9ecee;
@@ -297,8 +293,9 @@ header .header-desk__nav ul li a {
   color: #6b6b6b;
   background-color: #333;
   transition: all 0.5s ease;
+  position: relative;
 }
-.nav_dropdown .dropdown_container .right div .active {
+.nav_dropdown .dropdown_container .right .cards_wrapper .active {
   opacity: 1;
   transition: all 0.5s ease;
   color: #e9ecee;

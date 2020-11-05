@@ -302,9 +302,10 @@ header {
             display: block;
             background: #2a2a2a;
 
-             div {
+             .cards_wrapper {
                 width: 100%;
                 overflow-x: scroll;
+
                 .inner_container {
                     display: flex;
                     // flex-wrap: wrap;
@@ -318,10 +319,6 @@ header {
                 .product_card {
                     width: 31.25%;
                     display: flex;
-                    flex-wrap: wrap;
-                    align-items: stretch;
-                    justify-content: space-between;
-                    flex-direction: row;
                     min-height: 26.66vw;
                     margin: 45px 30px 30px;
                     color: #e9ecee;
@@ -329,9 +326,9 @@ header {
                     color: #6b6b6b;
                     background-color: #333;
                     transition: all .5s ease;
+                    position: relative;
                 }
                 .active {
-                   
                     opacity: 1;
                     transition: all .5s ease;
                     color: #e9ecee;
