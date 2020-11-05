@@ -1422,6 +1422,9 @@ footer {
         }
 
     }
+    .lumex_form .form_button {
+        margin: 100px 0;
+    }
 }
 
 @media (max-width:414px) {
@@ -1771,9 +1774,35 @@ footer {
         width: 100%;
         height: 65vh;
     }
-
+    .lumex_button {
+        margin: 0px 5px 0 0;
+    }
+    .product_card .card-content {
+        padding: 60px 6.66667%;
+    }
     .category .category_container .category_text {
         bottom: 0%;
         width: 85%;
     }
 }
+
+@media (max-width: 320px) {
+    .who-we-are .who-we-are__container .who-we-are__row .lumex__video {
+        height: 80vh;
+    }
+    footer .footer_container .footer_about {
+        width: 100%;
+        padding-left: 10%;
+    }
+    footer .footer_container .footer_contacts {
+        width: 100%;
+        padding-left: 10%;
+        margin: 40px 0;
+    }
+    .lumex_info {
+        padding: 5px;
+    }
+    .lumex_form .form_button {
+        margin: 40px 0;
+    }
+ }
