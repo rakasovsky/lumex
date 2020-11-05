@@ -296,42 +296,48 @@ header {
             }
         
         }
-
+        
         .right {
-            height: 100%;
-            display: flex;
-            overflow-x: auto;
-            overflow-y: hidden;
+            overflow: hidden;
+            display: block;
             background: #2a2a2a;
-            flex: 4 1;
 
-            .inner_container {
-                display: flex;
-                overflow-x: auto;
-                overflow-y: hidden;
-                scrollbar-width: none
-            }
-            .inner_container::-webkit-scrollbar {
-                display: none;
-              }
-            .product_card {
-                margin: 45px 30px 30px;
-                flex: 1 0 33%;
-                color: #e9ecee;
-                box-shadow: 0 4px 40px rgba(0,0,0,.25);
-                opacity: .5;
-                color: #6b6b6b;
-                background-color: #333;
-                transition: all .5s ease;
-            }
-            .active {
-                margin: 45px 30px 30px;
-                flex: 1 0 33%;
-                opacity: 1;
-                transition: all .5s ease;
-                color: #e9ecee;
-                box-shadow: 0 4px 40px rgba(0,0,0,.25);
-            }
+             div {
+                width: 100%;
+                overflow-x: scroll;
+                .inner_container {
+                    display: flex;
+                    // flex-wrap: wrap;
+                    align-items: stretch;
+                    justify-content: space-between;
+                    flex-direction: row;
+                    flex: none;
+                    align-self: stretch;
+                    width: 113.33333%;
+                }
+                .product_card {
+                    width: 31.25%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: stretch;
+                    justify-content: space-between;
+                    flex-direction: row;
+                    min-height: 26.66vw;
+                    margin: 45px 30px 30px;
+                    color: #e9ecee;
+                    box-shadow: 0 4px 40px rgba(0,0,0,.25);
+                    color: #6b6b6b;
+                    background-color: #333;
+                    transition: all .5s ease;
+                }
+                .active {
+                   
+                    opacity: 1;
+                    transition: all .5s ease;
+                    color: #e9ecee;
+                    box-shadow: 0 4px 40px rgba(0,0,0,.25);
+                }
+             }
         }
     }
 }
@@ -1121,9 +1127,7 @@ footer {
     .who-we-are .who-we-are__container .who-we-are__row .lumex__content .content .bot .transform90{
         transform: rotate(90deg) translateX(-20px);
     }
-    // .lumex__main {
-    //     width: 1440px;
-    // }
+  
     
 
     .lumex__main .cloud__block2 .title .title__front div {
@@ -1133,9 +1137,7 @@ footer {
         width: 370px;
     }
 
-    // .cloud__calls-main {
-    //     max-width: 1440px;
-    // }
+    
 
     .card_wrapper .left {
         width: 25%;
@@ -1145,9 +1147,7 @@ footer {
         width: 45%;
     }
 
-    // footer {
-    //     max-width: 1440px;
-    // }
+ 
    
 }
 
@@ -1807,5 +1807,8 @@ footer {
     }
     .lumex_form .form_button {
         margin: 40px 0;
+    }
+    .category .category_container {
+        height: 100vh;
     }
  }
