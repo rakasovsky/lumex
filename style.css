@@ -1659,7 +1659,7 @@ footer .footer_bottom .copyright p:last-child {
   }
 }
 
-@media (max-width: 414px) {
+@media (max-width: 500px) {
   .who-we-are {
     padding-bottom: 0px;
   }
@@ -1877,6 +1877,7 @@ footer .footer_bottom .copyright p:last-child {
     width: 100%;
     padding-top: 60%;
     margin-left: 12%;
+    background-size: cover;
   }
   .lumex_team .team_right .vertical-button {
     width: 100%;

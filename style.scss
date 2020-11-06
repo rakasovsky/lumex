@@ -1427,7 +1427,7 @@ footer {
     }
 }
 
-@media (max-width:414px) {
+@media (max-width:500px) {
     
 
     // .mob_menu {
@@ -1674,6 +1674,7 @@ footer {
             width: 100%;
             padding-top: 60%;
             margin-left: 12%;
+            background-size: cover;
             .vertical-button {
                 width: 100%;
                 min-height: 32px;
