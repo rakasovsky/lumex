@@ -1523,6 +1523,12 @@ footer .footer_bottom .copyright p:last-child {
      -ms-user-select: none;
          user-select: none;
   }
+  header .dropdown_container_mobile {
+    display: none;
+  }
+  header .is-Open .dropdown_container_mobile {
+    display: block;
+  }
   header #menuToggle input {
     display: -webkit-box;
     display: -ms-flexbox;

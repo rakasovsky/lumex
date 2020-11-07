@@ -1,6 +1,54 @@
 "use strict";
 
-// GSAP
+// Mobile menu dropdown
+// document.querySelectorAll('.m_li').forEach(function(li) { 
+//     var drp = li.querySelector(".dropdown_container_mobile");
+//     li.addEventListener('click', function (e){
+//         drp.classList.toggle("hidden");
+//     })
+//    })
+// document.querySelectorAll('.m_li').forEach(function(li) { 
+//     const thisItem = this.parentNode;
+//     var drp = li.querySelector(".dropdown_container_mobile");
+//     li.addEventListener('click', function (e){
+//        if (thisItem == li) {
+//             drp.classList.add("hidden");
+//        } else {
+//             drp.classList.toggle("hidden");
+//        }
+//     })
+//    })
+function initAccordion(accordionElem) {
+  //when panel is clicked, handlePanelClick is called.          
+  function handlePanelClick(event) {
+    showPanel(event.currentTarget);
+  } //Hide currentPanel and show new panel.  
+
+
+  function showPanel(panel) {
+    //Hide current one. First time it will be null. 
+    var expandedPanel = accordionElem.querySelector(".is-Open");
+
+    if (expandedPanel) {
+      expandedPanel.classList.remove("is-Open");
+    } //Show new one
+
+
+    panel.classList.add("is-Open");
+  }
+
+  var allPanelElems = accordionElem.querySelectorAll(".m_li");
+
+  for (var i = 0, len = allPanelElems.length; i < len; i++) {
+    allPanelElems[i].addEventListener("click", handlePanelClick);
+  } //By Default Show first panel
+
+
+  showPanel(allPanelElems[0]);
+}
+
+initAccordion(document.getElementById("menu")); // GSAP
+
 var tl = gsap.timeline();
 tl.from(".lumex__content", {
   duration: 2,
@@ -81,84 +129,40 @@ JoC.from(".txt3", {
 // GSAP
 // MEGA MENU
 
-var drp = gsap.timeline({
-  defaults: {
-    duration: 1
-  },
-  paused: true
-});
-drp.to('.nav_dropdown', {
-  duration: .5,
-  scaleY: 1,
-  height: '70vh'
-});
-drp.from('.drp-list', {
-  duration: .5,
-  opacity: 0,
-  y: 0,
-  stagger: 0.25
-}, "-=1");
-drp.from('.drp_card', {
-  duration: .5,
-  opacity: 0,
-  x: "550%",
-  stagger: 0.25,
-  ease: "power4.in"
-}, "-=1");
-drp.reversed(true);
 document.querySelectorAll('.nav-trigger').forEach(function (li) {
+  var drp = gsap.timeline({
+    defaults: {
+      duration: 1
+    },
+    paused: true
+  });
+  var dr = li.querySelector('.nav_dropdown');
+  var dp = li.querySelector('.drp-list');
+  var dx = li.querySelectorAll('.drp_card');
+  drp.to(dr, {
+    duration: .5,
+    scaleY: 1,
+    height: '70vh'
+  }).from(dp, {
+    duration: .5,
+    opacity: 0,
+    y: 0,
+    stagger: 0.25
+  }, "-=1").from(dx, {
+    duration: .5,
+    opacity: 0,
+    x: "550%",
+    stagger: 0.25,
+    ease: "power4.in"
+  }, "-=1").reversed(true);
   li.addEventListener('mouseover', function (e) {
-    console.log('over');
-    drp.reversed(!drp.reversed());
-    if (drp.reversed()) drp.reverse();else {
-      drp.play();
-    }
+    drp.play();
   });
   li.addEventListener('mouseout', function (e) {
     console.log('out');
     drp.reverse();
   });
 }); // Q/A CARDS 
-// const qa = gsap.timeline({
-//     defaults: {duration: 1},
-//     paused: true
-// })
-// qa.to('.title__front',{duration: .5, width: "100%"})
-//    .to('.title__front div', {duration: .5, y: 20, opacity:0})
-//    .to('.title__front',{duration: .5, opacity: 0})
-//    .to('.title__back',{duration: .5, opacity: 1},"-=1")
-//    .from('.title__back div', {duration: .5, y: 20, opacity:0},"-=1")
-// document.querySelectorAll(".cloud__block2").forEach(function(f){
-//     f.addEventListener('mouseover', function(e) {
-//             qa.play();
-//     })
-//     f.addEventListener('mouseout', function(e) {
-//       qa.reverse();
-//     })
-// })
-// 2
-// document.querySelectorAll(".cloud__block2").forEach(function(f){
-//     const qa = gsap.timeline({
-//         defaults: {duration: 1},
-//         paused: true
-//     })
-//     f.addEventListener('mouseover', function(e) {
-//         var x = e.target.closest('.cloud__block2');
-//         var a = x.querySelector('.title__front');
-//         var b = x.querySelector('.title__front div');
-//         var c = x.querySelector('.title__back');
-//         var d = x.querySelector('.title__back div');
-//         qa.to(a, {duration: .5, width: "100%"})
-//             .to(b, {duration: .5, y: 20, opacity:0})
-//             .to(a, {duration: .5, opacity: 0})
-//             .to(c, {duration: .5, opacity:1},"-=1")
-//             .from(d, {duration: .5, y: 20, opacity:0},"-=1")
-//         qa.play();      
-//     })
-//     f.addEventListener('mouseout', function(e) {
-//       qa.reverse();
-//     })
-// })
 
 document.querySelectorAll(".cat_block").forEach(function (f) {
   var qa = gsap.timeline({
@@ -195,30 +199,4 @@ document.querySelectorAll(".cat_block").forEach(function (f) {
   f.addEventListener("mouseout", function (e) {
     qa.reverse();
   });
-}); // document.querySelectorAll('.nav-item').forEach(function(li) {
-//     li.addEventListener('mouseover', function(e) {
-//     console.log('over');
-//       e.currentTarget.querySelector('.nav_dropdown').style.display = 'block';
-//     });
-//     li.addEventListener('mouseout', function(e) {
-//     console.log('out');
-//       e.currentTarget.querySelector('.nav_dropdown').style.display = 'none';
-//     });
-//   });
-// document.querySelectorAll('.nav-item').forEach(function(li) {
-//     const mmTl = gsap.timeline({
-//         paused: true
-//     });
-//     mmTl.from(".nav_dropdown",{duration:1, opacity:0, y: gsap.utils.random(-100, 100, true), ease: Power3.easeOut});
-//     li.addEventListener('mouseover', function(e) {
-//     console.log('over');
-//       e.currentTarget.querySelector('.nav_dropdown').style.display = 'block';
-//       mmTl.play();
-//     });
-//     li.addEventListener('mouseout', function(e) {
-//     console.log('out');
-//       e.currentTarget.querySelector('.nav_dropdown').style.display = 'none';
-//       mmTl.reverse();
-//     });
-//   });
-// test
+});

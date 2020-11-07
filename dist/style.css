@@ -1132,6 +1132,12 @@ footer .footer_bottom .copyright p:last-child {
     -webkit-user-select: none;
     user-select: none;
   }
+  header .dropdown_container_mobile {
+    display: none;
+  }
+  header .is-Open .dropdown_container_mobile {
+    display: block;
+  }
   header #menuToggle input {
     display: flex;
     width: 40px;

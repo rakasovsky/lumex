@@ -1296,7 +1296,12 @@ footer {
             -webkit-user-select: none;
             user-select: none;
           }
-        
+          .dropdown_container_mobile {
+            display : none;
+          }
+          .is-Open .dropdown_container_mobile {
+            display : block;
+          }
           #menuToggle input {
             display: flex;
             width: 40px;
