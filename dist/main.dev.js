@@ -142,7 +142,7 @@ document.querySelectorAll('.nav-trigger').forEach(function (li) {
   drp.to(dr, {
     duration: .5,
     scaleY: 1,
-    height: '70vh'
+    height: '65vh'
   }).from(dp, {
     duration: .5,
     opacity: 0,

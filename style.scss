@@ -301,6 +301,7 @@ header {
             overflow: hidden;
             display: block;
             background: #2a2a2a;
+            // padding: 0 2% 0 1%;
 
              .cards_wrapper {
                 width: 100%;
@@ -314,10 +315,10 @@ header {
                     flex-direction: row;
                     flex: none;
                     align-self: stretch;
-                    width: 113.33333%;
+                    width: 125%;
                 }
                 .product_card {
-                    width: 31.25%;
+                    width: 33%;
                     display: flex;
                     min-height: 26.66vw;
                     margin: 45px 30px 30px;
@@ -327,6 +328,9 @@ header {
                     background-color: #333;
                     transition: all .5s ease;
                     position: relative;
+                    .card-content {
+                        padding: 40px 7%;
+                    }
                 }
                 .active {
                     opacity: 1;
@@ -335,6 +339,9 @@ header {
                     box-shadow: 0 4px 40px rgba(0,0,0,.25);
                 }
              }
+             .cards_wrapper::-webkit-scrollbar {
+                display: none;
+              }
         }
     }
 }

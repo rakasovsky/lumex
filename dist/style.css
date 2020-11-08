@@ -281,10 +281,10 @@ header .header-desk__nav ul li a {
   flex-direction: row;
   flex: none;
   align-self: stretch;
-  width: 113.33333%;
+  width: 125%;
 }
 .nav_dropdown .dropdown_container .right .cards_wrapper .product_card {
-  width: 31.25%;
+  width: 33%;
   display: flex;
   min-height: 26.66vw;
   margin: 45px 30px 30px;
@@ -295,11 +295,17 @@ header .header-desk__nav ul li a {
   transition: all 0.5s ease;
   position: relative;
 }
+.nav_dropdown .dropdown_container .right .cards_wrapper .product_card .card-content {
+  padding: 40px 7%;
+}
 .nav_dropdown .dropdown_container .right .cards_wrapper .active {
   opacity: 1;
   transition: all 0.5s ease;
   color: #e9ecee;
   box-shadow: 0 4px 40px rgba(0, 0, 0, 0.25);
+}
+.nav_dropdown .dropdown_container .right .cards_wrapper::-webkit-scrollbar {
+  display: none;
 }
 
 .mob_menu {
