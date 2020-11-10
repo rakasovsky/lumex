@@ -1,3 +1,4 @@
+
 // Mobile menu dropdown
 
 
@@ -152,6 +153,26 @@ document.querySelectorAll('.nav-trigger').forEach(function(li) {
         console.log('out');
         drp.reverse();
     });
+
+    document.querySelectorAll(".list_trigger").forEach(function (h) {
+
+        let card_container = document.querySelectorAll('.inner_container');
+     
+    
+        h.addEventListener("mouseover", function () {
+            card_container.forEach(function(i){
+                i.classList.add('active_trigger');
+            })
+            this.classList.add('active');
+        })
+        h.addEventListener("mouseleave", function () {
+            card_container.forEach(function(i){
+                i.classList.remove('active_trigger');
+            })
+            this.classList.remove('active');
+        })
+    })
+
 })
 
 
@@ -181,3 +202,4 @@ document.querySelectorAll(".cat_block").forEach(function (f) {
 });
 
 
+// console.clear();

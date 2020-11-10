@@ -162,6 +162,21 @@ document.querySelectorAll('.nav-trigger').forEach(function (li) {
     console.log('out');
     drp.reverse();
   });
+  document.querySelectorAll(".list_trigger").forEach(function (h) {
+    var card_container = document.querySelectorAll('.inner_container');
+    h.addEventListener("mouseover", function () {
+      card_container.forEach(function (i) {
+        i.classList.add('active_trigger');
+      });
+      this.classList.add('active');
+    });
+    h.addEventListener("mouseleave", function () {
+      card_container.forEach(function (i) {
+        i.classList.remove('active_trigger');
+      });
+      this.classList.remove('active');
+    });
+  });
 }); // Q/A CARDS 
 
 document.querySelectorAll(".cat_block").forEach(function (f) {
@@ -199,4 +214,4 @@ document.querySelectorAll(".cat_block").forEach(function (f) {
   f.addEventListener("mouseout", function (e) {
     qa.reverse();
   });
-});
+}); // console.clear();
