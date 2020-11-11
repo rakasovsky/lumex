@@ -9,7 +9,17 @@
 <body>
     <div id="app"> 
         <div class="sticky">
-            <div class="contacts"><span class="fs20">+380 66 108-2211</span> <span class="fs20">г.Харьков, ул.Сумская 26</span> </div>
+            <div class="contacts">
+                 <p>
+                    <span >+380 66 108-2211</span> 
+                    <span >г.Харьков, ул.Сумская 26</span> 
+                 </p>
+                 <p>
+                    <span >+380 57 714-3074</span> 
+                    <span >info@lumex.in.ua</span> 
+                 </p>
+                
+            </div>
             <div class="button"><svg class="arrow" enable-background="new 0 0 21 14" viewBox="0 0 21 14"><path d="m14.4 1-.7.7 5 4.8h-18.7v1h18.8l-5.2 5.5.8.7 6.3-6.7z" fill="currentColor"></path></svg></div>
         </div> 
         <!-- HEADER -->
@@ -24,17 +34,17 @@
                         <div class="nav_dropdown">
                             <div class="dropdown_container">
                                 <div class="left drp-list">
-                                    <a href="category.html" class="">Телефония</a>
+                                    <a href="category.html">Телефония</a>
                                     <ul>
-                                        <li>Облачная атс</li>
-                                        <li class="list_trigger">Ip атс</li>
-                                        <li class="list_trigger">Аналоговая атс</li>
+                                        <li data-link="cloud_tel">Облачная атс</li>
+                                        <li class="list_trigger" data-link="ip_tel">Ip атс</li>
+                                        <li class="list_trigger" data-link="analog_tel">Аналоговая атс</li>
                                     </ul>
                                 </div>
                                 <div class="right">
                                     <div class="cards_wrapper">
                                         <div class="inner_container">
-                                            <div class="product_card drp_card">
+                                            <div class="product_card drp_card" data-card="cloud_tel">
                                                 <div class="card-img">
                                                     <div></div>
                                                     <img src="assets/img/ukraine.jpg" alt="">
@@ -53,7 +63,7 @@
                                                     </a>
                                                 </div>
                                             </div>
-                                            <div class="product_card drp_card list_trigger active">
+                                            <div class="product_card drp_card list_trigger " data-card="ip_tel">
                                                 <div class="card-img">
                                                     <div></div>
                                                     <img src="assets/img/ukraine.jpg" alt="">
@@ -72,7 +82,7 @@
                                                     </a>
                                                 </div>
                                             </div>
-                                            <div class="product_card drp_card list_trigger">
+                                            <div class="product_card drp_card list_trigger" data-card="analog_tel">
                                                 <div class="card-img">
                                                     <div></div>
                                                     <img src="assets/img/ukraine.jpg" alt="">
@@ -108,8 +118,8 @@
                                 <div class="left drp-list">
                                     <a href="category.html" class="">Видеонаблюдение</a>
                                     <ul>
-                                        <li>Облачная атс</li>
-                                        <li class="list_trigger">Ip атс</li>
+                                        <li data-link="">Облачная атс</li>
+                                        <li class="list_trigger" data-link="ip_">Ip атс</li>
                                         <li class="list_trigger">Аналоговая атс</li>
                                     </ul>
                                 </div>
@@ -190,6 +200,7 @@
             <!-- MOBILE MENU -->
 
             <div class="mob_menu">
+                <a href="index.html" class="mob_logo"><img src="assets/img/logo1.png" alt=""></a>
                 <nav role="navigation">
                     <div id="menuToggle">
                         <input type="checkbox" />
@@ -197,26 +208,24 @@
                         <span></span>
                         <span></span>
                         <ul id="menu">
-                            <li class="m_li">Телефония
+                            <li class="m_li">Телефония<div>▾</div>
                                 <ul class="dropdown_container_mobile">
-                                    <li class="m_li"><a href="/category.html">Телефония</a></li>
-                                    <li class="m_li"><a href="/category.html">Телефония</a></li>
-                                    <li class="m_li"><a href="/contacts.html">Телефония</a></li>
+                                    <li><a href="/category.html">Телефония</a></li>
+                                    <li><a href="/category.html">Телефония</a></li>
+                                    <li><a href="/contacts.html">Телефония</a></li>
                                 </ul>
                             </li>
-                            <li class="m_li">Видеонаблюдение
+                            <li class="m_li">Видеонаблюдение<div>▾</div>
                                 <ul class="dropdown_container_mobile">
-                                    <li class="m_li"><a href="/category.html">Видеонаблюдение</a></li>
-                                    <li class="m_li"><a href="/category.html">Видеонаблюдение</a></li>
-                                    <li class="m_li"><a href="/contacts.html">Видеонаблюдение</a></li>
+                                    <li><a href="/category.html">Видеонаблюдение</a></li>
+                                    <li><a href="/category.html">Видеонаблюдение</a></li>
+                                    <li><a href="/contacts.html">Видеонаблюдение</a></li>
                                 </ul>
                             </li>
                             <li class="m_li"><a href="/contacts.html">Контакты</a></li>
                         </ul>
                     </div>
                 </nav>
-               
-                <a href="index.html" class="mob_logo"><img src="assets/img/logo1.png" alt=""></a>
             </div>
         </header>
         <!-- HEADER -->
@@ -233,13 +242,13 @@
                         <div class="content">
                             <div></div>
                             <div>
-                                <p class="fs28">Welcome to a world of</p>
+                                <p class="fs28">Системы безопасности и связи</p>
                                 <p class="fs80"><span class="lumex">L</span>umex</p>
                             </div>
                             <div class="bot">
                                 <p class="fs24">
-                                    Enterprise Artificial Intelligence® for<br>
-                                     Manufacturing & Supply Chain
+                                    Комплексные решения, максимально адаптированные под индивидуальные<br>
+                                    потребности клиента
                                 </p>
                                 <div class="transform90">
                                     <span class="fs15">ROMA / ROMAN</span>
@@ -267,8 +276,8 @@
                 <div class="title">
                     <div class="title__front dark-grey">
                         <div>
-                            <p class="label fc_grey">Cloudcalls</p>
-                            <p class="fs24">Нужно ли тратить деньги на оборудование и его настройку, когда можно использовать сервис?</p>
+                            <!-- <p class="label fc_grey">Cloudcalls</p> -->
+                            <p class="fs24">Нужно ли тратить деньги на оборудование и его настройку, когда можно заказать сервис?</p>
                         </div>
                     </div>
                     <div class="title__back" style="background-image:url('//images.ctfassets.net/0vdg6equhogq/2AY2fl8lCmt98uMM9RnXhA/5deb7e15716de90b95b57bacc524546b/stat-bg-stranded-inventory.jpg')">

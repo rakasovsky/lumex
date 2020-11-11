@@ -44,9 +44,10 @@ function initAccordion(accordionElem){
        if (expandedPanel){
            expandedPanel.classList.remove("is-Open");
        }
-  
        //Show new one
-       panel.classList.add("is-Open");
+       if (expandedPanel !== panel) {
+        panel.classList.add("is-Open");
+      }
   
     }
   
@@ -56,7 +57,7 @@ function initAccordion(accordionElem){
     }
   
     //By Default Show first panel
-    showPanel(allPanelElems[0])
+    // showPanel(allPanelElems[0])
   
   }
   
@@ -154,24 +155,43 @@ document.querySelectorAll('.nav-trigger').forEach(function(li) {
         drp.reverse();
     });
 
-    document.querySelectorAll(".list_trigger").forEach(function (h) {
+    // li.querySelectorAll(".list_trigger").forEach(function (h) {
 
-        let card_container = document.querySelectorAll('.inner_container');
+    //     let card_container = document.querySelectorAll('.inner_container');
      
     
-        h.addEventListener("mouseover", function () {
-            card_container.forEach(function(i){
-                i.classList.add('active_trigger');
-            })
-            this.classList.add('active');
-        })
-        h.addEventListener("mouseleave", function () {
-            card_container.forEach(function(i){
-                i.classList.remove('active_trigger');
-            })
-            this.classList.remove('active');
-        })
-    })
+    //     h.addEventListener("mouseover", function () {
+    //         card_container.forEach(function(i){
+    //             i.classList.add('active_trigger');
+    //         })
+    //         this.classList.add('active');
+    //     })
+    //     h.addEventListener("mouseleave", function () {
+    //         card_container.forEach(function(i){
+    //             i.classList.remove('active_trigger');
+    //         })
+    //         this.classList.remove('active');
+    //     })
+    // })
+    li.querySelectorAll(".list_trigger").forEach(function (h) {
+        /*
+          Both hovered link and div, which correponds to this link have the same value of attribute.
+          Example: <li data-link="ip-card">...</li>, <div data-card="ip-card">...</li>
+        */
+          let linkName = h.getAttribute('data-link');
+          let card_container = document.querySelector('data-card="'+linkName+'"');
+      
+          h.addEventListener("mouseover", function () {
+              card_container.scrollIntoView(); //maybe scrollIntoViewIfNeeded()
+              this.classList.add('active'); //TODO? change just to hovered style: li.list_trigger:hover {...}
+          })
+          card_container.addEventListener("mouseover", function () {
+              card_container.scrollIntoView(); //maybe scrollIntoViewIfNeeded()
+          })
+          h.addEventListener("mouseleave", function () {
+              this.classList.remove('active');
+          })
+      })
 
 })
 

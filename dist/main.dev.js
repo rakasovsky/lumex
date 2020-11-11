@@ -34,7 +34,9 @@ function initAccordion(accordionElem) {
     } //Show new one
 
 
-    panel.classList.add("is-Open");
+    if (expandedPanel !== panel) {
+      panel.classList.add("is-Open");
+    }
   }
 
   var allPanelElems = accordionElem.querySelectorAll(".m_li");
@@ -42,9 +44,8 @@ function initAccordion(accordionElem) {
   for (var i = 0, len = allPanelElems.length; i < len; i++) {
     allPanelElems[i].addEventListener("click", handlePanelClick);
   } //By Default Show first panel
+  // showPanel(allPanelElems[0])
 
-
-  showPanel(allPanelElems[0]);
 }
 
 initAccordion(document.getElementById("menu")); // GSAP
@@ -161,19 +162,38 @@ document.querySelectorAll('.nav-trigger').forEach(function (li) {
   li.addEventListener('mouseout', function (e) {
     console.log('out');
     drp.reverse();
-  });
-  document.querySelectorAll(".list_trigger").forEach(function (h) {
-    var card_container = document.querySelectorAll('.inner_container');
+  }); // li.querySelectorAll(".list_trigger").forEach(function (h) {
+  //     let card_container = document.querySelectorAll('.inner_container');
+  //     h.addEventListener("mouseover", function () {
+  //         card_container.forEach(function(i){
+  //             i.classList.add('active_trigger');
+  //         })
+  //         this.classList.add('active');
+  //     })
+  //     h.addEventListener("mouseleave", function () {
+  //         card_container.forEach(function(i){
+  //             i.classList.remove('active_trigger');
+  //         })
+  //         this.classList.remove('active');
+  //     })
+  // })
+
+  li.querySelectorAll(".list_trigger").forEach(function (h) {
+    /*
+      Both hovered link and div, which correponds to this link have the same value of attribute.
+      Example: <li data-link="ip-card">...</li>, <div data-card="ip-card">...</li>
+    */
+    var linkName = h.getAttribute('data-link');
+    var card_container = document.querySelector('data-card="' + linkName + '"');
     h.addEventListener("mouseover", function () {
-      card_container.forEach(function (i) {
-        i.classList.add('active_trigger');
-      });
-      this.classList.add('active');
+      card_container.scrollIntoView(); //maybe scrollIntoViewIfNeeded()
+
+      this.classList.add('active'); //TODO? change just to hovered style: li.list_trigger:hover {...}
+    });
+    card_container.addEventListener("mouseover", function () {
+      card_container.scrollIntoView(); //maybe scrollIntoViewIfNeeded()
     });
     h.addEventListener("mouseleave", function () {
-      card_container.forEach(function (i) {
-        i.classList.remove('active_trigger');
-      });
       this.classList.remove('active');
     });
   });
