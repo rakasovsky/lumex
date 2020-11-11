@@ -162,7 +162,7 @@ button {
 }
 
 .lumex {
-  color: #ba1f25;
+  color: #ff0000;
 }
 
 p {
@@ -203,10 +203,14 @@ p {
   z-index: 666;
   background: #2a2a2a;
 }
+.sticky .sticky_container {
+  display: flex;
+  margin-left: 8.33333%;
+  padding-top: 10px;
+}
 .sticky .contacts {
   width: 100%;
-  padding: 20px 70px 20px 0;
-  margin-left: 8.33333%;
+  padding: 20px 70px 20px 50px;
   color: #fff;
   line-height: 1.3;
 }
@@ -652,7 +656,7 @@ header .header-desk__nav ul li a {
   flex-direction: column;
   position: relative;
   height: 100%;
-  width: 46%;
+  width: 30%;
   color: #fff;
   background-color: #333;
 }
@@ -891,6 +895,9 @@ header .header-desk__nav ul li a {
 .category_sub {
   display: flex;
   flex-direction: column;
+}
+.category_sub .product_card {
+  width: 46%;
 }
 
 .divider {

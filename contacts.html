@@ -8,28 +8,56 @@
 </head>
 <body>
     <div id="app">
+        <div class="sticky">
+            <div class="sticky_container">
+                <a href="index.html">
+                    <img src="assets/img/logo1.png" alt="">
+                </a>
+                <div class="contacts">
+                    <p>
+                        <span >+380 66 108-2211</span> 
+                        <span >г.Харьков, ул.Сумская 26</span> 
+                    </p>
+                    <p>
+                        <span >+380 57 714-3074</span> 
+                        <span >info@lumex.in.ua</span> 
+                    </p>
+                    
+                </div>
+            </div>
+            <a href="contacts.html"><div class="button"><svg class="arrow" enable-background="new 0 0 21 14" viewBox="0 0 21 14"><path d="m14.4 1-.7.7 5 4.8h-18.7v1h18.8l-5.2 5.5.8.7 6.3-6.7z" fill="currentColor"></path></svg></div></a>
+        </div> 
+        <!-- HEADER -->
         <header>
-            <a href="index.html" class="header-logo"><img src="assets/img/logo1.png" alt=""></a>
+            <p  class="header-logo">
+                <!-- <img src="assets/img/logo1.png" alt=""> -->
+                <!-- <svg 
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="199px" height="70px">
+                    <image  x="0px" y="0px" width="199px" height="70px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMcAAABGCAMAAABPN3CJAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAANlBMVEX/////AAAzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzP/AAAzMzP///+1pxKCAAAAD3RSTlMAAABMQJGz33Jm/VrJg6HadPhDAAAAAWJLR0QAiAUdSAAAAAd0SU1FB+QLCw8VD02G+ZwAAALNSURBVGje7dptk6MgDADgvdBaRO3y/3/ttRbyAqi4w8rNTfKpVYs8QILt9Ou7SXx1D3WoQx3qUEcfx58Y6lCHOtShDnWoQx3qUIc61KEOdZxymE+AjHC0vkOmFDd2grd+w/PtHP4TEmLC0df5OxwHNSNjeJ14hNeWMeL5Kx1+PFI4s+eITTn6wBAO3eFKh7vtMwa/62C9DjGR7EqHn3cZ1h84cBXFT7CVdqnD76XI+8p9B9zjO4Sv8YCrHXsp4o4d6zV0j/huut6xnSLr4j9y8BmAhc/OxY7NFPn00Gw1Ax8HzwiIxlsPx0aKhMsOHaxCyep1uaOcIq7Sgb1fkt3kekcpRWLvjh1Ye5Pd/XpHIUVi+lY4sPbyjO/jyFLE+BMOrLafmDo68OZZz2ocljMG6Olw4pLBlxzzgCEdWHvfcevqECnCx7e8DyaOkc7QCu3j8EshOWodNIFsXjs5KEXceQfSbX+HS8f2hANX4rO/I6SI9T9wsPrW37GmiPE/cCx0Zu7owLI50ci63HG3GImDE8ffc8hNbsocU4Q4So4pd2zugyKj3C84ZlovFGERzKyDuJhwnS9Q70iWom3veIZ1I+4fBv/JO5gk93uV1zvmQvK0ddhkiHg9sqKDstg6OOGIm7kLoxZrb0MHJiB9U8JHCJAdFJvfdMbh8B5eXJg7ToVw4DDbZDZej6Wyg3yRL3DCEVucxcvGDurdYxnNuNCDqUkcLEVmKDts9js1r7lGTE1jB9+hRCyQOnDuHGw4ZITffURSxEX7aO7IigkNebZgHCVHtQMnXJYu29xRhMxQchhKjmrHwDrOssy1dxQgMxQda4rg81GVY2T9XiMus3t7R5YjC2w4XqNLPwFVOWLdoLrusc3mDjB8lxtir0sF1WUd2nXIQisK+wAN//fKmn++h+7x5N/XtjaGeocrNBCP2f/u/7vqUIc61PGPO/4C+R2O3vMbZvgAAAAASUVORK5CYII=" />
+                </svg> -->
+            </p>
             <nav class="header-desk__nav">
                 <ul>
                   <li class="nav-item">
                     <div class="nav-trigger">
-                        <a href="category.html">Телефония</a>
+                        <a href="category.html">Телефония</a><span>▾</span>
                         <!-- DROPDOWN -->
                         <div class="nav_dropdown">
                             <div class="dropdown_container">
                                 <div class="left drp-list">
-                                    <a href="category.html" class="">Телефония</a>
+                                    <a href="category.html">Телефония</a>
                                     <ul>
-                                        <li>Облачная атс</li>
-                                        <li>Ip атс</li>
-                                        <li>Аналоговая атс</li>
+                                        <li data-link="cloud_tel">Облачная атс</li>
+                                        <li class="list_trigger" data-link="ip_tel">Ip атс</li>
+                                        <li class="list_trigger" data-link="analog_tel">Аналоговая атс</li>
                                     </ul>
                                 </div>
                                 <div class="right">
-                                    <div>
+                                    <div class="cards_wrapper">
                                         <div class="inner_container">
-                                            <div class="product_card drp_card">
+                                            <div class="product_card drp_card" data-card="cloud_tel">
                                                 <div class="card-img">
                                                     <div></div>
                                                     <img src="assets/img/ukraine.jpg" alt="">
@@ -48,7 +76,7 @@
                                                     </a>
                                                 </div>
                                             </div>
-                                            <div class="product_card drp_card active">
+                                            <div class="product_card drp_card list_trigger " data-card="ip_tel">
                                                 <div class="card-img">
                                                     <div></div>
                                                     <img src="assets/img/ukraine.jpg" alt="">
@@ -67,7 +95,7 @@
                                                     </a>
                                                 </div>
                                             </div>
-                                            <div class="product_card drp_card">
+                                            <div class="product_card drp_card list_trigger" data-card="analog_tel">
                                                 <div class="card-img">
                                                     <div></div>
                                                     <img src="assets/img/ukraine.jpg" alt="">
@@ -96,20 +124,20 @@
                   </li>
                   <li class="nav-item">
                     <div class="nav-trigger">
-                        <a href="category.html">Видеонаблюдение</a>
+                        <a href="category.html">Видеонаблюдение</a><span>▾</span>
                         <!-- DROPDOWN -->
                         <div class="nav_dropdown">
                             <div class="dropdown_container">
                                 <div class="left drp-list">
                                     <a href="category.html" class="">Видеонаблюдение</a>
                                     <ul>
-                                        <li>Облачная атс</li>
-                                        <li>Ip атс</li>
-                                        <li>Аналоговая атс</li>
+                                        <li data-link="">Облачная атс</li>
+                                        <li class="list_trigger" data-link="ip_">Ip атс</li>
+                                        <li class="list_trigger">Аналоговая атс</li>
                                     </ul>
                                 </div>
                                 <div class="right">
-                                    <div>
+                                    <div class="cards_wrapper">
                                         <div class="inner_container">
                                             <div class="product_card drp_card active">
                                                 <div class="card-img">
@@ -130,7 +158,7 @@
                                                     </a>
                                                 </div>
                                             </div>
-                                            <div class="product_card drp_card">
+                                            <div class="product_card drp_card list_trigger">
                                                 <div class="card-img">
                                                     <div></div>
                                                     <img src="assets/img/ukraine.jpg" alt="">
@@ -149,7 +177,7 @@
                                                     </a>
                                                 </div>
                                             </div>
-                                            <div class="product_card drp_card">
+                                            <div class="product_card drp_card list_trigger">
                                                 <div class="card-img">
                                                     <div></div>
                                                     <img src="assets/img/ukraine.jpg" alt="">
@@ -185,6 +213,7 @@
             <!-- MOBILE MENU -->
 
             <div class="mob_menu">
+                <a href="index.html" class="mob_logo"><img src="assets/img/logo1.png" alt=""></a>
                 <nav role="navigation">
                     <div id="menuToggle">
                         <input type="checkbox" />
@@ -192,22 +221,27 @@
                         <span></span>
                         <span></span>
                         <ul id="menu">
-                            <li><a href="/portfolio" class="m_li">Портфолио</a></li>
-                            <li><a href="#" class="m_li dropbtn2">Услуги</a>
-                                <ul class="dropdown_container">
-                                    <li class="m_li"><a href="/category.html">Телефония</a></li>
-                                    <li class="m_li"><a href="/category.html">Видеонаблюдение</a></li>
-                                    <li class="m_li"><a href="/contacts.html">Контакты</a></li>
+                            <li class="m_li">Телефония<div>▾</div>
+                                <ul class="dropdown_container_mobile">
+                                    <li><a href="/category.html">Телефония</a></li>
+                                    <li><a href="/category.html">Телефония</a></li>
+                                    <li><a href="/contacts.html">Телефония</a></li>
                                 </ul>
                             </li>
-                            <li><a href="/about" class="m_li">О нас</a></li>
-                            <li><a href="/contacts" class="m_li">Контакты</a></li>
+                            <li class="m_li">Видеонаблюдение<div>▾</div>
+                                <ul class="dropdown_container_mobile">
+                                    <li><a href="/category.html">Видеонаблюдение</a></li>
+                                    <li><a href="/category.html">Видеонаблюдение</a></li>
+                                    <li><a href="/contacts.html">Видеонаблюдение</a></li>
+                                </ul>
+                            </li>
+                            <li class="m_li"><a href="/contacts.html">Контакты</a></li>
                         </ul>
                     </div>
                 </nav>
-                <a href="index.html" class="mob_logo"><img src="assets/img/logo1.png" alt=""></a>
             </div>
         </header>
+        <!-- HEADER -->
 
         <div class="top">
         </div>
