@@ -184,15 +184,15 @@ document.querySelectorAll('.nav-trigger').forEach(function (li) {
       Example: <li data-link="ip-card">...</li>, <div data-card="ip-card">...</li>
     */
     var linkName = h.getAttribute('data-link');
-    var card_container = document.querySelector('data-card="' + linkName + '"');
+    var card_container = document.querySelector('[data-card="' + linkName + '"]');
     h.addEventListener("mouseover", function () {
       card_container.scrollIntoView(); //maybe scrollIntoViewIfNeeded()
 
       this.classList.add('active'); //TODO? change just to hovered style: li.list_trigger:hover {...}
-    });
-    card_container.addEventListener("mouseover", function () {
-      card_container.scrollIntoView(); //maybe scrollIntoViewIfNeeded()
-    });
+    }); //   card_container.addEventListener("mouseover", function () {
+    //       card_container.scrollIntoView(); //maybe scrollIntoViewIfNeeded()
+    //   })
+
     h.addEventListener("mouseleave", function () {
       this.classList.remove('active');
     });

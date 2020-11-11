@@ -18,6 +18,7 @@
   position: relative;
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
+  color: #333;
   font-family: "Aeonik", sans-serif;
   background-color: #efeeee;
 }
@@ -138,6 +139,10 @@ button {
 
 .fc_white {
   color: white;
+}
+
+.fc_dark {
+  color: #333;
 }
 
 .label {
@@ -850,7 +855,7 @@ header .header-desk__nav ul li a {
   /* height: 100%; */
   overflow: hidden;
   background: #c9c9c9;
-  color: #2a2a2a;
+  color: #333;
   bottom: -5%;
 }
 .category .category_container .category_text .vertical-button {
