@@ -182,7 +182,8 @@ $third-color: #a8a8a8;;
 }
 
 .lumex {
-    color: #ff0000;
+    // color: #ff0000;
+    color: #ba1f25;
 }
 
 // Text Size
@@ -272,7 +273,7 @@ header {
     z-index: 11;
     // padding: 20px 0;
     
-    padding: 95px 0;
+    padding: 110px 0;
     color: #323539;
     position: absolute;
     width: 100%;
@@ -316,7 +317,7 @@ header {
 .nav_dropdown {
     position: absolute;
     // top: 120px;
-    top: 190px;
+    top: 208px;
     right: 0;
     display: flex;
     width: 1440px;

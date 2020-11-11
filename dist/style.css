@@ -162,7 +162,7 @@ button {
 }
 
 .lumex {
-  color: #ff0000;
+  color: #ba1f25;
 }
 
 p {
@@ -245,7 +245,7 @@ header {
   align-items: stretch;
   justify-content: flex-start;
   z-index: 11;
-  padding: 95px 0;
+  padding: 110px 0;
   color: #323539;
   position: absolute;
   width: 100%;
@@ -283,7 +283,7 @@ header .header-desk__nav ul li a {
 
 .nav_dropdown {
   position: absolute;
-  top: 190px;
+  top: 208px;
   right: 0;
   display: flex;
   width: 1440px;
