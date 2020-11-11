@@ -77,6 +77,32 @@ button {
 .primary_button:hover .btn_svg{
     transform: translateX(5px);
 }
+.secondary_button {
+    display: flex;
+    align-items: center;
+    position: relative;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    justify-content: center;
+    cursor: pointer;
+    border: 0 solid transparent;
+    border-radius: 0;
+    font-family: Roboto Mono,monospace;
+    font-size: 15px;
+    color: #ffda00;
+    letter-spacing: 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    white-space: nowrap;
+    background: #333;
+    padding: 0;
+    width: 70px;
+    height: 70px;
+}
+.secondary_button:hover .btn_svg{
+    transform: translateX(5px);
+}
 
 .form_button {
     width: 100%;
@@ -557,18 +583,7 @@ header {
                     margin-left: auto;
                 }
             }
-            // .title__front:before {
-            //     content: "";
-            //     display: block;
-            //     position: absolute;
-            //     background-color: $secondary-color;
-            //     right: 50%;
-            //     top: 0;
-            //     width: 0;
-            //     height: 100%;
-            //     -webkit-transition: width .4s cubic-bezier(.215,.61,.355,1) .4s;
-            //     transition: width .4s cubic-bezier(.215,.61,.355,1) .4s;
-            // }
+          
             .title__back {
                 background-image: url('');
                 position: absolute;
@@ -592,7 +607,13 @@ header {
                     // margin-left: auto;
                     // padding-left: 63.3333%;
                     padding: 10%;
-                    width: 490px;
+                    // width: 490px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    a{
+                        margin: 20px 0;
+                    }
                 
                 }
               }
@@ -1095,6 +1116,9 @@ header {
         margin-top: 150px;
         justify-content: space-between;
         padding: 0 40px; 
+        svg {
+            margin: 0;
+        }
     }
 }
 
@@ -1183,7 +1207,7 @@ footer {
     }
     .lumex__main .cloud__block2 .title .title__back div {
         padding: 10%;
-        width: 655px;
+        // width: 655px;
     } 
     
     // Category PAGE

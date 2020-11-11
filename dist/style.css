@@ -72,6 +72,34 @@ button {
   transform: translateX(5px);
 }
 
+.secondary_button {
+  display: flex;
+  align-items: center;
+  position: relative;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  justify-content: center;
+  cursor: pointer;
+  border: 0 solid transparent;
+  border-radius: 0;
+  font-family: Roboto Mono, monospace;
+  font-size: 15px;
+  color: #ffda00;
+  letter-spacing: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+  background: #333;
+  padding: 0;
+  width: 70px;
+  height: 70px;
+}
+
+.secondary_button:hover .btn_svg {
+  transform: translateX(5px);
+}
+
 .form_button {
   width: 100%;
 }
@@ -523,7 +551,12 @@ header .header-desk__nav ul li a {
 }
 .lumex__main .cloud__block2 .title .title__back div {
   padding: 10%;
-  width: 490px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.lumex__main .cloud__block2 .title .title__back div a {
+  margin: 20px 0;
 }
 .lumex__main .cloud__block3 {
   width: 25%;
@@ -955,6 +988,9 @@ header .header-desk__nav ul li a {
   justify-content: space-between;
   padding: 0 40px;
 }
+.lumex_form .form_button svg {
+  margin: 0;
+}
 
 input, textarea {
   font-size: 18px;
@@ -1030,7 +1066,6 @@ footer .footer_bottom .copyright p:last-child {
 
   .lumex__main .cloud__block2 .title .title__back div {
     padding: 10%;
-    width: 655px;
   }
 
   .category .category_container .category_text {
