@@ -389,6 +389,16 @@ header .header-desk__nav ul li {
           align-items: center;
 }
 
+header .header-desk__nav ul li .nav-trigger {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 header .header-desk__nav ul li a {
   text-decoration: none;
 }

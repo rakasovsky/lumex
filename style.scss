@@ -326,14 +326,19 @@ header {
         ul {    
             list-style: none;
             display: flex;
-            
-
+        
             li {
                 height: 100px;
                 padding-left: 50px;
                 cursor: pointer;
                 display: flex;
                 align-items: center;
+
+                .nav-trigger {
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                }
 
                 a{
                     text-decoration: none;

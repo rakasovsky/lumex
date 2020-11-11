@@ -309,6 +309,11 @@ header .header-desk__nav ul li {
   display: flex;
   align-items: center;
 }
+header .header-desk__nav ul li .nav-trigger {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
 header .header-desk__nav ul li a {
   text-decoration: none;
 }
