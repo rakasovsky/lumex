@@ -584,7 +584,6 @@ header .header-desk__nav ul li a {
   padding: 16.66667%;
 }
 .lumex__main .cloud__block3 .title .title__back {
-  background-image: url("//images.ctfassets.net/0vdg6equhogq/2WTAjslTS6KAs4o9KEdy17/cbd63d4766675e9271ce1b317f8d1045/10_-home-web.jpg");
   position: absolute;
   padding: 16.66667%;
   top: 0;
@@ -598,6 +597,14 @@ header .header-desk__nav ul li a {
   background-position: 70% 50%;
   -webkit-transition: opacity 0.1s;
   transition: opacity 0.1s;
+}
+.lumex__main .cloud__block3 .title .title__back div {
+  display: flex;
+  flex-direction: column;
+}
+.lumex__main .cloud__block3 .title .title__back div a {
+  margin: 20px 0;
+  align-self: flex-end;
 }
 .lumex__main .cloud__block4 {
   display: flex;
