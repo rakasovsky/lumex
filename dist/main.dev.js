@@ -130,7 +130,7 @@ JoC.from(".txt3", {
 // GSAP
 // MEGA MENU
 
-document.querySelectorAll('.nav-trigger').forEach(function (li) {
+document.querySelectorAll(".nav-trigger").forEach(function (li) {
   var drp = gsap.timeline({
     defaults: {
       duration: 1
@@ -162,40 +162,47 @@ document.querySelectorAll('.nav-trigger').forEach(function (li) {
   li.addEventListener('mouseout', function (e) {
     console.log('out');
     drp.reverse();
-  }); // li.querySelectorAll(".list_trigger").forEach(function (h) {
-  //     let card_container = document.querySelectorAll('.inner_container');
-  //     h.addEventListener("mouseover", function () {
-  //         card_container.forEach(function(i){
-  //             i.classList.add('active_trigger');
-  //         })
-  //         this.classList.add('active');
-  //     })
-  //     h.addEventListener("mouseleave", function () {
-  //         card_container.forEach(function(i){
-  //             i.classList.remove('active_trigger');
-  //         })
-  //         this.classList.remove('active');
-  //     })
-  // })
-
+  });
   li.querySelectorAll(".list_trigger").forEach(function (h) {
     /*
-      Both hovered link and div, which correponds to this link have the same value of attribute.
-      Example: <li data-link="ip-card">...</li>, <div data-card="ip-card">...</li>
-    */
-    var linkName = h.getAttribute('data-link');
-    var card_container = document.querySelector('[data-card="' + linkName + '"]');
-    h.addEventListener("mouseover", function () {
-      card_container.scrollIntoView(); //maybe scrollIntoViewIfNeeded()
+          Both hovered link and div, which correponds to this link have the same value of attribute.
+          Example: <li data-card="ip-card">...</li>, <div data-card="ip-card">...</li>
+        */
+    if (h.hasAttribute("data-card")) {
+      var linkName = h.getAttribute("data-card");
+      var card_container = document.querySelector('div[data-card="' + linkName + '"]');
 
-      this.classList.add('active'); //TODO? change just to hovered style: li.list_trigger:hover {...}
-    }); //   card_container.addEventListener("mouseover", function () {
-    //       card_container.scrollIntoView(); //maybe scrollIntoViewIfNeeded()
-    //   })
+      if (card_container) {
+        var scrollableDiv = card_container.closest(".cards_wrapper");
+        h.addEventListener("mouseover", function () {
+          var rsd = scrollableDiv.getBoundingClientRect();
+          var rcc = card_container.getBoundingClientRect();
+          var styles = getComputedStyle(card_container);
+          var realCcWidth = rcc.width + parseInt(styles.marginLeft) + parseInt(styles.marginRight);
+          var realCcLeft = rcc.left - parseInt(styles.marginLeft);
+          var leftOverflow = rsd.left - realCcLeft;
+          var rightOverflow = realCcLeft + realCcWidth - (rsd.left + rsd.width);
+          var threshold = 30;
 
-    h.addEventListener("mouseleave", function () {
-      this.classList.remove('active');
-    });
+          if (leftOverflow > threshold) {
+            scrollableDiv.scrollLeft -= rsd.left - realCcLeft;
+          } else if (rightOverflow > threshold) {
+            scrollableDiv.scrollLeft = realCcLeft + realCcWidth - (rsd.left + rsd.width);
+          }
+
+          console.error(">>>scrollableDiv.scrollLeft", scrollableDiv.scrollLeft, card_container);
+          card_container.classList.add("active"); //TODO? change just to hovered style: li.list_trigger:hover {...}
+        });
+        h.addEventListener("mouseleave", function () {
+          card_container.classList.remove("active");
+        });
+        console.error(">>>CARD CONTAINER", card_container);
+      } else {
+        console.error(">>>NO CARD CONTAINER", h);
+      }
+    } else {
+      console.error(">>>NO DATA-CARD ATTR", h);
+    }
   });
 }); // Q/A CARDS 
 

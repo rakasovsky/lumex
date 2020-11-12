@@ -130,70 +130,70 @@ JoC.from(".txt3", {duration:1, opacity:0, y: 100,stagger: 0.25})
 
 // MEGA MENU
 
-document.querySelectorAll('.nav-trigger').forEach(function(li) {
+document.querySelectorAll(".nav-trigger").forEach(function (li) {
+  const drp = gsap.timeline({
+      defaults: {duration: 1},
+      paused: true
 
-    const drp = gsap.timeline({
-        defaults: {duration: 1},
-        paused: true
-        
-    });
-    var dr = li.querySelector('.nav_dropdown');
-    var dp = li.querySelector('.drp-list');
-    var dx = li.querySelectorAll('.drp_card')
-    drp.to(dr,{duration: .5, scaleY: 1, height: '65vh'})
-       .from(dp, {duration: .5, opacity: 0, y:0 , stagger: 0.25,}, "-=1")
-       .from(dx, {duration: .5, opacity:0, x: "550%",stagger: 0.25, ease: "power4.in"}, "-=1")   
-       .reversed(true);
+  });
+  var dr = li.querySelector('.nav_dropdown');
+  var dp = li.querySelector('.drp-list');
+  var dx = li.querySelectorAll('.drp_card')
+  drp.to(dr,{duration: .5, scaleY: 1, height: '65vh'})
+     .from(dp, {duration: .5, opacity: 0, y:0 , stagger: 0.25,}, "-=1")
+     .from(dx, {duration: .5, opacity:0, x: "550%",stagger: 0.25, ease: "power4.in"}, "-=1")
+     .reversed(true);
 
-    li.addEventListener('mouseover', function(e) {
-       
-            drp.play()
-        
-        });
-    li.addEventListener('mouseout', function(e) {
-        console.log('out');
-        drp.reverse();
-    });
+  li.addEventListener('mouseover', function(e) {
+          drp.play()
+      });
+  li.addEventListener('mouseout', function(e) {
+      console.log('out');
+      drp.reverse();
+  });
 
-    // li.querySelectorAll(".list_trigger").forEach(function (h) {
-
-    //     let card_container = document.querySelectorAll('.inner_container');
-     
-    
-    //     h.addEventListener("mouseover", function () {
-    //         card_container.forEach(function(i){
-    //             i.classList.add('active_trigger');
-    //         })
-    //         this.classList.add('active');
-    //     })
-    //     h.addEventListener("mouseleave", function () {
-    //         card_container.forEach(function(i){
-    //             i.classList.remove('active_trigger');
-    //         })
-    //         this.classList.remove('active');
-    //     })
-    // })
-    li.querySelectorAll(".list_trigger").forEach(function (h) {
-        /*
+  li.querySelectorAll(".list_trigger").forEach(function (h) {
+    /*
           Both hovered link and div, which correponds to this link have the same value of attribute.
-          Example: <li data-link="ip-card">...</li>, <div data-card="ip-card">...</li>
+          Example: <li data-card="ip-card">...</li>, <div data-card="ip-card">...</li>
         */
-          let linkName = h.getAttribute('data-link');
-          let card_container = document.querySelector('[data-card="'+linkName+'"]');
-      
-          h.addEventListener("mouseover", function () {
-              card_container.scrollIntoView(); //maybe scrollIntoViewIfNeeded()
-              this.classList.add('active'); //TODO? change just to hovered style: li.list_trigger:hover {...}
-          })
-        //   card_container.addEventListener("mouseover", function () {
-        //       card_container.scrollIntoView(); //maybe scrollIntoViewIfNeeded()
-        //   })
-          h.addEventListener("mouseleave", function () {
-              this.classList.remove('active');
-          })
-      })
+    if (h.hasAttribute("data-card")) {
+      let linkName = h.getAttribute("data-card");
+      let card_container = document.querySelector(
+        'div[data-card="' + linkName + '"]'
+      );
+      if (card_container) {
+        const scrollableDiv = card_container.closest(".cards_wrapper");
+        h.addEventListener("mouseover", function () {
+          const rsd = scrollableDiv.getBoundingClientRect();
+          const rcc = card_container.getBoundingClientRect();
+          const styles = getComputedStyle(card_container);
+          const realCcWidth = rcc.width + parseInt(styles.marginLeft) + parseInt(styles.marginRight);
+          const realCcLeft = rcc.left - parseInt(styles.marginLeft);
+          const leftOverflow = rsd.left - realCcLeft;
+          const rightOverflow = (realCcLeft + realCcWidth) - (rsd.left + rsd.width);
+          const threshold = 30;
+          if (leftOverflow > threshold) {
+            scrollableDiv.scrollLeft -= rsd.left - realCcLeft;
+          } else if (rightOverflow > threshold) {
+            scrollableDiv.scrollLeft = realCcLeft + realCcWidth - (rsd.left + rsd.width);
+          }
+          console.error(">>>scrollableDiv.scrollLeft", scrollableDiv.scrollLeft, card_container);
+          card_container.classList.add("active"); //TODO? change just to hovered style: li.list_trigger:hover {...}
+        });
+        h.addEventListener("mouseleave", function () {
+          card_container.classList.remove("active");
+        });
+        console.error(">>>CARD CONTAINER", card_container);
+      } else {
+        console.error(">>>NO CARD CONTAINER", h);
+      }
+    } else {
+      console.error(">>>NO DATA-CARD ATTR", h);
+    }
+  });
+});
 
-})
 
 
 
