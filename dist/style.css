@@ -21,6 +21,7 @@
   color: #333;
   font-family: "Aeonik", sans-serif;
   background-color: #efeeee;
+  overflow-x: hidden;
 }
 
 .hidden {
@@ -226,7 +227,9 @@ p {
 .sticky {
   display: flex;
   align-items: center;
-  position: sticky;
+  position: fixed;
+  width: 100%;
+  height: 100px;
   top: 0;
   z-index: 666;
   background: #2a2a2a;
@@ -320,7 +323,7 @@ header .header-desk__nav ul li a {
 
 .nav_dropdown {
   position: absolute;
-  top: 208px;
+  top: 220px;
   right: 0;
   display: flex;
   width: 1440px;
@@ -420,6 +423,7 @@ header .header-desk__nav ul li a {
 .who-we-are {
   scrollbar-width: none;
   padding-bottom: 120px;
+  padding-top: 100px;
 }
 .who-we-are .who-we-are__container {
   display: flex;
@@ -675,6 +679,22 @@ header .header-desk__nav ul li a {
   width: 83.33333%;
   margin: 0 auto;
 }
+.cloud__calls-main .col .card_wrapper {
+  flex-direction: column;
+}
+.cloud__calls-main .col .card_wrapper .left {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.cloud__calls-main .col .card_wrapper .left .text {
+  align-self: flex-end;
+  max-width: 50%;
+  padding-bottom: calc(100% / 9);
+}
+.cloud__calls-main .col .card_wrapper .right {
+  width: 100%;
+}
 
 .card_wrapper {
   width: 83.33333%;
@@ -862,7 +882,7 @@ header .header-desk__nav ul li a {
 }
 
 .category {
-  padding-top: 120px;
+  padding-top: 220px;
 }
 .category .category_container {
   display: flex;
@@ -955,7 +975,7 @@ header .header-desk__nav ul li a {
 }
 
 .top {
-  padding-top: 120px;
+  padding-top: 220px;
 }
 
 .contact_container {
@@ -1250,6 +1270,10 @@ footer .footer_bottom .copyright p:last-child {
     display: flex;
     width: 100%;
     justify-content: space-between;
+  }
+  header .mob_menu .navigation {
+    position: fixed;
+    right: 0;
   }
   header .mob_logo {
     margin-left: 25px;
