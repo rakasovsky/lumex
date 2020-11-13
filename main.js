@@ -173,10 +173,13 @@ document.querySelectorAll(".nav-trigger").forEach(function (li) {
           const leftOverflow = rsd.left - realCcLeft;
           const rightOverflow = (realCcLeft + realCcWidth) - (rsd.left + rsd.width);
           const threshold = 30;
+          const htl = gsap.timeline();
           if (leftOverflow > threshold) {
             scrollableDiv.scrollLeft -= rsd.left - realCcLeft;
+            htl.from(".inner_container", {duration: 1, opacity:1, x: "-10%", ease: "power1.out"})
           } else if (rightOverflow > threshold) {
             scrollableDiv.scrollLeft = realCcLeft + realCcWidth - (rsd.left + rsd.width);
+            htl.from(".inner_container", {duration: 1, opacity:1, x: "10%",ease: "power1.out"})
           }
           console.error(">>>scrollableDiv.scrollLeft", scrollableDiv.scrollLeft, card_container);
           card_container.classList.add("active"); //TODO? change just to hovered style: li.list_trigger:hover {...}

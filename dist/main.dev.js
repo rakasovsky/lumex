@@ -183,11 +183,24 @@ document.querySelectorAll(".nav-trigger").forEach(function (li) {
           var leftOverflow = rsd.left - realCcLeft;
           var rightOverflow = realCcLeft + realCcWidth - (rsd.left + rsd.width);
           var threshold = 30;
+          var htl = gsap.timeline();
 
           if (leftOverflow > threshold) {
             scrollableDiv.scrollLeft -= rsd.left - realCcLeft;
+            htl.from(".inner_container", {
+              duration: 1,
+              opacity: 1,
+              x: "-10%",
+              ease: "power1.out"
+            });
           } else if (rightOverflow > threshold) {
             scrollableDiv.scrollLeft = realCcLeft + realCcWidth - (rsd.left + rsd.width);
+            htl.from(".inner_container", {
+              duration: 1,
+              opacity: 1,
+              x: "10%",
+              ease: "power1.out"
+            });
           }
 
           console.error(">>>scrollableDiv.scrollLeft", scrollableDiv.scrollLeft, card_container);
