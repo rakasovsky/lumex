@@ -1,23 +1,6 @@
 "use strict";
 
 // Mobile menu dropdown
-// document.querySelectorAll('.m_li').forEach(function(li) { 
-//     var drp = li.querySelector(".dropdown_container_mobile");
-//     li.addEventListener('click', function (e){
-//         drp.classList.toggle("hidden");
-//     })
-//    })
-// document.querySelectorAll('.m_li').forEach(function(li) { 
-//     const thisItem = this.parentNode;
-//     var drp = li.querySelector(".dropdown_container_mobile");
-//     li.addEventListener('click', function (e){
-//        if (thisItem == li) {
-//             drp.classList.add("hidden");
-//        } else {
-//             drp.classList.toggle("hidden");
-//        }
-//     })
-//    })
 function initAccordion(accordionElem) {
   //when panel is clicked, handlePanelClick is called.          
   function handlePanelClick(event) {
@@ -183,28 +166,22 @@ document.querySelectorAll(".nav-trigger").forEach(function (li) {
           var leftOverflow = rsd.left - realCcLeft;
           var rightOverflow = realCcLeft + realCcWidth - (rsd.left + rsd.width);
           var threshold = 30;
-          var htl = gsap.timeline();
 
           if (leftOverflow > threshold) {
             scrollableDiv.scrollLeft -= rsd.left - realCcLeft;
-            htl.from(".inner_container", {
-              duration: 1,
-              opacity: 1,
-              x: "-10%",
-              ease: "power1.out"
-            });
           } else if (rightOverflow > threshold) {
-            scrollableDiv.scrollLeft = realCcLeft + realCcWidth - (rsd.left + rsd.width);
-            htl.from(".inner_container", {
-              duration: 1,
-              opacity: 1,
-              x: "10%",
-              ease: "power1.out"
-            });
+            scrollableDiv.scrollLeft = realCcLeft + realCcWidth - (rsd.left + rsd.width); // gsap.from(".inner_container", {duration: 1, opacity:1, x: "20%",ease: "power1.out"},"+=2")
           }
 
           console.error(">>>scrollableDiv.scrollLeft", scrollableDiv.scrollLeft, card_container);
           card_container.classList.add("active"); //TODO? change just to hovered style: li.list_trigger:hover {...}
+
+          gsap.from(".inner_container", {
+            duration: 2,
+            opacity: 1,
+            x: "-10%",
+            ease: "power1.out"
+          });
         });
         h.addEventListener("mouseleave", function () {
           card_container.classList.remove("active");
