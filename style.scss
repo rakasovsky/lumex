@@ -1129,7 +1129,66 @@ header {
     color: white;
 }
 
-// 404 
+// CATALOG Page
+.catalog_main {
+  margin: 9px 8.33333% 0;
+  padding-bottom: $pb;
+  .cloud__block3 {
+    .title {
+        .title__front{
+            width: 100%;
+            padding: 0;
+            .cat_card_wrapper {
+                padding: 16.66667%;
+                display: flex;
+                flex-direction: column; 
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+  }  
+}
+
+// CATALOG CATEGORY PAGE
+.catalog_page_wrapper {
+    padding-top: $pt;
+    padding-bottom: $pb;
+    .catalog_page_top {
+        margin: 0 8.33333%;
+    }
+    .catalog_page_bottom {
+        margin: 0 8.33333%;
+        display: flex;
+        .catalog_select {
+            width: 15%;
+        }
+        .lumex__main {
+            padding-top: 0;
+            width: 85%;
+            .cat_card_wrapper {
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: flex-start;
+                .cat_card_text {
+                    padding: 10%;
+                }
+            }
+            .cloud__block3 {
+                padding-top: 40%;
+                .title .title__front {
+                    padding: 0;
+                }
+            }
+        }
+    }
+   
+}
+
+
+// PAGE 404 
 .notfound_container {
     display: flex;
     padding-top: $pt;
