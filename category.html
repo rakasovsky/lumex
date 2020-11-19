@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="static/styles/style.css">    
 </head>
 <body>
-    <div id="app">
+    <div id="app"> 
         <div class="sticky">
             <div class="sticky_container">
                 <a href="index.html">
-                    <img src="assets/img/lumex_logo.svg" alt="lumex logo">
+                    <img src="static/assets/img/lumex_logo.svg" alt="lumex logo">
                 </a>
                 <div class="contacts">
                     <p>
@@ -25,8 +25,8 @@
                     
                 </div>
             </div>
-            <a href="contacts.html"><div class="button"><svg class="arrow"  ><path d="m14.4 1-.7.7 5 4.8h-18.7v1h18.8l-5.2 5.5.8.7 6.3-6.7z" fill="currentColor"></path></svg></div></a>
-        </div>
+            <a href="contacts.html"><div class="button"><svg class="arrow" enable-background="new 0 0 21 14" viewBox="0 0 21 14"><path d="m14.4 1-.7.7 5 4.8h-18.7v1h18.8l-5.2 5.5.8.7 6.3-6.7z" fill="currentColor"></path></svg></div></a>
+        </div> 
         <!-- HEADER -->
         <header>
             <p  class="header-logo">
@@ -49,18 +49,18 @@
                                 <div class="left drp-list">
                                     <a href="category.html">Телефония</a>
                                     <ul>
-                                        <li data-link="cloud_tel">Облачная атс</li>
-                                        <li class="list_trigger" data-link="ip_tel">Ip атс</li>
-                                        <li class="list_trigger" data-link="analog_tel">Аналоговая атс</li>
+                                        <li class="list_trigger" data-card="cloud_tel">Облачная атс</li>
+                                        <li class="list_trigger" data-card="ip_tel">Ip атс</li>
+                                        <li class="list_trigger" data-card="analog_tel">Аналоговая атс</li>
                                     </ul>
                                 </div>
                                 <div class="right">
                                     <div class="cards_wrapper">
                                         <div class="inner_container">
-                                            <div class="product_card drp_card" data-card="cloud_tel">
+                                            <div class="product_card drp_card list_trigger" data-card="cloud_tel">
                                                 <div class="card-img">
                                                     <div></div>
-                                                    <img src="assets/img/ukraine.jpg" alt="">
+                                                    <img src="static/assets/img/ukraine.jpg" alt="">
                                                 </div>
                                                 <div class="card-content">
                                                     <p class="c_title fs24">Lumex</p>
@@ -79,7 +79,7 @@
                                             <div class="product_card drp_card list_trigger " data-card="ip_tel">
                                                 <div class="card-img">
                                                     <div></div>
-                                                    <img src="assets/img/ukraine.jpg" alt="">
+                                                    <img src="static/assets/img/ukraine.jpg" alt="">
                                                 </div>
                                                 <div class="card-content">
                                                     <p class="c_title fs24">Lumex</p>
@@ -98,7 +98,7 @@
                                             <div class="product_card drp_card list_trigger" data-card="analog_tel">
                                                 <div class="card-img">
                                                     <div></div>
-                                                    <img src="assets/img/ukraine.jpg" alt="">
+                                                    <img src="static/assets/img/ukraine.jpg" alt="">
                                                 </div>
                                                 <div class="card-content">
                                                     <p class="c_title fs24">Lumex / Cloudcalls</p>
@@ -118,7 +118,6 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
                         <!-- DROPDOWN -->
                     </div>
                   </li>
@@ -131,18 +130,18 @@
                                 <div class="left drp-list">
                                     <a href="category.html" class="">Видеонаблюдение</a>
                                     <ul>
-                                        <li data-link="">Облачная атс</li>
-                                        <li class="list_trigger" data-link="ip_">Ip атс</li>
-                                        <li class="list_trigger">Аналоговая атс</li>
+                                        <li class="list_trigger" data-card="video_1">Облачная атс</li>
+                                        <li class="list_trigger" data-card="video_2">Ip атс</li>
+                                        <li class="list_trigger" data-card="video_3">Аналоговая атс</li>
                                     </ul>
                                 </div>
                                 <div class="right">
                                     <div class="cards_wrapper">
                                         <div class="inner_container">
-                                            <div class="product_card drp_card active">
+                                            <div class="product_card drp_card list_trigger" data-card="video_1">
                                                 <div class="card-img">
                                                     <div></div>
-                                                    <img src="assets/img/ukraine.jpg" alt="">
+                                                    <img src="static/assets/img/ukraine.jpg" alt="">
                                                 </div>
                                                 <div class="card-content">
                                                     <p class="c_title fs24">Cloudcalls</p>
@@ -158,10 +157,10 @@
                                                     </a>
                                                 </div>
                                             </div>
-                                            <div class="product_card drp_card list_trigger">
+                                            <div class="product_card drp_card list_trigger" data-card="video_2">
                                                 <div class="card-img">
                                                     <div></div>
-                                                    <img src="assets/img/ukraine.jpg" alt="">
+                                                    <img src="static/assets/img/ukraine.jpg" alt="">
                                                 </div>
                                                 <div class="card-content">
                                                     <p class="c_title fs24">Cloudcalls</p>
@@ -177,10 +176,10 @@
                                                     </a>
                                                 </div>
                                             </div>
-                                            <div class="product_card drp_card list_trigger">
+                                            <div class="product_card drp_card list_trigger" data-card="video_3">
                                                 <div class="card-img">
                                                     <div></div>
-                                                    <img src="assets/img/ukraine.jpg" alt="">
+                                                    <img src="static/assets/img/ukraine.jpg" alt="">
                                                 </div>
                                                 <div class="card-content">
                                                     <p class="c_title fs24">Lumex / Cloudcalls</p>
@@ -213,7 +212,7 @@
             <!-- MOBILE MENU -->
 
             <div class="mob_menu">
-                <a href="index.html" class="mob_logo"><img src="assets/img/logo1.png" alt=""></a>
+                <a href="index.html" class="mob_logo"><img src="static/assets/img/logo1.png" alt=""></a>
                 <nav role="navigation">
                     <div id="menuToggle">
                         <input type="checkbox" />
@@ -282,7 +281,7 @@
                     </div>
                 </div>
                 <div class="diogram_right txt3">
-                        <img src="assets/img/Screenshot_4.png" alt="ыыы">
+                        <img src="static/assets/img/Screenshot_4.png" alt="ыыы">
                 </div>
         </section>
         <section class="category_sub">
@@ -300,7 +299,7 @@
                         <div class="product_card prod_white txt2">
                             <div class="card-img">
                                 <div></div>
-                                <img src="assets/img/cloud-7.jpg" alt="">
+                                <img src="static/assets/img/cloud-7.jpg" alt="">
                             </div>
                             <div class="card-content">
                                 <p class="c_title fs24">Lumex / Cloudcalls</p>
@@ -319,7 +318,7 @@
                         <div class="product_card prod_white txt2">
                             <div class="card-img">
                                 <div></div>
-                                <img src="assets/img/ukraine.jpg" alt="">
+                                <img src="static/assets/img/ukraine.jpg" alt="">
                             </div>
                             <div class="card-content">
                                 <p class="c_title fs24">Lumex / Ip-телефония</p>
@@ -338,39 +337,40 @@
                     </div>
                 </div>
             </div>
-            <footer>
-                <div class="footer_top">
-                    <a href="#" class="footer-logo"><img src="assets/img/logo1.png" alt=""></a>
-                    <div class="footer_container">
-                        <div class="footer_about">
-                            <p class="label fs24">О нас</p>
-                            <p>
-                                Облачные и аппаратные решения в области безопасности и связи. Сервис и обслуживание.
-                            </p>
-                        </div>
-                        <div class="footer_contacts">
-                            <p class="label fs24">Контакты</p>
-                            <p>г.Харьков, ул.Сумская 26</p>
-                            <p>+380 57 714-3074</p>
-                            <p>+380 66 108-2211</p>
-                            <p>info@lumex.in.ua</p>
-                            <p>support@lumex.in.ua</p>
-                        </div>
-                        <div class="footer_about">
-                            <p class="label fs24">Работая с нами</p>
-                            <p>
-                                Вы получаете: высокое качество обслуживание от специалистов. Гарантию. Быструю обработку заказов. Оборудование на подмену. Свяжитесь с нами сейчас!
-                            </p>
-                        </div>
+        </section>
+        <footer>
+            <div class="footer_top">
+                <a href="#" class="footer-logo"><img src="static/assets/img/lumex_logo.svg" alt=""></a>
+                <div class="footer_container">
+                    <div class="footer_about">
+                        <p class="label fs24">О нас</p>
+                        <p>
+                            Облачные и аппаратные решения в области безопасности и связи. Сервис и обслуживание.
+                        </p>
+                    </div>
+                    <div class="footer_contacts">
+                        <p class="label fs24">Контакты</p>
+                        <p>г.Харьков, ул.Сумская 26</p>
+                        <p>+380 57 714-3074</p>
+                        <p>+380 66 108-2211</p>
+                        <p>info@lumex.in.ua</p>
+                        <p>support@lumex.in.ua</p>
+                    </div>
+                    <div class="footer_about">
+                        <p class="label fs24">Работая с нами</p>
+                        <p>
+                            Вы получаете: высокое качество обслуживание от специалистов. Гарантию. Быструю обработку заказов. Оборудование на подмену. Свяжитесь с нами сейчас!
+                        </p>
                     </div>
                 </div>
-                <div class="footer_bottom">
-                    <div class="copyright">
-                        <p>©2020 <span class="lumex">L</span>umex.</p> 
-                        <p>All Rights Reserved</span></p>
-                    </div>
+            </div>
+            <div class="footer_bottom">
+                <div class="copyright">
+                    <p>©2020 <span class="lumex">L</span>umex.</p> 
+                    <p>All Rights Reserved</span></p>
                 </div>
-            </footer>
+            </div>
+        </footer>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
             <script src="main.js"></script>
