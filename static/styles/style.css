@@ -2017,7 +2017,7 @@ footer .footer_bottom .copyright p:last-child {
     right: 0;
   }
   header .mob_logo {
-    margin-left: 25px;
+    margin-left: 8%;
   }
   header #menuToggle {
     display: -webkit-box;
@@ -2191,6 +2191,9 @@ footer .footer_bottom .copyright p:last-child {
   }
   .lumex_form .form_button {
     margin: 100px 0;
+  }
+  footer .footer-logo {
+    width: 100%;
   }
 }
 

@@ -1672,7 +1672,7 @@ footer {
             
         }
         .mob_logo {
-            margin-left: 25px;
+            margin-left: 8%;
         }
         #menuToggle {
             display: flex;
@@ -1836,6 +1836,11 @@ footer {
     }
     .lumex_form .form_button {
         margin: 100px 0;
+    }
+    footer {
+        .footer-logo {
+            width: 100%;
+        }
     }
 }
 
