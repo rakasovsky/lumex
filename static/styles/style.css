@@ -1460,11 +1460,10 @@ header .header-desk__nav ul li a {
 }
 
 .catalog_main .cloud__block3 .title .title__front {
-  padding: 0;
+  padding: 10%;
 }
 
 .catalog_main .cloud__block3 .title .title__front .cat_card_wrapper {
-  padding: 16.66667%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

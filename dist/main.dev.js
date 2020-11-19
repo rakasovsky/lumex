@@ -61,6 +61,18 @@ catBlck.from(".cat_block", {
   y: 200,
   stagger: 0.5
 });
+var catBlck2 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".cat_block2",
+    start: "top bottom"
+  }
+});
+catBlck2.from(".cat_block2", {
+  duration: 1,
+  opacity: 0,
+  y: 200,
+  stagger: 0.5
+});
 var lbl = gsap.timeline({
   scrollTrigger: {
     trigger: ".lbl",

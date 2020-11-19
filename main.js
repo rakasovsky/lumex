@@ -49,13 +49,22 @@ gsap.from(".lumex__video", {duration: 2, scale: 0.3,  x: -1500});
 
 const catBlck = gsap.timeline({
     scrollTrigger: {
-        trigger: ".cat_block",
+        trigger: ".cat_block", 
         start: "top bottom"
     }
 })
 
 catBlck.from(".cat_block",{duration:1, opacity:0, y:200, stagger:0.5});
 
+
+const catBlck2 = gsap.timeline({
+  scrollTrigger: {
+      trigger: ".cat_block2", 
+      start: "top bottom"
+  }
+})
+
+catBlck2.from(".cat_block2",{duration:1, opacity:0, y:200, stagger:0.5});
 
 
 
