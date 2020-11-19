@@ -2199,7 +2199,7 @@ footer .footer_bottom .copyright p:last-child {
     padding-top: 160px;
   }
   header #menu {
-    width: 520px;
+    width: 430px;
   }
   header .mob_logo {
     margin-left: 8%;
@@ -2546,11 +2546,11 @@ footer .footer_bottom .copyright p:last-child {
 
 @media (max-width: 375px) {
   header #menuToggle input:checked ~ ul {
-    -webkit-transform: translate(-76%);
-    transform: translate(-67%);
+    -webkit-transform: translate(-72%);
+            transform: translate(-72%);
   }
   header #menu {
-    width: 460px;
+    width: 375px;
   }
   .who-we-are .who-we-are__container .who-we-are__row .lumex__video {
     width: 100%;
@@ -2570,11 +2570,11 @@ footer .footer_bottom .copyright p:last-child {
 
 @media (max-width: 320px) {
   header #menu {
-    width: 360px;
+    width: 325px;
   }
   header #menuToggle input:checked ~ ul {
-    -webkit-transform: translate(-63%);
-            transform: translate(-63%);
+    -webkit-transform: translate(-68%);
+            transform: translate(-68%);
   }
   .who-we-are .who-we-are__container .who-we-are__row .lumex__video {
     height: 80vh;
