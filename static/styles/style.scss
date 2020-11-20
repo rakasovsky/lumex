@@ -1233,6 +1233,13 @@ header {
                             background: #333;
                         }
                     }
+
+                    .title .title__back {
+                        p {
+                            height: 350px;
+                            overflow: hidden;
+                        }
+                    }
                 }
             }
         }

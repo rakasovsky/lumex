@@ -1592,6 +1592,11 @@ header .header-desk__nav ul li a {
   background: #333;
 }
 
+.catalog_page-wrapper .catalog_page-bottom .catalog_category .lumex__main .cloud__block3 .title .title__back p {
+  height: 350px;
+  overflow: hidden;
+}
+
 .catalog_page-wrapper .filter-item .checkbox-container {
   display: block;
   position: relative;
