@@ -692,11 +692,11 @@ header .header-desk__nav ul li a {
   width: 100%;
   display: flex;
   flex-direction: column;
+  padding-bottom: calc(100% / 9);
 }
 .cloud__calls-main .col .card_wrapper .left .text {
   align-self: flex-end;
   max-width: 50%;
-  padding-bottom: calc(100% / 9);
 }
 .cloud__calls-main .col .card_wrapper .right {
   width: 100%;
@@ -1031,38 +1031,114 @@ header .header-desk__nav ul li a {
   height: auto;
 }
 
-.catalog_page_wrapper {
+.catalog_page-wrapper {
   padding-top: calc(100% / 9);
   padding-bottom: calc(100% / 9);
-}
-.catalog_page_wrapper .catalog_page_top {
   margin: 0 8.33333%;
 }
-.catalog_page_wrapper .catalog_page_bottom {
-  margin: 0 8.33333%;
+.catalog_page-wrapper .catalog_page-top {
   display: flex;
 }
-.catalog_page_wrapper .catalog_page_bottom .catalog_select {
+.catalog_page-wrapper .catalog_page-bottom {
+  display: flex;
+}
+.catalog_page-wrapper .catalog_page-bottom .catalog_select {
   width: 15%;
 }
-.catalog_page_wrapper .catalog_page_bottom .lumex__main {
-  padding-top: 0;
+.catalog_page-wrapper .catalog_page-bottom .catalog_select .select_clear {
+  padding-bottom: 24px;
+  display: flex;
+}
+.catalog_page-wrapper .catalog_page-bottom .catalog_select .select_clear *:first-child {
+  border-bottom: 2px solid #ffda00;
+}
+.catalog_page-wrapper .catalog_page-bottom .catalog_select .select_clear *:last-child {
+  margin-left: 10%;
+}
+.catalog_page-wrapper .catalog_page-bottom .catalog_select ul {
+  list-style: none;
+}
+.catalog_page-wrapper .catalog_page-bottom .catalog_category {
+  display: flex;
+  flex-direction: column;
   width: 85%;
 }
-.catalog_page_wrapper .catalog_page_bottom .lumex__main .cat_card_wrapper {
+.catalog_page-wrapper .catalog_page-bottom .catalog_category .sorting {
+  display: flex;
+  padding-bottom: 24px;
+  width: 50%;
+  justify-content: space-between;
+}
+.catalog_page-wrapper .catalog_page-bottom .catalog_category .sorting p {
+  font-size: inherit;
+}
+.catalog_page-wrapper .catalog_page-bottom .catalog_category .sorting p span {
+  color: grey;
+}
+.catalog_page-wrapper .catalog_page-bottom .catalog_category .lumex__main {
+  padding-top: 0;
+  width: 100%;
+}
+.catalog_page-wrapper .catalog_page-bottom .catalog_category .lumex__main .cat_card_wrapper {
   display: flex;
   flex-direction: column-reverse;
   align-items: flex-start;
 }
-.catalog_page_wrapper .catalog_page_bottom .lumex__main .cat_card_wrapper .cat_card_text {
+.catalog_page-wrapper .catalog_page-bottom .catalog_category .lumex__main .cat_card_wrapper .cat_card_text {
   padding: 5% 10%;
 }
-.catalog_page_wrapper .catalog_page_bottom .lumex__main .cloud__block3 {
+.catalog_page-wrapper .catalog_page-bottom .catalog_category .lumex__main .cloud__block3 {
   padding-top: 40%;
 }
-.catalog_page_wrapper .catalog_page_bottom .lumex__main .cloud__block3 .title .title__front {
+.catalog_page-wrapper .catalog_page-bottom .catalog_category .lumex__main .cloud__block3 .title .title__front {
   padding: 0;
   width: 100%;
+}
+.catalog_page-wrapper .filter-item .checkbox-container {
+  display: block;
+  position: relative;
+  margin-bottom: 12px;
+  padding-left: 25px;
+  cursor: pointer;
+  user-select: none;
+}
+.catalog_page-wrapper .filter-item .checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  cursor: pointer;
+}
+.catalog_page-wrapper .filter-item .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: #a8a8a8;
+}
+.catalog_page-wrapper .filter-item .checkbox-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.catalog_page-wrapper .filter-item .checkbox-container input:checked ~ .checkmark {
+  background-color: #ffda00;
+}
+.catalog_page-wrapper .filter-item .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.catalog_page-wrapper .filter-item .checkbox-container input:checked ~ .checkmark::after {
+  display: block;
+}
+.catalog_page-wrapper .filter-item .checkbox-container .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
 }
 
 .notfound_container {

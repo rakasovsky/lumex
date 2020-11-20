@@ -60,7 +60,8 @@ catBlck.from(".cat_block", {
   opacity: 0,
   y: 200,
   stagger: 0.5
-});
+}); // For catalog page
+
 var catBlck2 = gsap.timeline({
   scrollTrigger: {
     trigger: ".cat_block2",
@@ -72,7 +73,8 @@ catBlck2.from(".cat_block2", {
   opacity: 0,
   y: 200,
   stagger: 0.5
-});
+}); // For catalog page
+
 var lbl = gsap.timeline({
   scrollTrigger: {
     trigger: ".lbl",

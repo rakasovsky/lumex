@@ -57,6 +57,8 @@ const catBlck = gsap.timeline({
 catBlck.from(".cat_block",{duration:1, opacity:0, y:200, stagger:0.5});
 
 
+
+// For catalog page
 const catBlck2 = gsap.timeline({
   scrollTrigger: {
       trigger: ".cat_block2", 
@@ -65,8 +67,7 @@ const catBlck2 = gsap.timeline({
 })
 
 catBlck2.from(".cat_block2",{duration:1, opacity:0, y:200, stagger:0.5});
-
-
+// For catalog page
 
 const lbl = gsap.timeline({
     scrollTrigger: {
