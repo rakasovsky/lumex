@@ -245,44 +245,28 @@ document.querySelectorAll(".cat_block").forEach(function (f) {
   f.addEventListener("mouseout", function (e) {
     qa.reverse();
   });
-});
-document.querySelectorAll(".cat_block2").forEach(function (f) {
-  var qa = gsap.timeline({
-    defaults: {
-      duration: 1
-    },
-    paused: true
-  });
-  var tf = f.querySelector(".title__front");
-  var tfd = f.querySelector(".title__front div");
-  var tb = f.querySelector(".title__back");
-  var tbd = f.querySelector(".title__back div");
-  qa.to(tf, {
-    duration: 0.5,
-    y: 20,
-    opacity: 1
-  }).to(tfd, {
-    duration: 0.5,
-    y: 20,
-    opacity: 0
-  }).to(tf, {
-    duration: 0.5,
-    opacity: 0
-  }).to(tb, {
-    duration: 0.5,
-    opacity: 1
-  }, "-=1").from(tbd, {
-    duration: 0.5,
-    y: 20,
-    opacity: 0
-  }, "-=1");
-  f.addEventListener("mouseover", function (e) {
-    qa.play();
-  });
-  f.addEventListener("mouseout", function (e) {
-    qa.reverse();
-  });
-}); // TABS 
+}); // document.querySelectorAll(".cat_block2").forEach(function (f) {
+//   const qa = gsap.timeline({
+//     defaults: { duration: 1 },
+//     paused: true,
+//   });
+//   var tf = f.querySelector(".title__front");
+//   var tfd = f.querySelector(".title__front div");
+//   var tb = f.querySelector(".title__back");
+//   var tbd = f.querySelector(".title__back div");
+//   qa.to(tf, { duration: 0.5, y: 20, opacity: 1 })
+//     .to(tfd, { duration: 0.5, y: 20, opacity: 0 })
+//     .to(tf, { duration: 0.5, opacity: 0 })
+//     .to(tb, { duration: 0.5, opacity: 1 }, "-=1")
+//     .from(tbd, { duration: 0.5, y: 20, opacity: 0 }, "-=1");
+//   f.addEventListener("mouseover", function (e) {
+//     qa.play();
+//   });
+//   f.addEventListener("mouseout", function (e) {
+//     qa.reverse();
+//   });
+// });
+// TABS 
 
 function openTab(evt, tabName) {
   var i, x, tablinks;

@@ -1042,6 +1042,7 @@ header .header-desk__nav ul li a {
 }
 .catalog_page-wrapper .catalog_page-bottom {
   display: flex;
+  margin-top: 50px;
 }
 .catalog_page-wrapper .catalog_page-bottom .catalog_select {
   width: 15%;
@@ -1074,6 +1075,7 @@ header .header-desk__nav ul li a {
   font-size: inherit;
 }
 .catalog_page-wrapper .catalog_page-bottom .catalog_category .sorting p span {
+  cursor: pointer;
   color: grey;
 }
 .catalog_page-wrapper .catalog_page-bottom .catalog_category .lumex__main {
@@ -1094,6 +1096,14 @@ header .header-desk__nav ul li a {
 .catalog_page-wrapper .catalog_page-bottom .catalog_category .lumex__main .cloud__block3 .title .title__front {
   padding: 0;
   width: 100%;
+}
+.catalog_page-wrapper .catalog_page-bottom .catalog_category .lumex__main .cloud__block3 .title .title__front .availability {
+  padding: 2% 5%;
+  position: absolute;
+  top: 2%;
+  left: 5%;
+  color: #fff;
+  background: #333;
 }
 .catalog_page-wrapper .filter-item .checkbox-container {
   display: block;

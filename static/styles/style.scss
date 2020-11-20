@@ -1173,6 +1173,7 @@ header {
     }
     .catalog_page-bottom {
         display: flex;
+        margin-top: 50px;
         .catalog_select {
             width: 15%;
             .select_clear {
@@ -1201,6 +1202,7 @@ header {
                 p{
                     font-size: inherit;
                    span {
+                        cursor: pointer;
                         color: grey;
                    }
                 }
@@ -1222,6 +1224,14 @@ header {
                         padding: 0;
                         width: 100%;
 
+                        .availability {
+                            padding: 2% 5%;
+                            position: absolute;
+                            top: 2%;
+                            left: 5%;
+                            color: #fff;
+                            background: #333;
+                        }
                     }
                 }
             }
