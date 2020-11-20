@@ -1048,7 +1048,7 @@ header .header-desk__nav ul li a {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
-  height: 100%;
+  height: 650px;
   width: 30%;
   color: #fff;
   background-color: #333;
