@@ -153,12 +153,8 @@ document.querySelectorAll(".nav-trigger").forEach(function (li) {
     stagger: 0.25,
     ease: "power4.in"
   }, "-=1").reversed(true);
-  li.addEventListener('mouseover', function (e) {
-    drp.play();
-  });
-  li.addEventListener('mouseout', function (e) {
-    console.log('out');
-    drp.reverse();
+  li.addEventListener('click', function (e) {
+    drp.reversed() ? drp.play() : drp.reverse();
   });
   li.querySelectorAll(".list_trigger").forEach(function (h) {
     /*
