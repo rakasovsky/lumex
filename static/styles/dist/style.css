@@ -844,7 +844,6 @@ header .header-desk__nav ul li a {
 .lumex_team {
   display: flex;
   padding-top: calc(100% / 9);
-  padding-bottom: 200px;
 }
 .lumex_team .team_left {
   margin-left: 12.5%;
@@ -857,14 +856,17 @@ header .header-desk__nav ul li a {
 .lumex_team .team_left div {
   max-width: 420px;
 }
-
-.team_right {
+.lumex_team .team_right {
   width: 50%;
   margin-left: 0;
   padding-top: 13%;
   margin-bottom: 0;
   background-position: center;
   background-image: url("https://cloudcalls.com.ua/wp-content/uploads/2018/02/stock-photo-211548267.jpg");
+}
+
+.lumex_team + .rev {
+  flex-direction: row-reverse;
 }
 
 .vertical-button {
@@ -941,6 +943,18 @@ header .header-desk__nav ul li a {
   position: absolute;
   left: 8%;
 }
+.category .rev {
+  flex-direction: row-reverse;
+}
+.category .rev .lumex__video {
+  bottom: 21%;
+}
+.category .rev .category_cover {
+  background-image: url("https://cloudcalls.com.ua/wp-content/uploads/2018/02/web-application2-1-e1521796990828.png");
+}
+.category .rev .category_text .vertical-button {
+  left: 0;
+}
 
 .category_diogram {
   padding-top: calc(100% / 9);
@@ -948,7 +962,7 @@ header .header-desk__nav ul li a {
   padding-bottom: calc(100% / 9);
 }
 .category_diogram .diogram_left {
-  width: 20%;
+  width: 23%;
   margin-left: 8.5%;
   margin-right: 12.5%;
   padding-top: 115px;
@@ -977,6 +991,25 @@ header .header-desk__nav ul li a {
   margin: 0 auto;
   background: black;
   height: 1px;
+}
+
+.col2 {
+  display: flex;
+  background: #282124;
+}
+.col2 .card_wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.col2 .card_wrapper .left {
+  width: 50%;
+}
+.col2 .card_wrapper .right {
+  width: 100%;
+}
+.col2 .card_wrapper .right .product_card {
+  height: 540px;
+  width: 24%;
 }
 
 .top {
@@ -1230,14 +1263,27 @@ header .header-desk__nav ul li a {
   }
 }
 
+.tel_table-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-top: calc(100% / 9);
+  padding-bottom: calc(100% / 9);
+}
+.tel_table-wrapper .text {
+  margin-left: 8.5%;
+  margin-bottom: 42px;
+}
+
 .atс_container {
   display: flex;
-  width: 50%;
-  justify-self: center;
+  width: 100%;
+  justify-content: center;
 }
 
 table {
   overflow: hidden;
+  width: 100%;
+  margin: 0 8.5%;
 }
 
 thead {
@@ -1245,7 +1291,7 @@ thead {
 }
 
 td, th {
-  padding: 10px;
+  padding: 10px 0;
   position: relative;
   outline: 0;
 }
@@ -1258,8 +1304,13 @@ th {
   text-align: left;
 }
 
+.col {
+  text-align: center;
+}
+
 .atс_container:not(.nohover) tbody tr:hover {
   background-color: #ffda00;
+  transition: 0.5s ease-in-out;
 }
 
 td:hover::after,
@@ -1273,29 +1324,14 @@ thead th:not(:empty):focus::after {
   top: -5000px;
   width: 100%;
   z-index: -1;
+  transition: 0.5s ease-in-out;
 }
 
 td:hover::after,
 th:hover::after {
   background-color: #ffe54d;
-}
-
-td:focus::after,
-th:focus::after {
-  background-color: lightblue;
-}
-
-/* Focus stuff for mobile */
-td:focus::before,
-tbody th:focus::before {
-  background-color: lightblue;
-  content: "";
-  height: 100%;
-  top: 0;
-  left: -5000px;
-  position: absolute;
-  width: 10000px;
-  z-index: -1;
+  transition: 0.5s ease-in-out;
+  box-shadow: 0 10px 6px -6px #777;
 }
 
 .alert_msg {
