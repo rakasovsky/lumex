@@ -1474,9 +1474,13 @@ td {
 }
 th {
     text-align: left;
-    }
+}
+tr:nth-child(even) {
+    background-color: white;
+}
 .col {
     text-align: center;
+    font-size: 20px;
 }
 .atс_container:not(.nohover) tbody tr:hover {
     background-color: $primary-color;
@@ -1498,12 +1502,12 @@ th {
  
     }
 
-    td:hover::after,
-    th:hover::after {
-    background-color: #ffe54d ;
-    transition: 0.5s ease-in-out;
-    box-shadow: 0 10px 6px -6px #777; 
-    }
+    // td:hover::after,
+    // th:hover::after {
+    // background-color: #ffe54d ;
+    // transition: 0.5s ease-in-out;
+    // box-shadow: 0 10px 6px -6px #777; 
+    // }
 
 
 // FORM

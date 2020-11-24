@@ -1880,8 +1880,13 @@ th {
   text-align: left;
 }
 
+tr:nth-child(even) {
+  background-color: white;
+}
+
 .col {
   text-align: center;
+  font-size: 20px;
 }
 
 .atс_container:not(.nohover) tbody tr:hover {
@@ -1903,15 +1908,6 @@ thead th:not(:empty):focus::after {
   z-index: -1;
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
-}
-
-td:hover::after,
-th:hover::after {
-  background-color: #ffe54d;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
-  -webkit-box-shadow: 0 10px 6px -6px #777;
-          box-shadow: 0 10px 6px -6px #777;
 }
 
 .alert_msg {
