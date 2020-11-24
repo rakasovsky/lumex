@@ -662,6 +662,7 @@ header .header-desk__nav ul li a {
 .cloud__calls-main .how_it_works {
   padding-top: calc(100% / 9);
   display: flex;
+  padding-bottom: calc(100% / 9);
 }
 .cloud__calls-main .how_it_works img {
   width: 50%;
@@ -675,9 +676,6 @@ header .header-desk__nav ul li a {
 }
 .cloud__calls-main .how_it_works .text_wrapper .tabs .tab {
   height: 300px;
-}
-.cloud__calls-main .our_products {
-  padding-top: calc(100% / 9);
 }
 .cloud__calls-main .our_products:before {
   content: "";
@@ -1108,6 +1106,7 @@ header .header-desk__nav ul li a {
 .catalog_page-wrapper .catalog_page-bottom .catalog_category .lumex__main .cloud__block3 .title .title__back p {
   height: 350px;
   overflow: hidden;
+  font-size: 15px;
 }
 .catalog_page-wrapper .filter-item .checkbox-container {
   display: block;
@@ -1305,6 +1304,9 @@ tbody th:focus::before {
   margin-bottom: 25px;
 }
 
+.lumex_form * {
+  font-family: RobotoMono;
+}
 .lumex_form .form_button {
   margin-top: 150px;
   justify-content: space-between;

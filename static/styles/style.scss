@@ -742,7 +742,7 @@ header {
     .how_it_works {
         padding-top: $pt;
         display: flex;
-
+        padding-bottom: $pb;
         img {
             width: 50%;
         }
@@ -758,10 +758,7 @@ header {
             }
         }
     }
-    .our_products {
-        padding-top: $pt;
-
-    }
+  
    .our_products:before {
     content: "";
     display: block;
@@ -1238,6 +1235,7 @@ header {
                         p {
                             height: 350px;
                             overflow: hidden;
+                            font-size: 15px;
                         }
                     }
                 }
@@ -1484,6 +1482,9 @@ th {
 }
 
 .lumex_form {
+    *{
+        font-family: RobotoMono;
+    }
     .form_button {
         margin-top: 150px;
         justify-content: space-between;
