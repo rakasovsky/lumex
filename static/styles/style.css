@@ -1387,7 +1387,6 @@ header .header-desk__nav ul li a {
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
-  padding-bottom: calc(100% / 9);
 }
 
 .category_diogram .diogram_left {

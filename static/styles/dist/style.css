@@ -957,7 +957,6 @@ header .header-desk__nav ul li a {
   padding-top: calc(100% / 9);
   display: flex;
   flex-direction: row-reverse;
-  padding-bottom: calc(100% / 9);
 }
 .category_diogram .diogram_left {
   width: 23%;
