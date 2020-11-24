@@ -26,6 +26,10 @@ body {
   overflow-x: hidden;
 }
 
+ul li {
+  list-style: none;
+}
+
 .hidden {
   display: none;
 }
@@ -1009,6 +1013,14 @@ header .header-desk__nav ul li a {
   width: 24%;
 }
 
+.category-list {
+  position: relative;
+}
+.category-list li {
+  padding-left: 25px;
+  position: relative;
+}
+
 .top {
   padding-top: 220px;
 }
@@ -1138,7 +1150,8 @@ header .header-desk__nav ul li a {
   overflow: hidden;
   font-size: 15px;
 }
-.catalog_page-wrapper .filter-item .checkbox-container {
+
+.filter-item .checkbox-container, ul .checkbox-container {
   display: block;
   position: relative;
   margin-bottom: 12px;
@@ -1146,14 +1159,14 @@ header .header-desk__nav ul li a {
   cursor: pointer;
   user-select: none;
 }
-.catalog_page-wrapper .filter-item .checkbox-container input {
+.filter-item .checkbox-container input, ul .checkbox-container input {
   position: absolute;
   opacity: 0;
   height: 0;
   width: 0;
   cursor: pointer;
 }
-.catalog_page-wrapper .filter-item .checkmark {
+.filter-item .checkmark, ul .checkmark {
   position: absolute;
   top: 0;
   left: 0;
@@ -1161,27 +1174,45 @@ header .header-desk__nav ul li a {
   width: 18px;
   background-color: #a8a8a8;
 }
-.catalog_page-wrapper .filter-item .checkbox-container:hover input ~ .checkmark {
+.filter-item .checkbox-container:hover input ~ .checkmark, ul .checkbox-container:hover input ~ .checkmark {
   background-color: #ccc;
 }
-.catalog_page-wrapper .filter-item .checkbox-container input:checked ~ .checkmark {
+.filter-item .checkbox-container input:checked ~ .checkmark, ul .checkbox-container input:checked ~ .checkmark {
   background-color: #ffda00;
 }
-.catalog_page-wrapper .filter-item .checkmark:after {
+.filter-item .checkmark:after, ul .checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
-.catalog_page-wrapper .filter-item .checkbox-container input:checked ~ .checkmark::after {
+.filter-item .checkbox-container input:checked ~ .checkmark::after, ul .checkbox-container input:checked ~ .checkmark::after {
   display: block;
 }
-.catalog_page-wrapper .filter-item .checkbox-container .checkmark:after {
+.filter-item .checkbox-container .checkmark:after, ul .checkbox-container .checkmark:after {
   left: 6px;
   top: 2px;
   width: 5px;
   height: 10px;
   border: solid black;
   border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+ul .checkmark {
+  background-color: #ffda00;
+}
+
+ul .checkmark:after {
+  display: block;
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 

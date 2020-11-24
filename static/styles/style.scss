@@ -36,6 +36,10 @@ body {
 //     overflow-x: hidden;
 // }
 
+ul li {
+    list-style: none;
+}
+
 .hidden {
     display: none;
 }
@@ -1132,6 +1136,14 @@ header {
     }
 }
 
+.category-list {
+    position: relative;
+    li {
+        padding-left: 25px;
+        position: relative;
+    }
+}
+
 
 // CONTACTS PAGE
 .top {
@@ -1274,9 +1286,9 @@ header {
             }
         }
     }
-
+}
     // Custom chekbox 
-    .filter-item {
+    .filter-item, ul{
         .checkbox-container{
             display: block;
             position: relative;
@@ -1333,9 +1345,24 @@ header {
             }
         }
     }
-   
-}
 
+    ul .checkmark {
+        background-color: #ffda00;
+    }
+    ul .checkmark:after {
+        display: block;
+        content: "";
+        position: absolute;
+        left: 6px;
+        top: 2px;
+        width: 5px;
+        height: 10px;
+        border: solid black;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    
 
 // PAGE 404 
 .notfound_container {
