@@ -946,9 +946,6 @@ header .header-desk__nav ul li a {
 .category .rev {
   flex-direction: row-reverse;
 }
-.category .rev .lumex__video {
-  bottom: 21%;
-}
 .category .rev .category_cover {
   background-image: url("https://cloudcalls.com.ua/wp-content/uploads/2018/02/web-application2-1-e1521796990828.png");
 }
@@ -959,6 +956,7 @@ header .header-desk__nav ul li a {
 .category_diogram {
   padding-top: calc(100% / 9);
   display: flex;
+  flex-direction: row-reverse;
   padding-bottom: calc(100% / 9);
 }
 .category_diogram .diogram_left {
