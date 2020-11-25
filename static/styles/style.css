@@ -1412,6 +1412,14 @@ header .header-desk__nav ul li a {
   height: 100%;
 }
 
+.v2 .diogram_left {
+  width: 30%;
+}
+
+.v2 .diogram_right {
+  width: 50%;
+}
+
 .category_sub {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -1100,6 +1100,14 @@ header {
             }
         }
 }
+.v2{
+    .diogram_left {
+        width: 30%;
+    }
+    .diogram_right {
+        width: 50%;
+    }
+}
 .category_sub {
     display: flex;
     flex-direction:column;
