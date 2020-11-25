@@ -127,6 +127,7 @@ JoC.from(".txt3", {
 // GSAP
 // MEGA MENU
 
+var lastOpenedDropdown = null;
 document.querySelectorAll(".nav-trigger").forEach(function (li) {
   var drp = gsap.timeline({
     defaults: {
@@ -154,7 +155,16 @@ document.querySelectorAll(".nav-trigger").forEach(function (li) {
     ease: "power4.in"
   }, "-=1").reversed(true);
   li.addEventListener('click', function (e) {
-    drp.reversed() ? drp.play() : drp.reverse();
+    if (drp.reversed()) {
+      if (lastOpenedDropdown !== null && lastOpenedDropdown !== drp) {
+        lastOpenedDropdown.reverse();
+      }
+
+      lastOpenedDropdown = drp;
+      drp.play();
+    } else {
+      drp.reverse();
+    }
   });
   li.querySelectorAll(".list_trigger").forEach(function (h) {
     /*

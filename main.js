@@ -113,6 +113,8 @@ JoC.from(".txt3", {duration:1, opacity:0, y: 100,stagger: 0.25})
 
 // MEGA MENU
 
+var lastOpenedDropdown = null;
+
 document.querySelectorAll(".nav-trigger").forEach(function (li) {
   const drp = gsap.timeline({
       defaults: {duration: 1},
@@ -128,9 +130,16 @@ document.querySelectorAll(".nav-trigger").forEach(function (li) {
      .reversed(true);
 
   li.addEventListener('click', function(e) {
-          drp.reversed() ? drp.play() : drp.reverse();
-      });
-
+          if (drp.reversed()) {
+            if (lastOpenedDropdown !== null && lastOpenedDropdown !== drp) {
+              lastOpenedDropdown.reverse();
+            }
+            lastOpenedDropdown = drp;
+            drp.play();
+          } else {
+            drp.reverse();
+          }
+  });
 
   li.querySelectorAll(".list_trigger").forEach(function (h) {
     /*
