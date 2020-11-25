@@ -1499,10 +1499,6 @@ table {
 thead {
     vertical-align: baseline;
     .col {
-        background-color: $secondary-color;
-        color: $primary-color;
-    }
-    .col:hover {
         background-color: $primary-color;
         color: black;
     }

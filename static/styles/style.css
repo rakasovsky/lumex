@@ -1907,11 +1907,6 @@ thead {
 }
 
 thead .col {
-  background-color: #282124;
-  color: #ffda00;
-}
-
-thead .col:hover {
   background-color: #ffda00;
   color: black;
 }
