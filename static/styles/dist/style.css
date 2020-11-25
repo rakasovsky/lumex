@@ -1030,13 +1030,11 @@ header .header-desk__nav ul li a {
 }
 
 .atc_img-wrapper {
-  padding-top: calc(100% / 9);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 2px 2px;
   grid-template-areas: ". . ." ". . .";
-  margin: 0 8.5%;
 }
 .atc_img-wrapper .atc_img-container {
   display: flex;
@@ -1052,6 +1050,9 @@ header .header-desk__nav ul li a {
 }
 .atc_img-wrapper .atc_img-container img:hover {
   filter: grayscale(0);
+}
+.atc_img-wrapper .atc_img-container:hover {
+  box-shadow: 0 0 5px #ffda00;
 }
 
 .top {

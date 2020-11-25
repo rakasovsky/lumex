@@ -1157,7 +1157,7 @@ header {
 }
 
 .atc_img-wrapper {
-    padding-top: $pt;
+    // padding-top: $pt;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -1165,7 +1165,7 @@ header {
     grid-template-areas:
       ". . ."
       ". . .";
-    margin: 0 8.5%;
+    // margin: 0 8.5%;
     
     .atc_img-container {
         display: flex;
@@ -1181,6 +1181,9 @@ header {
         img:hover {
             filter: grayscale(0)
         }
+    }
+    .atc_img-container:hover{
+        box-shadow: 0 0 5px $primary-color
     }
 }
 

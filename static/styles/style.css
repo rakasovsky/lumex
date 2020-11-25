@@ -1488,7 +1488,6 @@ header .header-desk__nav ul li a {
 }
 
 .atc_img-wrapper {
-  padding-top: calc(100% / 9);
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
@@ -1497,7 +1496,6 @@ header .header-desk__nav ul li a {
       grid-template-rows: 1fr 1fr;
   gap: 2px 2px;
       grid-template-areas: ". . ." ". . .";
-  margin: 0 8.5%;
 }
 
 .atc_img-wrapper .atc_img-container {
@@ -1527,6 +1525,11 @@ header .header-desk__nav ul li a {
 .atc_img-wrapper .atc_img-container img:hover {
   -webkit-filter: grayscale(0);
           filter: grayscale(0);
+}
+
+.atc_img-wrapper .atc_img-container:hover {
+  -webkit-box-shadow: 0 0 5px #ffda00;
+          box-shadow: 0 0 5px #ffda00;
 }
 
 .top {
