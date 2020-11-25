@@ -1471,6 +1471,7 @@ header {
     flex-direction: column;
     padding-top: $pt;
     padding-bottom: $pb;
+    font-family: RobotoMono,monospace;
     .text {
         margin-left: 8.5%;
         margin-bottom: 42px;
@@ -1489,6 +1490,14 @@ table {
 
 thead {
     vertical-align: baseline;
+    .col {
+        background-color: $secondary-color;
+        color: $primary-color;
+    }
+    .col:hover {
+        background-color: $primary-color;
+        color: black;
+    }
 }
 td, th {
     padding: 10px 0;

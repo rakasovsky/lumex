@@ -1296,6 +1296,7 @@ ul .checkmark:after {
   flex-direction: column;
   padding-top: calc(100% / 9);
   padding-bottom: calc(100% / 9);
+  font-family: RobotoMono, monospace;
 }
 .tel_table-wrapper .text {
   margin-left: 8.5%;
@@ -1316,6 +1317,14 @@ table {
 
 thead {
   vertical-align: baseline;
+}
+thead .col {
+  background-color: #282124;
+  color: #ffda00;
+}
+thead .col:hover {
+  background-color: #ffda00;
+  color: black;
 }
 
 td, th {
