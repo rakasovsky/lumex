@@ -1126,6 +1126,9 @@ header {
     height: 1px;
 }
 
+
+
+
 .col2{
     display: flex;
     background: #282124;
@@ -1153,6 +1156,33 @@ header {
     }
 }
 
+.atc_img-wrapper {
+    padding-top: $pt;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2px 2px;
+    grid-template-areas:
+      ". . ."
+      ". . .";
+    margin: 0 8.5%;
+    
+    .atc_img-container {
+        display: flex;
+        flex-direction: column;
+        background-color:white;
+        align-items: center;
+        padding: 25px;
+        img{
+            object-fit: contain;
+            filter: grayscale(100%);
+            transition: .5s ease;
+        }
+        img:hover {
+            filter: grayscale(0)
+        }
+    }
+}
 
 // CONTACTS PAGE
 .top {
