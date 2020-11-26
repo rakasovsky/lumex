@@ -2190,11 +2190,15 @@ footer .footer_bottom .copyright p:last-child {
 }
 @media (max-width: 375px) {
   header #menuToggle input:checked ~ ul {
-    transform: translate(-72%);
+    transform: translate(-73%);
   }
 
   header #menu {
     width: 375px;
+  }
+
+  .top {
+    padding-top: 118px;
   }
 
   .cloud__calls-main .our_products:before {
