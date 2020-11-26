@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @font-face {
   font-family: "Aeonik";
-  src: url("../assets/fonts/Aeonik-Regular.otf");
+  src: url("../assets/fonts/pro/AeonikPro-Regular.otf");
 }
 
 @font-face {
@@ -25,7 +25,7 @@ body {
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
   color: #333;
-  font-family: "Aeonik", sans-serif;
+  font-family: "Aeonik";
   background-color: #efeeee;
   overflow-x: hidden;
 }
@@ -70,7 +70,7 @@ button {
   cursor: pointer;
   border: 0 solid transparent;
   border-radius: 0;
-  font-family: "RobotoMono",monospace;
+  font-family: "RobotoMono";
   font-size: 15px;
   color: #323539;
   letter-spacing: 0;
@@ -109,7 +109,7 @@ button {
   cursor: pointer;
   border: 0 solid transparent;
   border-radius: 0;
-  font-family: "RobotoMono",monospace;
+  font-family: "RobotoMono";
   font-size: 15px;
   color: #ffda00;
   letter-spacing: 0;
@@ -202,7 +202,7 @@ button {
 }
 
 .label {
-  font-family: "RobotoMono", monospace;
+  font-family: "RobotoMono";
   margin-bottom: 15px;
 }
 
@@ -1924,7 +1924,6 @@ ul .checkmark:after {
           flex-direction: column;
   padding-top: calc(100% / 9);
   padding-bottom: calc(100% / 9);
-  font-family: RobotoMono,monospace;
 }
 
 .tel_table-wrapper .text {
@@ -2743,6 +2742,10 @@ footer .footer_bottom .copyright p:last-child {
     margin-top: 42px;
     margin-left: 12.5%;
     width: 75%;
+  }
+  .lumex_team + .v2 {
+    padding-top: 0;
+    padding-bottom: calc(100% / 9);
   }
   .category .category_container {
     height: 85vh;
