@@ -873,6 +873,11 @@ header .header-desk__nav ul li a {
   flex-direction: row-reverse;
 }
 
+.lumex_team2 {
+  padding-top: 0;
+  padding-bottom: calc(100% / 9);
+}
+
 .vertical-button {
   flex-direction: column;
   padding: 40px 0;
@@ -2042,11 +2047,6 @@ footer .footer_bottom .copyright p:last-child {
     margin-top: 42px;
     margin-left: 12.5%;
     width: 75%;
-  }
-
-  .lumex_team + .v2 {
-    padding-top: 0;
-    padding-bottom: calc(100% / 9);
   }
 
   .category .category_container {

@@ -962,7 +962,6 @@ header {
 .lumex_team {
     display: flex;
     padding-top: $pt;
-    // padding-bottom: 200px;
     .team_left {
         margin-left: 12.5%;
         margin-right: auto;
@@ -983,9 +982,12 @@ header {
         background-image: url("https://cloudcalls.com.ua/wp-content/uploads/2018/02/stock-photo-211548267.jpg");
     }
 }
-
 .lumex_team + .rev{
     flex-direction: row-reverse;
+}
+.lumex_team2 {
+    padding-top: 0;
+    padding-bottom: $pb;
 }
 
 .vertical-button {
@@ -2271,10 +2273,7 @@ footer {
             width: 75%;
         }
     }
-    .lumex_team + .v2 {
-        padding-top: 0;
-        padding-bottom: $pb;
-    }
+   
     // Category PAGE
     .category .category_container {
         height: 85vh;
