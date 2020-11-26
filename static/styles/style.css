@@ -70,7 +70,7 @@ button {
   cursor: pointer;
   border: 0 solid transparent;
   border-radius: 0;
-  font-family: Roboto Mono,monospace;
+  font-family: "RobotoMono",monospace;
   font-size: 15px;
   color: #323539;
   letter-spacing: 0;
@@ -109,7 +109,7 @@ button {
   cursor: pointer;
   border: 0 solid transparent;
   border-radius: 0;
-  font-family: Roboto Mono,monospace;
+  font-family: "RobotoMono",monospace;
   font-size: 15px;
   color: #ffda00;
   letter-spacing: 0;
@@ -1300,6 +1300,7 @@ header .header-desk__nav ul li a {
 
 .category {
   padding-top: 220px;
+  height: 144vh;
 }
 
 .category .category_container {
@@ -1311,7 +1312,7 @@ header .header-desk__nav ul li a {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
-  height: 100vh;
+  height: 100%;
 }
 
 .category .category_container .category_cover {
@@ -1347,13 +1348,12 @@ header .header-desk__nav ul li a {
       -ms-grid-row-align: stretch;
       align-self: stretch;
   width: 62.5%;
-  margin-top: -420px;
+  margin-top: 370px;
   padding: 135px 16.66667% 185px;
   /* height: 100%; */
   overflow: hidden;
   background: #c9c9c9;
   color: #333;
-  bottom: -5%;
 }
 
 .category .category_container .category_text .vertical-button {
@@ -2010,7 +2010,7 @@ thead th:not(:empty):focus::after {
 }
 
 .lumex_form * {
-  font-family: RobotoMono;
+  font-family: "RobotoMono";
 }
 
 .lumex_form .form_button {
@@ -2157,6 +2157,14 @@ footer .footer_bottom .copyright p:last-child {
   .lumex__main .cloud__block2 .title .title__back div {
     width: 370px;
   }
+  .category {
+    height: 170vh;
+  }
+  .category_diogram {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   .card_wrapper .left {
     width: 25%;
   }
@@ -2167,7 +2175,7 @@ footer .footer_bottom .copyright p:last-child {
 
 @media (max-width: 1366px) {
   .category .category_container .category_text {
-    bottom: -20%;
+    margin-top: 340px;
   }
 }
 
@@ -2243,15 +2251,13 @@ footer .footer_bottom .copyright p:last-child {
   footer .footer_bottom .copyright {
     margin-right: 7.33333%;
   }
-  .category .category_container {
-    height: 70vh;
-  }
-  .category .category_container .category_cover {
-    height: 50vh;
+  .category {
+    height: 120vh;
   }
   .category .category_container .category_text {
     bottom: 0%;
     width: 80%;
+    padding: 65px 16.66667% 120px;
   }
   .category_diogram .diogram_left {
     padding-top: 0px;
