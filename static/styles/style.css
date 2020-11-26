@@ -993,11 +993,6 @@ header .header-desk__nav ul li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding-bottom: calc(100% / 9);
 }
 
 .cloud__calls-main .col .card_wrapper .left .text {
@@ -2902,6 +2897,9 @@ footer .footer_bottom .copyright p:last-child {
   }
   header #menu {
     width: 375px;
+  }
+  .cloud__calls-main .our_products:before {
+    display: none;
   }
   .who-we-are .who-we-are__container .who-we-are__row .lumex__video {
     width: 100%;

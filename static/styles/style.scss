@@ -777,8 +777,8 @@ header {
         .left {
             width: 100%;
             display: flex;
-            flex-direction: column;
-            padding-bottom: $pb;
+            // flex-direction: column;
+            // padding-bottom: $pb;
             .text {
                 align-self: flex-end;
                 max-width: 50%;
@@ -2432,6 +2432,10 @@ footer {
     }
     header #menu {
         width: 375px;
+    }
+
+    .cloud__calls-main .our_products:before {
+        display: none;
     }
 
     .who-we-are .who-we-are__container .who-we-are__row .lumex__video {
