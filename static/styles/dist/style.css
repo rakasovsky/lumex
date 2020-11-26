@@ -1094,11 +1094,9 @@ header .header-desk__nav ul li a {
 }
 
 .catalog_main {
-  margin: 9px 8.33333% 0;
+  margin: 0 8.33333% 0;
+  padding-top: 0;
   padding-bottom: calc(100% / 9);
-}
-.catalog_main .cloud__block3 .title .title__front {
-  padding: 10%;
 }
 .catalog_main .cloud__block3 .title .title__front .cat_card_wrapper {
   display: flex;
@@ -1546,6 +1544,20 @@ footer .footer_bottom .copyright p:last-child {
   .product_card {
     width: 45%;
   }
+
+  .catalog_main .cloud__block3 .title .title__front {
+    position: relative;
+    width: 100%;
+    padding: 8% 16.66667%;
+  }
+  .catalog_main .cloud__block3 .title .title__front .cat_card_wrapper p {
+    z-index: 2;
+  }
+  .catalog_main .cloud__block3 .title .title__front .cat_card_wrapper img {
+    position: absolute;
+    left: 0;
+    top: 45px;
+  }
 }
 @media (max-width: 1366px) {
   .category .category_container .category_text {
@@ -1668,6 +1680,13 @@ footer .footer_bottom .copyright p:last-child {
   .sub_wrapper .card_wrapper .right {
     width: 100%;
   }
+
+  .catalog_main {
+    justify-content: flex-start;
+  }
+  .catalog_main .cloud__block3 {
+    padding-top: 33%;
+  }
 }
 @media (max-width: 768px) {
   .sticky {
@@ -1787,6 +1806,10 @@ footer .footer_bottom .copyright p:last-child {
     transform: translate(-87%);
   }
 
+  .top {
+    padding-top: 120px;
+  }
+
   .who-we-are .who-we-are__container .who-we-are__row .lumex__content {
     width: 72.5%;
   }
@@ -1860,6 +1883,10 @@ footer .footer_bottom .copyright p:last-child {
 
   .lumex_team .team_left {
     margin-left: 8.5%;
+  }
+
+  .catalog_main {
+    margin: 0 8%;
   }
 
   .contact_container .wrapper {
@@ -2175,6 +2202,15 @@ footer .footer_bottom .copyright p:last-child {
     top: unset;
   }
 
+  .catalog_main {
+    padding-top: 0;
+    display: flex;
+  }
+  .catalog_main .cloud__block3 {
+    padding-top: 50%;
+    width: 49.333%;
+  }
+
   .notfound_container .transform90 {
     margin-right: 14.33333%;
   }
@@ -2186,6 +2222,11 @@ footer .footer_bottom .copyright p:last-child {
 
   .category {
     padding-top: 110px;
+  }
+
+  .catalog_main .cloud__block3 {
+    padding-top: 60%;
+    width: 49.333%;
   }
 }
 @media (max-width: 375px) {

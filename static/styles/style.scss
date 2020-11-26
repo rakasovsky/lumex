@@ -1228,13 +1228,13 @@ header {
 
 // CATALOG Page
 .catalog_main {
-  margin: 9px 8.33333% 0;
+  margin: 0 8.33333% 0;
+  padding-top: 0;
   padding-bottom: $pb;
   .cloud__block3 {
     .title {
         .title__front{
-            padding: 10%;
-            
+            // padding: 10%;
             .cat_card_wrapper {
                 // padding: 16.66667%;
                 display: flex;
@@ -1761,7 +1761,24 @@ footer {
         width: 45%;
     }
 
- 
+    // Catalog Page
+    .catalog_main  {
+        .cloud__block3 .title .title__front {
+            position: relative;
+            width: 100%;
+            padding: 8% 16.66667%;
+            .cat_card_wrapper {
+                p {
+                    z-index: 2;
+                }
+                img {
+                    position: absolute;
+                    left: 0;
+                    top: 45px;
+                }
+            }
+        }
+    }
    
 }
 
@@ -1893,6 +1910,14 @@ footer {
             .right {
                 width: 100%;
             }
+        }
+    }
+
+    // Catalog page
+    .catalog_main {
+        justify-content: flex-start;
+        .cloud__block3 {
+            padding-top: 33%;
         }
     }
 }
@@ -2030,6 +2055,11 @@ footer {
             transform: translate(-87%);;
           }
     }
+
+    .top {
+        padding-top: 120px;
+    }
+
     .who-we-are .who-we-are__container .who-we-are__row .lumex__content {
         width: 72.5%;
     }
@@ -2100,6 +2130,11 @@ footer {
 
     .lumex_team .team_left {
         margin-left: 8.5%;
+    }
+    
+    // Catalog page
+    .catalog_main{
+        margin: 0 8%;
     }
 
     // contacts page
@@ -2409,6 +2444,18 @@ footer {
         top: unset;
     }
 
+    // Catalog page
+    .catalog_main {
+        padding-top: 0;
+        display: flex;
+       .cloud__block3 {
+            padding-top: 50%;
+            width: 49.333%;
+        }
+        
+        
+    }
+
     // 404
     .notfound_container {
         .transform90 {
@@ -2423,6 +2470,12 @@ footer {
     }
     .category {
         padding-top: 110px;
+    }
+    .catalog_main {
+        .cloud__block3 {
+            padding-top: 60%;
+            width: 49.333%;
+         }
     }
 }
 
