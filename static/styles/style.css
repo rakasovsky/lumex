@@ -2266,6 +2266,16 @@ footer .footer_bottom .copyright p:last-child {
     width: 80%;
     padding: 65px 16.66667% 120px;
   }
+  .atc_img-wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    gap: 2px 2px;
+        grid-template-areas: ". . " ". . " ". .";
+  }
   .category_diogram .diogram_left {
     padding-top: 0px;
   }

@@ -1687,6 +1687,7 @@ footer {
 
 @media screen and (min-width:2560px) {
     .category {
+
         height: 120vh;
     }
     .lumex__main {
@@ -1863,6 +1864,28 @@ footer {
                 }
         }
     }
+
+    // .category_diogram2 {
+    //     flex-direction: row;
+    //     flex-wrap: wrap;
+    //     .diogram_left {
+    //         width: 100%;
+    //     }
+    //     .diogram_right {
+    //         width: 100%;
+    //     }
+    // }
+
+    .atc_img-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 2px 2px;
+        grid-template-areas:
+            ". . "
+            ". . "
+            ". .";
+    }
     .category_diogram .diogram_left {
         padding-top: 0px;
     }
@@ -1870,9 +1893,7 @@ footer {
         width: 40%;
     }
 
-    .v2 {
-
-    }
+    
     .sub_wrapper {
         .card_wrapper{
             flex-direction: column;
