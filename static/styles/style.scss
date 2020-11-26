@@ -1865,17 +1865,6 @@ footer {
         }
     }
 
-    // .category_diogram2 {
-    //     flex-direction: row;
-    //     flex-wrap: wrap;
-    //     .diogram_left {
-    //         width: 100%;
-    //     }
-    //     .diogram_right {
-    //         width: 100%;
-    //     }
-    // }
-
     .atc_img-wrapper {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -2077,11 +2066,44 @@ footer {
     }
 
     // category page
+    .category {
+        height: 95vh;
+        padding-top: 150px;
+        .category_container {
+            .category_cover {
+                height: 60vh;
+            }
+            .category_text .transform90 {
+                left: 0%;
+            }
+        }
+    }
     .category .category_container {
         height: 74vh;
     }
+    .category .category_container .category_text {
+        margin-top: 130px;
+        bottom: unset;
+    }
+    .category_diogram .diogram_left {
+       margin-right: 8.5%;
+    }
+    .atс_container {
+        .col {
+            font-size:15px;
+        }
+        table {
+         
+            margin: 0 2.5%;
+        }
+    }
+
+    .lumex_team .team_left {
+        margin-left: 8.5%;
+    }
 
     // contacts page
+   
     .contact_container .wrapper {
         flex-direction: column;
         height: 100%;
@@ -2095,6 +2117,9 @@ footer {
         }
 
     }
+    .category-list {
+        font-size:13px;
+    }
     .lumex_form .form_button {
         margin: 100px 0;
     }
@@ -2103,6 +2128,7 @@ footer {
             width: 100%;
         }
     }
+    
 }
 
 @media (max-width:500px) {
@@ -2271,7 +2297,7 @@ footer {
         }
     }
     .lumex_team {
-        flex-direction: column-reverse;
+        flex-direction: column;
         overflow-x: hidden;
         .team_right {
             width: 100%;
@@ -2293,6 +2319,7 @@ footer {
         }
         .team_left {
             margin-top: 42px;
+            margin-bottom: 42px;
             margin-left: 12.5%;
             width: 75%;
         }
@@ -2304,7 +2331,7 @@ footer {
     }
     .category .category_container .category_text {
         padding: 60px 12.66667% 110px;
-        bottom: 1%;
+        width: 85%;
         display: flex;
         flex-direction: column;
 
@@ -2336,8 +2363,18 @@ footer {
             margin-bottom: 40px;
         }
         .diogram_right {
-            width: 87.5%;
-            margin-left: 12.5%;
+            width: 100%;
+            // margin-left: 12.5%;
+        }
+    }
+
+    .atс_container  {
+        font-size: 13px;
+        .col {
+            font-size: 13px;
+        }
+        table{
+            margin: 0px;
         }
     }
     .sub_wrapper{
@@ -2384,6 +2421,9 @@ footer {
     .notfound_container .transform90 {
         display: none;
     }
+    .category {
+        padding-top: 110px;
+    }
 }
 
 @media (max-width: 375px) {
@@ -2405,7 +2445,6 @@ footer {
         padding: 60px 6.66667%;
     }
     .category .category_container .category_text {
-        bottom: 0%;
         width: 85%;
     }
 }
