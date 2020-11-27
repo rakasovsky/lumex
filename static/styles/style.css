@@ -1412,12 +1412,12 @@ header .header-desk__nav ul li a {
   height: 100%;
 }
 
-.v2 .diogram_left {
+.category_diogram2 .diogram_left {
   width: 30%;
   padding-top: 0px;
 }
 
-.v2 .diogram_right {
+.category_diogram2 .diogram_right {
   width: 50%;
 }
 
@@ -1687,6 +1687,10 @@ header .header-desk__nav ul li a {
 
 .catalog_page-wrapper .catalog_page-bottom .catalog_category .lumex__main .cat_card_wrapper .cat_card_text {
   padding: 5% 10%;
+}
+
+.catalog_page-wrapper .catalog_page-bottom .catalog_category .lumex__main .cat_card_wrapper img {
+  width: 100%;
 }
 
 .catalog_page-wrapper .catalog_page-bottom .catalog_category .lumex__main .cloud__block3 {
@@ -2134,6 +2138,9 @@ footer .footer_bottom .copyright p:last-child {
   .category .category_container .category_text {
     bottom: 5%;
   }
+  .catalog_page-wrapper .catalog_page-bottom .catalog_category .lumex__main .cloud__block3 {
+    padding-top: 33%;
+  }
 }
 
 @media (max-width: 1440px) {
@@ -2182,6 +2189,18 @@ footer .footer_bottom .copyright p:last-child {
     position: absolute;
     left: 0;
     top: 45px;
+  }
+  .catalog_page-wrapper .catalog_page-bottom .catalog_category .lumex__main .cloud__block3 {
+    width: 33.33333%;
+    padding-top: 60%;
+  }
+  .catalog_page-wrapper .catalog_page-bottom {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .catalog_page-wrapper .catalog_page-bottom .catalog_category {
+    width: 80%;
   }
 }
 
