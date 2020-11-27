@@ -1919,9 +1919,6 @@ footer .footer_bottom .copyright p:last-child {
   .catalog_main {
     margin: 0 8%;
   }
-  .catalog_main .cloud__block3 .title .title__front .cat_card_wrapper img {
-    top: unset;
-  }
 
   .contact_container .wrapper {
     flex-direction: column;
