@@ -980,6 +980,9 @@ header {
         background-position: center;
         background-image: url("https://cloudcalls.com.ua/wp-content/uploads/2018/02/stock-photo-211548267.jpg");
     }
+    .cloud_img{
+        background-image: url(../assets/img/category/tel/cloudcalls.jpg);
+    }
     .service_img {
         background-image: url(../assets/img/category/tel/tv-repair-min.jpg);
 
@@ -1189,7 +1192,10 @@ header {
         }
     }
     .atc_img-container:hover{
-        box-shadow: 0 0 5px $primary-color
+        box-shadow: 0 0 5px $primary-color;
+        p{
+            color: black;
+        }
     }
 }
 

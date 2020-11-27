@@ -1255,6 +1255,10 @@ header .header-desk__nav ul li a {
   background-image: url("https://cloudcalls.com.ua/wp-content/uploads/2018/02/stock-photo-211548267.jpg");
 }
 
+.lumex_team .cloud_img {
+  background-image: url(../assets/img/category/tel/cloudcalls.jpg);
+}
+
 .lumex_team .service_img {
   background-image: url(../assets/img/category/tel/tv-repair-min.jpg);
 }
@@ -1534,6 +1538,10 @@ header .header-desk__nav ul li a {
 .atc_img-wrapper .atc_img-container:hover {
   -webkit-box-shadow: 0 0 5px #ffda00;
           box-shadow: 0 0 5px #ffda00;
+}
+
+.atc_img-wrapper .atc_img-container:hover p {
+  color: black;
 }
 
 .top {
