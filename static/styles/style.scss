@@ -771,7 +771,6 @@ header {
     margin: 0 auto;
  }
  .col {
-    
      .card_wrapper {
         flex-direction: column;
         .left {
@@ -980,6 +979,10 @@ header {
         margin-bottom: 0;
         background-position: center;
         background-image: url("https://cloudcalls.com.ua/wp-content/uploads/2018/02/stock-photo-211548267.jpg");
+    }
+    .service_img {
+        background-image: url(../assets/img/category/tel/tv-repair-min.jpg);
+
     }
 }
 .lumex_team + .rev{
@@ -1523,72 +1526,72 @@ header {
     .text {
         margin-left: 8.5%;
         margin-bottom: 42px;
-    }
-}
-.atс_container {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}
-table {
-    overflow: hidden;
-    width: 100%;
-    margin: 0 8.5%;
-    }
+        }
 
-thead {
-    vertical-align: baseline;
+    .atс_container {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    table {
+        overflow: hidden;
+        width: 100%;
+        margin: 0 8.5%;
+        }
+
+    thead {
+        vertical-align: baseline;
+        .col {
+            background-color: $primary-color;
+            color: black;
+        }
+    }
+    td, th {
+        padding: 10px 0;
+        position: relative;
+        outline: 0;
+
+    }
+    td {
+        text-align: center;
+    }
+    th {
+        text-align: left;
+    }
+    tr:nth-child(even) {
+        background-color: white;
+    }
     .col {
+        text-align: center;
+        font-size: 20px;
+    }
+    .atс_container:not(.nohover) tbody tr:hover {
         background-color: $primary-color;
-        color: black;
-    }
-}
-td, th {
-    padding: 10px 0;
-    position: relative;
-    outline: 0;
-
- }
-td {
-    text-align: center;
-}
-th {
-    text-align: left;
-}
-tr:nth-child(even) {
-    background-color: white;
-}
-.col {
-    text-align: center;
-    font-size: 20px;
-}
-.atс_container:not(.nohover) tbody tr:hover {
-    background-color: $primary-color;
-    transition: 0.5s ease-in-out;
-}
-
-    td:hover::after,
-    thead th:not(:empty):hover::after,
-    td:focus::after,
-    thead th:not(:empty):focus::after { 
-    content: '';  
-    height: 10000px;
-    left: 0;
-    position: absolute;  
-    top: -5000px;
-    width: 100%;
-    z-index: -1;
-    transition: 0.5s ease-in-out;
- 
+        transition: 0.5s ease-in-out;
     }
 
-    // td:hover::after,
-    // th:hover::after {
-    // background-color: #ffe54d ;
-    // transition: 0.5s ease-in-out;
-    // box-shadow: 0 10px 6px -6px #777; 
-    // }
+        td:hover::after,
+        thead th:not(:empty):hover::after,
+        td:focus::after,
+        thead th:not(:empty):focus::after { 
+        content: '';  
+        height: 10000px;
+        left: 0;
+        position: absolute;  
+        top: -5000px;
+        width: 100%;
+        z-index: -1;
+        transition: 0.5s ease-in-out;
+    
+        }
 
+        // td:hover::after,
+        // th:hover::after {
+        // background-color: #ffe54d ;
+        // transition: 0.5s ease-in-out;
+        // box-shadow: 0 10px 6px -6px #777; 
+        // }
+}
 
 // FORM
 
@@ -2365,6 +2368,8 @@ footer {
                 margin: 0;
             }
         }
+
+
         .team_left {
             margin-top: 42px;
             margin-bottom: 42px;
