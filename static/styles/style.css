@@ -942,6 +942,7 @@ header .header-desk__nav ul li a {
       -ms-flex-direction: column;
           flex-direction: column;
   color: white;
+  overflow: hidden;
 }
 
 .cloud__calls-main .slogan p:last-child {

@@ -659,6 +659,7 @@ header .header-desk__nav ul li a {
   display: flex;
   flex-direction: column;
   color: white;
+  overflow: hidden;
 }
 .cloud__calls-main .slogan p:last-child {
   max-width: 772px;
