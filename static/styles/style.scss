@@ -1738,6 +1738,25 @@ footer {
         }
     }    
 
+    .cloud__calls-main {
+        .our_products {
+            .card_wrapper {
+                .right{
+                    width:70%;
+                    .three {
+                        margin: 0 2px;
+                    }
+                }
+            }
+        }
+    }
+    .cloud__calls-main .col {
+            .card_wrapper {
+                .right{
+                    width:100%;
+                }
+            }
+    }
   
     .who-we-are .who-we-are__container .who-we-are__row .lumex__content .content {
         margin-left: 30%;
@@ -1858,7 +1877,7 @@ footer {
     .cloud__calls-main .how_it_works .text_wrapper {
         width: 66.33333%;
     }
-    .our_products { 
+    .cloud__calls-main .our_products { 
         .card_wrapper {
             flex-direction: column;
 
@@ -2159,7 +2178,11 @@ footer {
     // Catalog page
     .catalog_main{
         margin: 0 8%;
+        .cloud__block3 .title .title__front .cat_card_wrapper img {
+            top: unset;
+        }
     }
+    
 
     // contacts page
    
@@ -2192,7 +2215,7 @@ footer {
 
 @media (max-width:500px) {
     .top {
-        padding-top: 160px;
+        padding-top: 130px;
     }
     header #menu { 
         width: 430px;
@@ -2206,12 +2229,13 @@ footer {
     .who-we-are {
         padding-bottom: 0px;
     }
+    
     .who-we-are .who-we-are__container .who-we-are__row {
         flex-direction: column;
         .lumex__video {
             width: 100%;
             height: 80vh;
-            
+            margin-top: 30px;
             video {
                 height: 60%;
             }
@@ -2334,7 +2358,7 @@ footer {
         width: 80%;
         margin: 0 12%;
     }
-    .our_products .card_wrapper {
+    .cloud__calls-main .our_products .card_wrapper {
        width: 88%;
        .left {
             width: 90%;
@@ -2387,6 +2411,9 @@ footer {
     }
    
     // Category PAGE
+    .category {
+        height: 110vh;
+    }  
     .category .category_container {
         height: 85vh;
     }
@@ -2472,10 +2499,11 @@ footer {
 
     // Catalog page
     .catalog_main {
+        margin: 0 4%;
         padding-top: 0;
         display: flex;
        .cloud__block3 {
-            padding-top: 50%;
+            padding-top: 80%;
             width: 49.333%;
         }
         
@@ -2499,7 +2527,7 @@ footer {
     }
     .catalog_main {
         .cloud__block3 {
-            padding-top: 60%;
+            padding-top: 80%;
             width: 49.333%;
          }
     }
