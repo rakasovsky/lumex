@@ -2519,6 +2519,9 @@ footer {
     .cloud__calls-main .our_products:before {
         display: none;
     }
+    .category {
+        height: 125vh;
+    }
 
     .who-we-are .who-we-are__container .who-we-are__row .lumex__video {
         width: 100%;
@@ -2532,6 +2535,9 @@ footer {
     }
     .category .category_container .category_text {
         width: 85%;
+    }
+    .tel_table-wrapper {
+        display: none;
     }
 }
 

@@ -2974,6 +2974,9 @@ footer .footer_bottom .copyright p:last-child {
   .cloud__calls-main .our_products:before {
     display: none;
   }
+  .category {
+    height: 125vh;
+  }
   .who-we-are .who-we-are__container .who-we-are__row .lumex__video {
     width: 100%;
     margin-top: 15px;
@@ -2986,6 +2989,9 @@ footer .footer_bottom .copyright p:last-child {
   }
   .category .category_container .category_text {
     width: 85%;
+  }
+  .tel_table-wrapper {
+    display: none;
   }
 }
 
