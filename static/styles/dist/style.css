@@ -1867,6 +1867,12 @@ footer .footer_bottom .copyright p:last-child {
     left: 0%;
   }
 
+  .catalog_main .cloud__block3 .title .title__front .cat_card_wrapper img {
+    height: 150px;
+    width: 150px;
+    left: unset;
+  }
+
   .top {
     padding-top: 100px;
   }
@@ -2100,11 +2106,15 @@ footer .footer_bottom .copyright p:last-child {
 }
 @media screen and (max-width: 736px) and (orientation: landscape) {
   header #menu {
-    height: 150vh;
+    height: 250vh;
     padding: 50px;
   }
   header #menu .m_li {
     font-size: 18px;
+  }
+
+  header .m_li ul li {
+    font-size: 16px;
   }
 
   .card_wrapper .product_card {
@@ -2112,8 +2122,31 @@ footer .footer_bottom .copyright p:last-child {
   }
 
   .catalog_main .cloud__block3 .title .title__front .cat_card_wrapper img {
-    position: absolute;
-    left: 0;
+    left: unset;
+  }
+
+  .lumex__main .cloud__block3 .title .title__back div a {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 667px) and (orientation: landscape) {
+  header #menuToggle input:checked ~ ul {
+    transform: translate(-86%);
+  }
+
+  header #menu {
+    width: 750px;
+    min-height: 250vh;
+    height: 100%;
+  }
+
+  .catalog_main .cloud__block3 .title .title__front .cat_card_wrapper {
+    align-items: center;
+  }
+
+  .catalog_main .cloud__block3 {
+    width: 50%;
+    padding-top: 50%;
   }
 }
 @media (max-width: 500px) {
