@@ -2824,6 +2824,13 @@ footer .footer_bottom .copyright p:last-child {
 }
 
 @media (max-width: 500px) {
+  header #menu {
+    height: 150vh;
+    padding: 50px;
+  }
+  header .m_li {
+    margin-left: 0;
+  }
   .top {
     padding-top: 130px;
   }
