@@ -3254,6 +3254,11 @@ footer .footer_bottom .copyright p:last-child {
     bottom: 0;
     top: unset;
   }
+  .catalog_main .cloud__block3 .title .title__front .cat_card_wrapper {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   .catalog_main {
     margin: 0 4%;
     padding-top: 0;
