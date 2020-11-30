@@ -25,16 +25,16 @@ body {
     overflow-x: hidden;
 }
 
-// #app {
-//     display: grid;
-//     position: relative;
-//     grid-template-rows: auto 1fr auto;
-//     min-height: 100vh;
-//     color:#333;
-//     font-family: "Aeonik", sans-serif;
-//     background-color: #efeeee;
-//     overflow-x: hidden;
-// }
+#app {
+    display: grid;
+    position: relative;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    color:#333;
+    font-family: "Aeonik", sans-serif;
+    background-color: #efeeee;
+    overflow: hidden;
+}
 
 
 ul li {
