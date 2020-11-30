@@ -2440,6 +2440,9 @@ footer .footer_bottom .copyright p:last-child {
   header .mob_logo {
     margin-left: 8%;
   }
+  header .mob_logo img {
+    width: 200px;
+  }
   header .mob_logo-drp img {
     width: 200px;
     margin-left: 8.33333%;
@@ -2613,6 +2616,9 @@ footer .footer_bottom .copyright p:last-child {
   }
   header .mob_logo {
     margin-left: 8%;
+  }
+  header .mob_logo img {
+    width: 175px;
   }
   header #menuToggle {
     display: -webkit-box;
