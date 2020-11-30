@@ -2552,6 +2552,9 @@ footer {
     .lumex__main{
             display: none;
     }
+    .catalog_wrapper {
+        display: flex;
+    }
     .lumex__main_mobile {
         padding-top: $pt;
         display: flex;
@@ -2798,8 +2801,13 @@ footer {
             padding-top: 80%;
             width: 49.333%;
         }
-        
-        
+    }
+    .catalog_page-wrapper .catalog_page-bottom .catalog_category .sorting {
+        width: 80%;
+    }
+    .catalog_page-wrapper .catalog_page-bottom .catalog_category .lumex__main .cloud__block3 {
+        width: 50%;
+        padding-top: 60%;
     }
 
     // 404

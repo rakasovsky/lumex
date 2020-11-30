@@ -2276,6 +2276,10 @@ footer .footer_bottom .copyright p:last-child {
     display: none;
   }
 
+  .catalog_wrapper {
+    display: flex;
+  }
+
   .lumex__main_mobile {
     padding-top: calc(100% / 9);
     display: flex;
@@ -2524,6 +2528,15 @@ footer .footer_bottom .copyright p:last-child {
   .catalog_main .cloud__block3 {
     padding-top: 80%;
     width: 49.333%;
+  }
+
+  .catalog_page-wrapper .catalog_page-bottom .catalog_category .sorting {
+    width: 80%;
+  }
+
+  .catalog_page-wrapper .catalog_page-bottom .catalog_category .lumex__main .cloud__block3 {
+    width: 50%;
+    padding-top: 60%;
   }
 
   .notfound_container .transform90 {
