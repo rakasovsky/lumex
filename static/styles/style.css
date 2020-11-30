@@ -2407,7 +2407,7 @@ footer .footer_bottom .copyright p:last-child {
   }
   .catalog_page-wrapper .catalog_page-top button {
     display: block;
-    z-index: 12;
+    z-index: 10;
   }
 }
 
