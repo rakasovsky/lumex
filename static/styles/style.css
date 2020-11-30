@@ -2515,6 +2515,12 @@ footer .footer_bottom .copyright p:last-child {
     -webkit-transform: translate(-87%);
             transform: translate(-87%);
   }
+  .card_wrapper .product_card {
+    height: 500px;
+  }
+  .card_wrapper .product_card .card-content {
+    padding: 30px 16.6667%;
+  }
   .category {
     height: 260vh;
     padding-top: 120px;
@@ -2766,6 +2772,23 @@ footer .footer_bottom .copyright p:last-child {
   }
   footer .footer-logo {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 736px) and (orientation: landscape) {
+  header #menu {
+    height: 150vh;
+    padding: 50px;
+  }
+  header #menu .m_li {
+    font-size: 18px;
+  }
+  .card_wrapper .product_card {
+    height: 535px;
+  }
+  .catalog_main .cloud__block3 .title .title__front .cat_card_wrapper img {
+    position: absolute;
+    left: 0;
   }
 }
 

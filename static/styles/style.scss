@@ -2107,6 +2107,16 @@ footer {
           }
     }
 
+    .card_wrapper {
+        .product_card {
+            height: 500px;
+            .card-content {
+                padding: 30px 16.6667%;
+            }
+        }
+    }
+    
+
 
     // Category Page
     .category {
@@ -2367,6 +2377,29 @@ footer {
         }
     }
     
+}
+
+
+@media screen and (max-width: 736px) and (orientation: landscape) {
+    header #menu {
+        height: 150vh;
+        padding: 50px;
+        .m_li{
+            font-size:18px;
+        }
+    }
+  .card_wrapper  {
+      .product_card {
+          height: 535px;
+      }
+  }
+
+  // Catalog Page
+  .catalog_main .cloud__block3 .title .title__front .cat_card_wrapper img {
+    position: absolute;
+    left: 0;
+    // top: unset;
+    }
 }
 
 @media (max-width:500px) {
