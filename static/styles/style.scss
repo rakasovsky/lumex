@@ -1995,6 +1995,9 @@ footer {
             justify-content: space-between;
         }
     }
+    .catalog_page-wrapper .catalog_page-bottom {
+        margin-top: 18px;
+    }
     .catalog_page-wrapper .catalog_page-top { 
         margin-top: 100px;
     }
@@ -2501,6 +2504,10 @@ footer {
     }
     .top {
         padding-top: 130px;
+    }
+    header .mob_logo-drp img {
+        width: 200px;
+        margin-left:0%; 
     }
     header #menu { 
         width: 430px;
