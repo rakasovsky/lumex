@@ -176,12 +176,12 @@ document.querySelectorAll(".nav-trigger").forEach(function (li) {
         h.addEventListener("mouseleave", function () {
           card_container.classList.remove("active");
         });
-        console.error(">>>CARD CONTAINER", card_container);
+        // console.error(">>>CARD CONTAINER", card_container);
       } else {
-        console.error(">>>NO CARD CONTAINER", h);
+        // console.error(">>>NO CARD CONTAINER", h);
       }
     } else {
-      console.error(">>>NO DATA-CARD ATTR", h);
+      // console.error(">>>NO DATA-CARD ATTR", h);
     }
   });
 });
@@ -254,3 +254,15 @@ function openTab(evt, tabName) {
                        
 
 // console.clear();
+
+
+// Catalog mobile modal button
+
+var showBtn = document.querySelector(".select-btn2");
+var selectContainer = document.querySelector(".catalog_select")
+
+showBtn.addEventListener("click", function() {
+  selectContainer.classList.toggle("select_style")
+})
+
+console.log(showBtn)

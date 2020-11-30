@@ -1132,9 +1132,14 @@ header .header-desk__nav ul li a {
   padding-top: calc(100% / 9);
   padding-bottom: calc(100% / 9);
   margin: 0 8.33333%;
+  position: relative;
 }
 .catalog_page-wrapper .catalog_page-top {
   display: flex;
+  flex-direction: column;
+}
+.catalog_page-wrapper .catalog_page-top button {
+  display: none;
 }
 .catalog_page-wrapper .catalog_page-bottom {
   display: flex;
@@ -1607,6 +1612,10 @@ footer .footer_bottom .copyright p:last-child {
   }
 }
 @media (max-width: 1024px) {
+  header .header-desk__nav {
+    width: 100%;
+  }
+
   .h_title {
     margin-bottom: 18px;
   }
@@ -1728,6 +1737,43 @@ footer .footer_bottom .copyright p:last-child {
   }
   .catalog_main .cloud__block3 {
     padding-top: 33%;
+  }
+
+  .catalog_page-bottom {
+    position: relative;
+  }
+
+  .catalog_select {
+    display: none;
+  }
+
+  .catalog_page-wrapper .catalog_page-bottom .catalog_select {
+    width: 50%;
+  }
+
+  .select_style {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    width: 50%;
+    padding: 5%;
+    background-color: white;
+  }
+  .select_style .select_clear {
+    justify-content: space-between;
+  }
+
+  .catalog_page-wrapper .catalog_page-top {
+    margin-top: 100px;
+  }
+
+  .catalog_page-wrapper .catalog_page-bottom .catalog_category {
+    width: 100%;
+  }
+
+  .catalog_page-wrapper .catalog_page-top button {
+    display: block;
+    z-index: 12;
   }
 }
 @media screen and (max-width: 812px) and (orientation: landscape) {
@@ -1972,6 +2018,10 @@ footer .footer_bottom .copyright p:last-child {
     transform: translate(-250%, 0);
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   }
+  header .mob_logo-drp img {
+    width: 200px;
+    margin-left: 8.33333%;
+  }
   header #menu li {
     padding: 10px 0;
     transition-delay: 2s;
@@ -2076,6 +2126,13 @@ footer .footer_bottom .copyright p:last-child {
 
   .catalog_main {
     margin: 0 8%;
+  }
+
+  .catalog_main .cloud__block3 .title .title__front .cat_card_wrapper img {
+    position: absolute;
+    left: unset;
+    width: 150px;
+    height: 150px;
   }
 
   .contact_container .wrapper {
