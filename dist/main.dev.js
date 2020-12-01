@@ -141,7 +141,7 @@ document.querySelectorAll(".nav-trigger").forEach(function (li) {
   drp.to(dr, {
     duration: .5,
     scaleY: 1,
-    height: '65vh'
+    height: '100%'
   }).from(dp, {
     duration: .5,
     opacity: 0,
@@ -167,10 +167,6 @@ document.querySelectorAll(".nav-trigger").forEach(function (li) {
     }
   });
   li.querySelectorAll(".list_trigger").forEach(function (h) {
-    /*
-          Both hovered link and div, which correponds to this link have the same value of attribute.
-          Example: <li data-card="ip-card">...</li>, <div data-card="ip-card">...</li>
-        */
     if (h.hasAttribute("data-card")) {
       var linkName = h.getAttribute("data-card");
       var card_container = document.querySelector('div[data-card="' + linkName + '"]');
@@ -193,7 +189,6 @@ document.querySelectorAll(".nav-trigger").forEach(function (li) {
             scrollableDiv.scrollLeft = realCcLeft + realCcWidth - (rsd.left + rsd.width); // gsap.from(".inner_container", {duration: 1, opacity:1, x: "20%",ease: "power1.out"},"+=2")
           }
 
-          console.error(">>>scrollableDiv.scrollLeft", scrollableDiv.scrollLeft, card_container);
           card_container.classList.add("active"); //TODO? change just to hovered style: li.list_trigger:hover {...}
 
           gsap.from(".inner_container", {
@@ -205,11 +200,9 @@ document.querySelectorAll(".nav-trigger").forEach(function (li) {
         });
         h.addEventListener("mouseleave", function () {
           card_container.classList.remove("active");
-        }); // console.error(">>>CARD CONTAINER", card_container);
-      } else {// console.error(">>>NO CARD CONTAINER", h);
-        }
-    } else {// console.error(">>>NO DATA-CARD ATTR", h);
-      }
+        });
+      } else {}
+    } else {}
   });
 }); // Q/A CARDS 
 

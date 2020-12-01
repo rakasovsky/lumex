@@ -124,7 +124,7 @@ document.querySelectorAll(".nav-trigger").forEach(function (li) {
   var dr = li.querySelector('.nav_dropdown');
   var dp = li.querySelector('.drp-list');
   var dx = li.querySelectorAll('.drp_card')
-  drp.to(dr,{duration: .5, scaleY: 1, height: '65vh'})
+  drp.to(dr,{duration: .5, scaleY: 1, height: '100%'})
      .from(dp, {duration: .5, opacity: 0, y:0 , stagger: 0.25,}, "-=1")
      .from(dx, {duration: .5, opacity:0, x: "550%",stagger: 0.25, ease: "power4.in"}, "-=1")
      .reversed(true);
@@ -142,10 +142,7 @@ document.querySelectorAll(".nav-trigger").forEach(function (li) {
   });
 
   li.querySelectorAll(".list_trigger").forEach(function (h) {
-    /*
-          Both hovered link and div, which correponds to this link have the same value of attribute.
-          Example: <li data-card="ip-card">...</li>, <div data-card="ip-card">...</li>
-        */
+   
     if (h.hasAttribute("data-card")) {
       let linkName = h.getAttribute("data-card");
       let card_container = document.querySelector(
@@ -169,19 +166,18 @@ document.querySelectorAll(".nav-trigger").forEach(function (li) {
             scrollableDiv.scrollLeft = realCcLeft + realCcWidth - (rsd.left + rsd.width);
             // gsap.from(".inner_container", {duration: 1, opacity:1, x: "20%",ease: "power1.out"},"+=2")
           }
-          console.error(">>>scrollableDiv.scrollLeft", scrollableDiv.scrollLeft, card_container);
           card_container.classList.add("active"); //TODO? change just to hovered style: li.list_trigger:hover {...}
           gsap.from(".inner_container", {duration: 2, opacity:1, x: "-10%", ease: "power1.out"})
         });
         h.addEventListener("mouseleave", function () {
           card_container.classList.remove("active");
         });
-        // console.error(">>>CARD CONTAINER", card_container);
+        
       } else {
-        // console.error(">>>NO CARD CONTAINER", h);
+   
       }
     } else {
-      // console.error(">>>NO DATA-CARD ATTR", h);
+      
     }
   });
 });
