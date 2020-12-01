@@ -137,11 +137,11 @@ document.querySelectorAll(".nav-trigger").forEach(function (li) {
   });
   var dr = li.querySelector('.nav_dropdown');
   var dp = li.querySelector('.drp-list');
-  var dx = li.querySelectorAll('.drp_card');
+  var dx = li.querySelectorAll('.drp_card'); // drp.to(dr,{duration: .5, scaleY: 1, height: '65vh'})
+
   drp.to(dr, {
     duration: .5,
-    scaleY: 1,
-    height: '100%'
+    scaleY: 1
   }).from(dp, {
     duration: .5,
     opacity: 0,

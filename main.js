@@ -124,7 +124,8 @@ document.querySelectorAll(".nav-trigger").forEach(function (li) {
   var dr = li.querySelector('.nav_dropdown');
   var dp = li.querySelector('.drp-list');
   var dx = li.querySelectorAll('.drp_card')
-  drp.to(dr,{duration: .5, scaleY: 1, height: '100%'})
+  // drp.to(dr,{duration: .5, scaleY: 1, height: '65vh'})
+  drp.to(dr,{duration: .5, scaleY: 1})
      .from(dp, {duration: .5, opacity: 0, y:0 , stagger: 0.25,}, "-=1")
      .from(dx, {duration: .5, opacity:0, x: "550%",stagger: 0.25, ease: "power4.in"}, "-=1")
      .reversed(true);
