@@ -27,7 +27,8 @@ body {
 }
 
 #app {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   position: relative;
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
@@ -801,7 +802,7 @@ header .header-desk__nav ul li a {
 }
 .lumex_partners-wrapper .partners_slideshow {
   align-items: center;
-  display: none;
+  display: flex;
   justify-content: center;
   max-width: 80%;
   overflow: hidden;
@@ -809,49 +810,13 @@ header .header-desk__nav ul li a {
   width: 100%;
   margin: 0px auto;
 }
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-250px * 7));
-  }
+.lumex_partners-wrapper .partners_slideshow .glide__slides {
+  align-items: center;
 }
-.lumex_partners-wrapper .partners_slideshow .slider {
-  height: 200px;
-  margin: auto;
-  overflow: hidden;
-  position: relative;
-  width: 1600px;
-}
-.lumex_partners-wrapper .partners_slideshow .slider::before, .lumex_partners-wrapper .partners_slideshow .slider::after {
-  content: "";
-  height: 100px;
-  position: absolute;
-  width: 200px;
-  z-index: 2;
-}
-.lumex_partners-wrapper .partners_slideshow .slider::after {
-  right: 0;
-  top: 0;
-  transform: rotateZ(180deg);
-}
-.lumex_partners-wrapper .partners_slideshow .slider::before {
-  left: 0;
-  top: 0;
-}
-.lumex_partners-wrapper .partners_slideshow .slider .slide-track {
-  animation: scroll 40s linear infinite;
+.lumex_partners-wrapper .partners_slideshow .glide__slide {
   display: flex;
-}
-.lumex_partners-wrapper .partners_slideshow .slider .slide {
-  width: 300px;
-  height: 200px;
-  margin: 0 25px;
-}
-.lumex_partners-wrapper .partners_slideshow .slider .slide img {
-  width: 300px;
-  height: 200px;
+  justify-content: center;
+  align-items: center;
 }
 
 .lumex_team {
