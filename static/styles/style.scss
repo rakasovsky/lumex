@@ -1243,13 +1243,40 @@ header {
 
 // CATALOG Page
 .catalog_main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-direction: row;
   margin: 0 8.33333% 0;
   padding-top: 0;
   padding-bottom: $pb;
+
   .cloud__block3 {
+    width: 25%;
+    padding-top: 25%;
+    align-self: stretch;
+    opacity: 1;
+    position: relative;
+
     .title {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        justify-content: flex-start;
+        flex-direction: row;
+        overflow: hidden;
+
         .title__front{
-            // padding: 10%;
+            display: flex;
+            flex-direction: column;
+            padding: 16.66667%;
+
             .cat_card_wrapper {
                 // padding: 16.66667%;
                 display: flex;
@@ -1261,8 +1288,32 @@ header {
             }
         }
     }
+    .title__back {
+        position: absolute;
+        padding: 16.66667%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: block;
+        opacity: 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 70% 50%;
+        -webkit-transition: opacity .1s;
+        transition: opacity .1s;
+        .catalog_card-wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+        a{
+            margin: 20px 0;
+            align-self: flex-end;
+        }
+    }
   }  
 }
+
 
 // CATALOG CATEGORY PAGE
 .catalog_page-wrapper {
