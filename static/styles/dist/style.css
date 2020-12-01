@@ -792,6 +792,7 @@ header .header-desk__nav ul li a {
 
 .lumex_partners-wrapper {
   padding-top: calc(100% / 9);
+  padding-bottom: calc(100% / 9);
 }
 .lumex_partners-wrapper .partners_text {
   flex: none;
