@@ -358,7 +358,7 @@ header .header-desk__nav ul li a {
 }
 .nav_dropdown .dropdown_container .left {
   padding: 3em;
-  flex: 0 0 30%;
+  flex: 0 0 100%;
   background: #323539;
   color: #fff;
   font-size: 20px;
