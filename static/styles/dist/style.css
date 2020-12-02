@@ -792,7 +792,6 @@ header .header-desk__nav ul li a {
 
 .lumex_partners-wrapper {
   padding-top: calc(100% / 9);
-  padding-bottom: calc(100% / 9);
   display: flex;
   justify-content: center;
 }
@@ -841,6 +840,9 @@ header .header-desk__nav ul li a {
   margin-bottom: 0;
   background-position: center;
   background-image: url("https://cloudcalls.com.ua/wp-content/uploads/2018/02/stock-photo-211548267.jpg");
+}
+.lumex_team .srvc {
+  background-image: url(../assets/img/category/tel/electronic-repairs-min.jpg);
 }
 .lumex_team .cloud_img {
   background-image: url(../assets/img/category/tel/cloudcalls.jpg);
