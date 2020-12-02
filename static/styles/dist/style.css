@@ -793,19 +793,18 @@ header .header-desk__nav ul li a {
 .lumex_partners-wrapper {
   padding-top: calc(100% / 9);
   padding-bottom: calc(100% / 9);
-}
-.lumex_partners-wrapper .partners_text {
-  flex: none;
-  align-self: stretch;
-  width: 33.33333%;
-  margin-left: 12.5%;
   display: flex;
+  justify-content: center;
+}
+.lumex_partners-wrapper .slider-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 83.3333%;
 }
 .lumex_partners-wrapper .partners_slideshow {
   align-items: center;
   display: flex;
   justify-content: center;
-  max-width: 80%;
   overflow: hidden;
   position: relative;
   width: 100%;

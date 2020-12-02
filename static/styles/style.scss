@@ -882,19 +882,26 @@ header {
 .lumex_partners-wrapper {
     padding-top: $pt;
     padding-bottom: $pb;
-    .partners_text {
-        flex: none;
-        align-self: stretch;
-        width: 33.33333%;
-        margin-left: 12.5%;
+    display: flex;
+    justify-content: center;
+
+    .slider-wrapper {
         display: flex;
+        flex-direction: column;
+        width: 83.3333%;
     }
+    // .partners_text {
+    //     flex: none;
+    //     align-self: stretch;
+    //     width: 33.33333%;
+    //     margin-left: 12.5%;
+    //     display: flex;
+    // }
 
     .partners_slideshow {
         align-items: center;
         display: flex;
         justify-content: center;
-        max-width: 80%;
         overflow: hidden;
         position: relative;
         width: 100%;

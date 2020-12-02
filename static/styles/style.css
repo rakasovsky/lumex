@@ -1138,19 +1138,23 @@ header .header-desk__nav ul li a {
 .lumex_partners-wrapper {
   padding-top: calc(100% / 9);
   padding-bottom: calc(100% / 9);
-}
-
-.lumex_partners-wrapper .partners_text {
-  -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none;
-  -ms-flex-item-align: stretch;
-      align-self: stretch;
-  width: 33.33333%;
-  margin-left: 12.5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.lumex_partners-wrapper .slider-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 83.3333%;
 }
 
 .lumex_partners-wrapper .partners_slideshow {
@@ -1163,7 +1167,6 @@ header .header-desk__nav ul li a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  max-width: 80%;
   overflow: hidden;
   position: relative;
   width: 100%;
