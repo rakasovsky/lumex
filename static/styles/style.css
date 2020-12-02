@@ -168,6 +168,7 @@ button {
   border: 1px solid #a8a8a8;
   border-radius: 18px;
   color: white;
+  cursor: pointer;
 }
 
 .lumex_button-active {
@@ -364,7 +365,7 @@ header {
       -ms-flex-pack: start;
           justify-content: flex-start;
   z-index: 11;
-  padding: 110px 0;
+  padding: 110px 0 0;
   color: #323539;
   position: absolute;
   width: 100%;
@@ -1882,6 +1883,112 @@ ul .checkmark:after {
   transform: rotate(45deg);
 }
 
+.product_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  height: 100%;
+  margin: 0 8.33333%;
+  position: relative;
+  padding-bottom: calc(100% / 9);
+}
+
+.product_container .product_wrapper-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 50%;
+  background-color: white;
+  padding: 2% 2% 0 0;
+}
+
+.product_container .product_wrapper-top .desc_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2%;
+}
+
+.product_container .product_wrapper-top .desc_container .product_code {
+  margin: 20px 0;
+}
+
+.product_container .product_wrapper-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  background-color: white;
+  padding: 2% 0 0 2%;
+}
+
+.product_container .product_wrapper-bottom .tabs {
+  padding: 2%;
+}
+
+.product_container .product_wrapper-bottom .lumex_button {
+  color: black;
+}
+
+.product_container .product_availability {
+  padding: 2% 5%;
+  margin: 20px 0;
+  width: 150px;
+  color: black;
+  background: #ffda00;
+}
+
+.product_container .out_of_stock {
+  color: #fff;
+  background: #333;
+}
+
+.product_container .p_title {
+  margin-bottom: 24px;
+}
+
+.product_container .tab thead {
+  vertical-align: baseline;
+}
+
+.product_container .tab thead .col {
+  background-color: #ffda00;
+  color: black;
+}
+
+.product_container .tab td, .product_container .tab th {
+  padding: 10px 0;
+  position: relative;
+  outline: 0;
+}
+
+.product_container .tab td {
+  text-align: center;
+}
+
+.product_container .tab th {
+  text-align: left;
+  width: 30%;
+  padding-left: 10px;
+}
+
+.product_container .tab tr:nth-child(even) {
+  background-color: #efeeee;
+}
+
+.product_container .tab .col {
+  text-align: center;
+  font-size: 20px;
+}
+
 .notfound_container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2232,6 +2339,9 @@ footer .footer_bottom .copyright p:last-child {
   }
   .catalog_page-wrapper .catalog_page-bottom .catalog_category .lumex__main .cloud__block3 {
     padding-top: 33%;
+  }
+  .product_container .product_availability {
+    width: 170px;
   }
 }
 

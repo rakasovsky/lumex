@@ -143,6 +143,7 @@ button {
     border: 1px solid #a8a8a8;
     border-radius: 18px;
     color: white;
+    cursor: pointer;
 }
 .lumex_button-active {
     min-width: 96px;
@@ -326,7 +327,7 @@ header {
     z-index: 11;
     // padding: 20px 0;
     
-    padding: 110px 0;
+    padding: 110px 0 0;
     color: #323539;
     position: absolute;
     width: 100%;
@@ -1439,6 +1440,93 @@ header {
         transform: rotate(45deg);
     }
     
+// Product page
+.product_container {
+    display: flex;
+    // flex-direction: column;
+    min-height: 100vh;
+    height: 100%;
+    margin: 0 8.33333%;
+    position: relative;
+    padding-bottom: $pb;
+    .product_wrapper-top {
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+        background-color: white;
+        padding: 2% 2% 0 0;
+        .desc_container {
+            display: flex;
+            flex-direction: column;
+            padding: 2%;
+            .product_code {
+                margin: 20px 0;
+            }
+        }
+    }
+    .product_wrapper-bottom {
+        display: flex;
+        width: 50%;
+        background-color: white;
+        padding: 2% 0 0 2%;
+        .tabs {
+            padding:2%;
+        }
+        .lumex_button {
+            color: black;
+        }
+    }
+    .product_availability {
+        padding: 2% 5%;
+        margin: 20px 0;
+        width: 150px;
+        color: black;
+        background: $primary-color;
+    }
+    .out_of_stock {
+        color: #fff;
+        background: #333;
+    }
+
+    .p_title {
+        margin-bottom: 24px;
+    }
+
+    .tab {
+        thead {
+            vertical-align: baseline;
+            .col {
+                background-color: $primary-color;
+                color: black;
+            }
+        }
+        td, th {
+            padding: 10px 0;
+            position: relative;
+            outline: 0;
+    
+        }
+        td {
+            text-align: center;
+        }
+        th {
+            text-align: left;
+            width: 30%;
+            padding-left: 10px;
+        }
+        tr:nth-child(even) {
+            background-color: #efeeee;
+        }
+        .col {
+            text-align: center;
+            font-size: 20px;
+        }
+    }
+
+   
+}
+
+
 
 // PAGE 404 
 .notfound_container {
@@ -1753,6 +1841,13 @@ footer {
                 padding-top: 33%;
         }
     }
+    // Product 
+    .product_container {
+        .product_availability {
+            width: 170px;
+        }
+    }
+   
 }
 
 @media (max-width:1440px) { 

@@ -296,6 +296,25 @@ function openTab(evt, tabName) {
 
   document.getElementById(tabName).style.display = "block";
   evt.currentTarget.className += " lumex_button-active";
+} // product page tab 
+
+
+function openTab2(evt, tabName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("tab");
+
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+
+  tablinks = document.getElementsByClassName("tablink");
+
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" lumex_button-active", "");
+  }
+
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " lumex_button-active";
 } // console.clear();
 // Catalog mobile modal button
 
