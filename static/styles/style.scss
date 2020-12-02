@@ -776,7 +776,7 @@ header {
     border-top: 1px solid #6b6b6b;
     width: 83.33333%;
     margin: 0 auto;
- }
+    }
  .col {
      .card_wrapper {
         flex-direction: column;
@@ -1718,6 +1718,14 @@ footer {
                         max-width: 425px;
                     }
                 }
+            }
+        }
+    }
+
+    .cloud__calls-main {
+        .col{
+            .product_card {
+                height: 850px;
             }
         }
     }

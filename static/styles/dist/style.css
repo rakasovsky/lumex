@@ -1534,6 +1534,10 @@ footer .footer_bottom .copyright p:last-child {
     max-width: 425px;
   }
 
+  .cloud__calls-main .col .product_card {
+    height: 850px;
+  }
+
   .lumex__main .cloud__block2 .title .title__back div {
     padding: 10%;
   }
