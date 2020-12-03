@@ -818,6 +818,11 @@ header .header-desk__nav ul li a {
   display: flex;
   justify-content: center;
   align-items: center;
+  filter: grayscale(1);
+  transition: all 0.5s ease;
+}
+.lumex_partners-wrapper .partners_slideshow .glide__slide:hover {
+  filter: none;
 }
 
 .lumex_team {
