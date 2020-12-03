@@ -1914,7 +1914,7 @@ ul .checkmark:after {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 2%;
+  padding: 2% 5%;
 }
 
 .product_container .product_wrapper-top .desc_container .product_code {
