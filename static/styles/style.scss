@@ -1444,6 +1444,7 @@ header {
 .product_container {
     display: flex;
     // flex-direction: column;
+    flex-direction:row-reverse;
     min-height: 100vh;
     height: 100%;
     margin: 0 8.33333%;
@@ -1454,7 +1455,7 @@ header {
         justify-content: space-between;
         width: 50%;
         background-color: white;
-        padding: 2% 2% 0 0;
+        padding: 2% 0 2% 2%;
         .desc_container {
             display: flex;
             flex-direction: column;

@@ -1303,6 +1303,7 @@ ul .checkmark:after {
 
 .product_container {
   display: flex;
+  flex-direction: row-reverse;
   min-height: 100vh;
   height: 100%;
   margin: 0 8.33333%;
@@ -1314,7 +1315,7 @@ ul .checkmark:after {
   justify-content: space-between;
   width: 50%;
   background-color: white;
-  padding: 2% 2% 0 0;
+  padding: 2% 0 2% 2%;
 }
 .product_container .product_wrapper-top .desc_container {
   display: flex;
