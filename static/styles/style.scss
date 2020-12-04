@@ -1477,6 +1477,11 @@ header {
         padding: 2% 0 0 2%;
         .tabs {
             padding:2%;
+            .tab {
+                p {
+                    margin-bottom: 15px;
+                }
+            }
         }
         .lumex_button {
             color: black;

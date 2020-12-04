@@ -1339,6 +1339,9 @@ ul .checkmark:after {
 .product_container .product_wrapper-bottom .tabs {
   padding: 2%;
 }
+.product_container .product_wrapper-bottom .tabs .tab p {
+  margin-bottom: 15px;
+}
 .product_container .product_wrapper-bottom .lumex_button {
   color: black;
 }
