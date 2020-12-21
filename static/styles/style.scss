@@ -927,9 +927,7 @@ header {
 .lumex_team {
     display: flex;
     padding-top: $pt;
-    .team_left .main {
-        margin-left: 8.3333%;
-    }
+    
     .team_left {
         margin-left: 12.5%;
         margin-right: auto;
@@ -940,6 +938,9 @@ header {
         div {
             max-width: 420px;
         }
+    }
+    .main {
+        margin-left: 8.3333%;
     }
     .team_right {
         width: 50%;
@@ -992,16 +993,15 @@ header {
 
 .category {
     padding-top: 220px;
-    height: 144vh;
     
     .category_container {
         display: flex;
         flex-direction: column;
         position: relative;
         height: 100%;
-        // height: 100vh;
+        
         .category_cover {
-            position: absolute;
+            position: relative;
             overflow: hidden;
             opacity: 1;
             background-image: url(../assets/img/cyberpunk2077.jpg);
@@ -1027,16 +1027,16 @@ header {
             opacity: 1
         }
         .category_text {
-            position: absolute;
+           
+            position: relative;
             align-self: stretch;
             width: 62.5%;
-            margin-top: 370px;
+            margin-top: -370px;
             padding: 135px 16.66667% 185px;
-            /* height: 100%; */
             overflow: hidden;
             background: #c9c9c9;
             color: #333;
-            // bottom: -5%;
+            
 
             .vertical-button {
                 position: absolute;
@@ -1819,9 +1819,6 @@ footer {
 }
 
 @media screen and (min-width:2560px) {
-    .category {
-        height: 120vh;
-    }
     .lumex__main {
         .cloud__block2{
             .title {
@@ -1850,8 +1847,11 @@ footer {
     } 
     
     // Category PAGE
+    .category .category_container .category_cover {
+        height: 70vh;
+    }
     .category .category_container .category_text {
-        bottom: 5%;
+        margin-top: -570px;
     }
     .catalog_page-wrapper {
             .catalog_page-bottom .catalog_category .lumex__main .cloud__block3 {
@@ -1913,9 +1913,10 @@ footer {
 
     // CATEGORY Page
 
-    .category {
-        height: 170vh;
+    .category .category_container .category_cover {
+        height: 50vh;
     }
+
     .category_diogram {
         align-items: center;
     }
@@ -1963,8 +1964,8 @@ footer {
 }
 
 @media (max-width:1366px) {
-    .category .category_container .category_text {
-        margin-top: 340px;
+    .category .category_container .category_cover {
+        height: 75vh;
     }
 }
 
@@ -2057,12 +2058,12 @@ footer {
 
     // Category PAGE
     .category {
-        height: 120vh;
+        // height: 120vh;
         .category_container {
                 // height: 70vh;
-                .category_cover {
-                    // height: 50vh;
-                }
+                // .category_cover {
+                //     height: 50vh;
+                // }
                 .category_text {
                     bottom: 0%;
                     width: 80%;
@@ -2509,7 +2510,6 @@ footer {
 
     // category page
     .category {
-        height: 95vh;
         padding-top: 150px;
         .category_container {
             .category_cover {
@@ -2520,11 +2520,9 @@ footer {
             }
         }
     }
-    .category .category_container {
-        height: 74vh;
-    }
+  
     .category .category_container .category_text {
-        margin-top: 130px;
+        
         bottom: unset;
     }
     .category_diogram .diogram_left {
@@ -2849,12 +2847,7 @@ footer {
     }
    
     // Category PAGE
-    .category {
-        height: 110vh;
-    }  
-    .category .category_container {
-        height: 85vh;
-    }
+    
     .category .category_container .category_text {
         padding: 60px 12.66667% 110px;
         width: 85%;
@@ -3004,6 +2997,9 @@ footer {
     .category {
         padding-top: 110px;
     }
+    .category .category_container .category_text {
+        margin-top: -180px;
+    }
     .catalog_main {
         .cloud__block3 {
             padding-top: 80%;
@@ -3032,10 +3028,7 @@ footer {
     .cloud__calls-main .our_products:before {
         display: none;
     }
-    .category {
-        height: 125vh;
-    }
-
+  
     .who-we-are .who-we-are__container .who-we-are__row .lumex__video {
         width: 100%;
         margin-top: 15px;
@@ -3079,9 +3072,8 @@ footer {
     .lumex_form .form_button {
         margin: 40px 0;
     }
-    .category .category_container {
-        height: 100vh;
-    }
+    
+
     .catalog_main {
         .cloud__block3 {
             padding-top: 100%;

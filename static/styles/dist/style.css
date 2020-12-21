@@ -829,9 +829,6 @@ header .header-desk__nav ul li a {
   display: flex;
   padding-top: calc(100% / 9);
 }
-.lumex_team .team_left .main {
-  margin-left: 8.3333%;
-}
 .lumex_team .team_left {
   margin-left: 12.5%;
   margin-right: auto;
@@ -842,6 +839,9 @@ header .header-desk__nav ul li a {
 }
 .lumex_team .team_left div {
   max-width: 420px;
+}
+.lumex_team .main {
+  margin-left: 8.3333%;
 }
 .lumex_team .team_right {
   width: 50%;
@@ -891,7 +891,6 @@ header .header-desk__nav ul li a {
 
 .category {
   padding-top: 220px;
-  height: 144vh;
 }
 .category .category_container {
   display: flex;
@@ -900,7 +899,7 @@ header .header-desk__nav ul li a {
   height: 100%;
 }
 .category .category_container .category_cover {
-  position: absolute;
+  position: relative;
   overflow: hidden;
   opacity: 1;
   background-image: url(../assets/img/cyberpunk2077.jpg);
@@ -925,12 +924,11 @@ header .header-desk__nav ul li a {
   opacity: 1;
 }
 .category .category_container .category_text {
-  position: absolute;
+  position: relative;
   align-self: stretch;
   width: 62.5%;
-  margin-top: 370px;
+  margin-top: -370px;
   padding: 135px 16.66667% 185px;
-  /* height: 100%; */
   overflow: hidden;
   background: #c9c9c9;
   color: #333;
@@ -1618,10 +1616,6 @@ footer .footer_bottom .copyright p:last-child {
 }
 
 @media screen and (min-width: 2560px) {
-  .category {
-    height: 120vh;
-  }
-
   .lumex__main .cloud__block2 .title .title__front div {
     max-width: 425px;
   }
@@ -1638,8 +1632,12 @@ footer .footer_bottom .copyright p:last-child {
     padding: 10%;
   }
 
+  .category .category_container .category_cover {
+    height: 70vh;
+  }
+
   .category .category_container .category_text {
-    bottom: 5%;
+    margin-top: -570px;
   }
 
   .catalog_page-wrapper .catalog_page-bottom .catalog_category .lumex__main .cloud__block3 {
@@ -1685,8 +1683,8 @@ footer .footer_bottom .copyright p:last-child {
     width: 370px;
   }
 
-  .category {
-    height: 170vh;
+  .category .category_container .category_cover {
+    height: 50vh;
   }
 
   .category_diogram {
@@ -1729,8 +1727,8 @@ footer .footer_bottom .copyright p:last-child {
   }
 }
 @media (max-width: 1366px) {
-  .category .category_container .category_text {
-    margin-top: 340px;
+  .category .category_container .category_cover {
+    height: 75vh;
   }
 }
 @media (max-width: 1024px) {
@@ -1818,9 +1816,6 @@ footer .footer_bottom .copyright p:last-child {
     margin-right: 7.33333%;
   }
 
-  .category {
-    height: 120vh;
-  }
   .category .category_container .category_text {
     bottom: 0%;
     width: 80%;
@@ -2222,7 +2217,6 @@ footer .footer_bottom .copyright p:last-child {
   }
 
   .category {
-    height: 95vh;
     padding-top: 150px;
   }
   .category .category_container .category_cover {
@@ -2232,12 +2226,7 @@ footer .footer_bottom .copyright p:last-child {
     left: 0%;
   }
 
-  .category .category_container {
-    height: 74vh;
-  }
-
   .category .category_container .category_text {
-    margin-top: 130px;
     bottom: unset;
   }
 
@@ -2564,14 +2553,6 @@ footer .footer_bottom .copyright p:last-child {
     width: 75%;
   }
 
-  .category {
-    height: 110vh;
-  }
-
-  .category .category_container {
-    height: 85vh;
-  }
-
   .category .category_container .category_text {
     padding: 60px 12.66667% 110px;
     width: 85%;
@@ -2708,6 +2689,10 @@ footer .footer_bottom .copyright p:last-child {
     padding-top: 110px;
   }
 
+  .category .category_container .category_text {
+    margin-top: -180px;
+  }
+
   .catalog_main .cloud__block3 {
     padding-top: 80%;
     width: 49.333%;
@@ -2733,10 +2718,6 @@ footer .footer_bottom .copyright p:last-child {
 
   .cloud__calls-main .our_products:before {
     display: none;
-  }
-
-  .category {
-    height: 125vh;
   }
 
   .who-we-are .who-we-are__container .who-we-are__row .lumex__video {
@@ -2790,10 +2771,6 @@ footer .footer_bottom .copyright p:last-child {
 
   .lumex_form .form_button {
     margin: 40px 0;
-  }
-
-  .category .category_container {
-    height: 100vh;
   }
 
   .catalog_main .cloud__block3 {

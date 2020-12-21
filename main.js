@@ -142,6 +142,9 @@ document.querySelectorAll(".nav-trigger").forEach(function (li) {
           }
   });
 
+
+  
+
   li.querySelectorAll(".list_trigger").forEach(function (h) {
    
     if (h.hasAttribute("data-card")) {
