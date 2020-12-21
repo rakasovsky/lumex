@@ -1208,6 +1208,10 @@ header .header-desk__nav ul li a {
   padding-top: calc(100% / 9);
 }
 
+.lumex_team .team_left .main {
+  margin-left: 8.3333%;
+}
+
 .lumex_team .team_left {
   margin-left: 12.5%;
   margin-right: auto;

@@ -927,6 +927,9 @@ header {
 .lumex_team {
     display: flex;
     padding-top: $pt;
+    .team_left .main {
+        margin-left: 8.3333%;
+    }
     .team_left {
         margin-left: 12.5%;
         margin-right: auto;

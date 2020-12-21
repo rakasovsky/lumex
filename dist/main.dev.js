@@ -154,7 +154,7 @@ document.querySelectorAll(".nav-trigger").forEach(function (li) {
     stagger: 0.25,
     ease: "power4.in"
   }, "-=1").reversed(true);
-  li.addEventListener('click', function (e) {
+  li.addEventListener('mouseenter', function (e) {
     if (drp.reversed()) {
       if (lastOpenedDropdown !== null && lastOpenedDropdown !== drp) {
         lastOpenedDropdown.reverse();
