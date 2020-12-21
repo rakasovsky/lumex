@@ -126,85 +126,67 @@ JoC.from(".txt3", {
 // mmTl.to(".nav_dropdown",{duration:.5, opacity:0, y: 0, ease: Power3.easeOut});
 // GSAP
 // MEGA MENU
-
-var lastOpenedDropdown = null;
-document.querySelectorAll(".nav-trigger").forEach(function (li) {
-  var drp = gsap.timeline({
-    defaults: {
-      duration: 1
-    },
-    paused: true
-  });
-  var dr = li.querySelector('.nav_dropdown');
-  var dp = li.querySelector('.drp-list');
-  var dx = li.querySelectorAll('.drp_card'); // drp.to(dr,{duration: .5, scaleY: 1, height: '65vh'})
-
-  drp.to(dr, {
-    duration: .5,
-    scaleY: 1
-  }).from(dp, {
-    duration: .5,
-    opacity: 0,
-    y: 0,
-    stagger: 0.25
-  }, "-=1").from(dx, {
-    duration: .5,
-    opacity: 0,
-    x: "550%",
-    stagger: 0.25,
-    ease: "power4.in"
-  }, "-=1").reversed(true);
-  li.addEventListener('mouseenter', function (e) {
-    if (drp.reversed()) {
-      if (lastOpenedDropdown !== null && lastOpenedDropdown !== drp) {
-        lastOpenedDropdown.reverse();
-      }
-
-      lastOpenedDropdown = drp;
-      drp.play();
-    } else {
-      drp.reverse();
-    }
-  });
-  li.querySelectorAll(".list_trigger").forEach(function (h) {
-    if (h.hasAttribute("data-card")) {
-      var linkName = h.getAttribute("data-card");
-      var card_container = document.querySelector('div[data-card="' + linkName + '"]');
-
-      if (card_container) {
-        var scrollableDiv = card_container.closest(".cards_wrapper");
-        h.addEventListener("mouseover", function () {
-          var rsd = scrollableDiv.getBoundingClientRect();
-          var rcc = card_container.getBoundingClientRect();
-          var styles = getComputedStyle(card_container);
-          var realCcWidth = rcc.width + parseInt(styles.marginLeft) + parseInt(styles.marginRight);
-          var realCcLeft = rcc.left - parseInt(styles.marginLeft);
-          var leftOverflow = rsd.left - realCcLeft;
-          var rightOverflow = realCcLeft + realCcWidth - (rsd.left + rsd.width);
-          var threshold = 30;
-
-          if (leftOverflow > threshold) {
-            scrollableDiv.scrollLeft -= rsd.left - realCcLeft;
-          } else if (rightOverflow > threshold) {
-            scrollableDiv.scrollLeft = realCcLeft + realCcWidth - (rsd.left + rsd.width); // gsap.from(".inner_container", {duration: 1, opacity:1, x: "20%",ease: "power1.out"},"+=2")
-          }
-
-          card_container.classList.add("active"); //TODO? change just to hovered style: li.list_trigger:hover {...}
-
-          gsap.from(".inner_container", {
-            duration: 2,
-            opacity: 1,
-            x: "-10%",
-            ease: "power1.out"
-          });
-        });
-        h.addEventListener("mouseleave", function () {
-          card_container.classList.remove("active");
-        });
-      } else {}
-    } else {}
-  });
-}); // Q/A CARDS 
+// var lastOpenedDropdown = null;
+// document.querySelectorAll(".nav-trigger").forEach(function (li) {
+//   const drp = gsap.timeline({
+//       defaults: {duration: 1},
+//       paused: true
+//   });
+//   var dr = li.querySelector('.nav_dropdown');
+//   var dp = li.querySelector('.drp-list');
+//   var dx = li.querySelectorAll('.drp_card')
+//   drp.to(dr,{duration: .5, scaleY: 1, height: '65vh'})
+//   drp.to(dr,{duration: .5, scaleY: 1})
+//      .from(dp, {duration: .5, opacity: 0, y:0 , stagger: 0.25,}, "-=1")
+//      .from(dx, {duration: .5, opacity:0, x: "550%",stagger: 0.25, ease: "power4.in"}, "-=1")
+//      .reversed(true);
+//   li.addEventListener('click', function(e) {
+//           if (drp.reversed()) {
+//             if (lastOpenedDropdown !== null && lastOpenedDropdown !== drp) {
+//               lastOpenedDropdown.reverse();
+//             }
+//             lastOpenedDropdown = drp;
+//             drp.play();
+//           } else {
+//             drp.reverse();
+//           }
+//   });
+//   li.querySelectorAll(".list_trigger").forEach(function (h) {
+//     if (h.hasAttribute("data-card")) {
+//       let linkName = h.getAttribute("data-card");
+//       let card_container = document.querySelector(
+//         'div[data-card="' + linkName + '"]'
+//       );
+//       if (card_container) {
+//         const scrollableDiv = card_container.closest(".cards_wrapper");
+//         h.addEventListener("mouseover", function () {
+//           const rsd = scrollableDiv.getBoundingClientRect();
+//           const rcc = card_container.getBoundingClientRect();
+//           const styles = getComputedStyle(card_container);
+//           const realCcWidth = rcc.width + parseInt(styles.marginLeft) + parseInt(styles.marginRight);
+//           const realCcLeft = rcc.left - parseInt(styles.marginLeft);
+//           const leftOverflow = rsd.left - realCcLeft;
+//           const rightOverflow = (realCcLeft + realCcWidth) - (rsd.left + rsd.width);
+//           const threshold = 30;
+//           if (leftOverflow > threshold) {
+//             scrollableDiv.scrollLeft -= rsd.left - realCcLeft;
+//           } else if (rightOverflow > threshold) {
+//             scrollableDiv.scrollLeft = realCcLeft + realCcWidth - (rsd.left + rsd.width);
+//             // gsap.from(".inner_container", {duration: 1, opacity:1, x: "20%",ease: "power1.out"},"+=2")
+//           }
+//           card_container.classList.add("active"); //TODO? change just to hovered style: li.list_trigger:hover {...}
+//           gsap.from(".inner_container", {duration: 2, opacity:1, x: "-10%", ease: "power1.out"})
+//         });
+//         h.addEventListener("mouseleave", function () {
+//           card_container.classList.remove("active");
+//         });
+//       } else {
+//       }
+//     } else {
+//     }
+//   });
+// });
+// Q/A CARDS 
 
 document.querySelectorAll(".cat_block").forEach(function (f) {
   var qa = gsap.timeline({
