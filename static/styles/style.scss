@@ -494,7 +494,9 @@ header {
     color: white;
     top: 110px;
     min-width: 310px;
+    max-width: 400px;
     padding: 30px;
+    white-space: nowrap;
     .menu-item {
         position: relative;
         height: 24px;

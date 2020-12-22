@@ -447,7 +447,9 @@ header .header-desk__nav ul li a {
   color: white;
   top: 110px;
   min-width: 310px;
+  max-width: 400px;
   padding: 30px;
+  white-space: nowrap;
 }
 
 .sub-menu .menu-item {
